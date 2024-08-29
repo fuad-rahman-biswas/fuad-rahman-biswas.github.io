@@ -116,6 +116,33 @@
             padding: 20px;
             text-align: center;
         }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li {
+            margin: 0 15px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        footer ul li a:hover,
+        footer ul li a.active {
+            background: #5a2d9e; /* Darker purple for hover and active state */
+            color: #f0f0f0;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -149,14 +176,14 @@
         </ul>
     </main>
 
-<footer>
-    <ul class="footer-links">
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-    <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
-</footer>
+    <footer>
+        <ul class="footer-links">
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
+    </footer>
     
 </body>
 </html>
