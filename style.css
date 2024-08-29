@@ -286,7 +286,25 @@ footer a:hover {
 
 .project-item {
     margin-bottom: 30px;
-    text-align: center;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Added transform transition */
+    text-align: center; /* Center align content in each project card */
+}
+
+.project-card:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.project-card h3 {
+    margin-top: 0;
 }
 
 .project-item a {
@@ -305,26 +323,9 @@ footer a:hover {
     background-color: #4a1d7e; /* Even darker purple for hover */
 }
 
-
-.project-cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.project-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    max-width: 300px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.project-card h3 {
-    margin-top: 0;
+/* Ensure button visibility */
+.project-item a {
+    visibility: visible; /* Ensure visibility even without hover */
 }
 
 
