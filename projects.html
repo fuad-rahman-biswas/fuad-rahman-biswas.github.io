@@ -52,11 +52,13 @@
 
         /* Footer Styling */
         footer {
-            background: #383549; /* Dark grayish-blue color */
-            color: white;
-            padding: 20px;
+            background-color: #282c34;
+            color: #f0f0f0;
             text-align: center;
-            margin-top: 40px;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         footer .footer-links {
@@ -77,10 +79,16 @@
             transition: color 0.3s;
         }
 
-        footer .footer-links a:hover,
-        footer .footer-links a.active {
-            color: #5a2d9e; /* Darker purple for hover and active state */
-            text-decoration: underline;
+       footer a {
+            color: #f0f0f0;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        
+        footer a:hover {
+            background-color: #5a2d9e; /* Same dark purple */
+            color: #f0f0f0; /* Same text color */
+            text-decoration: underline; /* Same text decoration */
         }
 
         /* Projects section styling */
