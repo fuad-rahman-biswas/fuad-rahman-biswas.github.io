@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -80,7 +81,7 @@ nav ul li a:hover::after,
     z-index: 1;
     max-width: 700px;
     margin-left: 400px;
-    /*text-align: left;*/
+    text-align: left;
     animation: fadeIn 2s ease-in-out;
 }
 
