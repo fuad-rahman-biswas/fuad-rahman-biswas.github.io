@@ -311,14 +311,18 @@ footer a:hover {
 
 .project-item a {
     display: inline-block;
-    margin-top: 10px;
-    font-size: 1.1em;
-    color: #4CAF50;
+    color: white;
+    background-color: #5a2d9e; /* Button color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
     text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 .project-item a:hover {
-    text-decoration: underline;
+    background-color: #4a237e; /* Darker color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
 }
 
 .project-cards {
