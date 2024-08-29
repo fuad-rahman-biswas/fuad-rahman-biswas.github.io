@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
+    <title>Skills - Fuad Rahman Biswas</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Header and footer styles */
-        header, footer {
+        /* Consistent background color with the Projects page */
+        body {
+            background: #e9ecef;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header Styling */
+        header {
             background: #383549; /* Dark grayish-blue color */
             color: white;
-        }
-
-        header {
             padding: 1rem 0;
             text-align: center;
         }
 
-        footer {
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav ul, footer ul {
+        nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
@@ -31,11 +31,11 @@
             margin: 0;
         }
 
-        nav ul li, footer ul li {
+        nav ul li {
             margin: 0 15px;
         }
 
-        nav ul li a, footer ul li a {
+        nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: 600;
@@ -43,41 +43,82 @@
             transition: background 0.3s, color 0.3s;
         }
 
-        nav ul li a:hover, nav ul li a.active,
-        footer ul li a:hover, footer ul li a.active {
+        nav ul li a:hover,
+        nav ul li a.active {
             background: #5a2d9e; /* Darker purple for hover and active state */
             color: #f0f0f0;
             border-radius: 5px;
         }
 
-        /* Main content styles */
-        .skills, .cv {
+        /* Footer Styling */
+        footer {
+            background: #383549; /* Dark grayish-blue color */
+            color: white;
             padding: 20px;
+            text-align: center;
+            margin-top: 40px;
         }
 
+        footer .footer-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        footer .footer-links li {
+            margin: 0 15px;
+        }
+
+        footer .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer .footer-links a:hover,
+        footer .footer-links a.active {
+            color: #5a2d9e; /* Darker purple for hover and active state */
+            text-decoration: underline;
+        }
+
+        /* Skills section styling */
+        .skills {
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .skills h1 {
+            font-size: 3em;
+            color: #28a745;
+            margin-bottom: 40px;
+        }
+        
         .skills-category {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            margin-bottom: 40px;
         }
-
+        
         .skills-category img {
             margin: 10px;
         }
-
+        
         .cv-button {
             display: inline-block;
             margin: 10px;
             padding: 10px 20px;
-            background: #5a2d9e;
+            background: #28a745;
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
+            transition: background 0.3s ease;
         }
-
+        
         .cv-button:hover {
-            background: #4a1d7b;
+            background: #218838;
         }
     </style>
 </head>
@@ -88,7 +129,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -96,9 +137,9 @@
 
     <main>
         <section class="skills">
-            <h1>💻 Skills & Tools</h1>
-
-            <h2>🗣️ Languages</h2>
+            <h1>Skills & Tools 🌟</h1>
+        
+            <h2>Languages 🗣️</h2>
             <div class="skills-category">
                 <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" alt="Java">
                 <img src="https://img.shields.io/badge/Kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin">
@@ -106,8 +147,8 @@
                 <img src="https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
                 <img src="https://img.shields.io/badge/HTML-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
             </div>
-
-            <h2>⚙️ Tools & Apps</h2>
+        
+            <h2>Tools & Apps ⚙️</h2>
             <div class="skills-category">
                 <img src="https://img.shields.io/badge/Arduino-%2300979D.svg?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
                 <img src="https://img.shields.io/badge/Blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white" alt="Blender">
@@ -117,8 +158,8 @@
                 <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle">
                 <img src="https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white" alt="Salesforce">
             </div>
-
-            <h2>📱 Tools in Action</h2>
+        
+            <h2>Tools in Action 📱</h2>
             <div class="skills-category">
                 <img src="https://img.shields.io/badge/NetBeans-%231B6AC6.svg?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white" alt="NetBeans">
                 <img src="https://img.shields.io/badge/Visual_Studio-%235C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white" alt="Visual Studio">
@@ -143,7 +184,7 @@
             <li><a href="skills.html" class="active">Skills</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <p>&copy; 2024 Fuad Rahman Biswas. Crafted with 💻 and ☕.</p>
+        <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
     </footer>
 </body>
 </html>
