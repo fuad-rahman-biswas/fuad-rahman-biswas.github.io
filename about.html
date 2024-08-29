@@ -13,26 +13,18 @@
     <style>
         /* Base styles */
         body {
-            background: #f9f9f9;
+            background: #f4f4f9;
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #444;
             margin: 0;
             padding: 0;
         }
 
-        h1 {
-            font-size: 2.5em;
-            color: #28a745;
-            text-align: center;
-            margin-bottom: 20px;
-            animation: bounce 1.5s infinite;
-        }
-
         header {
-            background: #28a745;
-            padding: 10px 0;
+            background: #004d40;
             color: white;
+            padding: 20px 0;
         }
 
         nav ul {
@@ -50,96 +42,75 @@
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-weight: 500;
-            padding: 10px 15px;
+            font-weight: 600;
+            padding: 10px 20px;
             transition: background 0.3s, color 0.3s;
         }
 
         nav ul li a:hover,
         nav ul li a.active {
-            background: white;
-            color: #28a745;
+            background: #003d33;
+            color: #f4f4f9;
             border-radius: 5px;
         }
 
         .main-content {
-            padding: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: flex-start;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .about-text {
-            flex: 1;
-            max-width: 100%;
-            margin-right: 20px;
+        h1 {
+            font-size: 2.2em;
+            color: #004d40;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        .about-image {
-            flex: 1;
-            max-width: 450px;
-            width: 100%;
-            margin-left: 20px;
-            border-radius: 8px;
-            overflow: hidden;
+        p {
+            font-size: 1.1em;
+            margin: 15px 0;
+            line-height: 1.6;
         }
 
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
+        .highlight {
+            color: #004d40;
+            font-weight: bold;
         }
 
         ul {
-            list-style: none;
+            list-style-type: none;
             padding: 0;
-            margin: 20px 0;
         }
 
         ul li {
+            position: relative;
             padding: 10px 0;
+            margin-bottom: 15px;
             font-size: 1.1em;
-            background: #e9f5e9;
-            border-left: 5px solid #28a745;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            animation: fadeIn 2s ease-in-out;
+            color: #555;
+        }
+
+        ul li::before {
+            content: '•';
+            color: #004d40;
+            font-size: 1.5em;
+            position: absolute;
+            left: -30px;
+            top: 0;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background: #28a745;
+            background: #004d40;
             color: white;
             position: fixed;
             bottom: 0;
             width: 100%;
-        }
-
-        /* Keyframes for animations */
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-20px);
-            }
-            60% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
         }
     </style>
 </head>
@@ -157,26 +128,21 @@
     </header>
 
     <main class="main-content">
-        <div class="about-text">
-            <h1>Hey There! 👋</h1>
-            <p>Welcome to my world! I’m Fuad Rahman Biswas, a passionate software engineering student at Taylor's University, Malaysia. 🌟 My journey into the tech universe started with a burning curiosity for how things work and a relentless drive to solve problems in creative ways.</p>
-            
-            <p>🎓 As a student, I've built a solid foundation in programming and mathematics, with a keen focus on creating solutions that make a difference. Whether it's building sleek applications or diving into the world of Web 3.0 and blockchain, I'm all about turning ideas into reality! 🚀</p>
+        <h1>Hey There! 👋</h1>
+        <p>Welcome to my world! I’m <span class="highlight">Fuad Rahman Biswas</span>, a passionate software engineering student at Taylor's University, Malaysia. 🌟 My journey into the tech universe started with a burning curiosity for how things work and a relentless drive to solve problems in creative ways.</p>
+        
+        <p>🎓 As a student, I've built a solid foundation in programming and mathematics, with a keen focus on creating solutions that make a difference. Whether it's building sleek applications or diving into the world of Web 3.0 and blockchain, I'm all about turning ideas into reality! 🚀</p>
 
-            <p>🌍 Outside of the classroom, I’ve had the chance to work as an Adventure Guide and Cashier at National Geographic Ultimate Explorer, where I discovered a love for connecting with people and guiding them through exciting experiences. This adventure-packed job honed my skills in communication, teamwork, and customer service – and trust me, it was a blast! 🎢</p>
-            
-            <p>💻 When I’m not coding or guiding, you’ll find me experimenting with the latest tech, working on cool projects, or exploring the ever-evolving world of blockchain. My passion for technology is matched only by my curiosity to learn, create, and innovate! ✨</p>
+        <p>🌍 Outside of the classroom, I’ve had the chance to work as an Adventure Guide and Cashier at National Geographic Ultimate Explorer, where I discovered a love for connecting with people and guiding them through exciting experiences. This adventure-packed job honed my skills in communication, teamwork, and customer service – and trust me, it was a blast! 🎢</p>
+        
+        <p>💻 When I’m not coding or guiding, you’ll find me experimenting with the latest tech, working on cool projects, or exploring the ever-evolving world of blockchain. My passion for technology is matched only by my curiosity to learn, create, and innovate! ✨</p>
 
-            <ul>
-                <li>🎓 Pursuing Software Engineering at Taylor's University, Malaysia</li>
-                <li>🏆 Experienced in customer service and adventure guiding</li>
-                <li>💡 Skilled in software development, database management, and blockchain</li>
-                <li>🌟 Driven by innovation and a desire to make a positive impact</li>
-            </ul>
-        </div>
-        <div class="about-image">
-            <img src="images/profile.jpg" alt="Fuad Rahman Biswas">
-        </div>
+        <ul>
+            <li>🎓 Pursuing Software Engineering at Taylor's University, Malaysia</li>
+            <li>🏆 Experienced in customer service and adventure guiding</li>
+            <li>💡 Skilled in software development, database management, and blockchain</li>
+            <li>🌟 Driven by innovation and a desire to make a positive impact</li>
+        </ul>
     </main>
 
     <footer>
