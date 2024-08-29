@@ -85,7 +85,7 @@ nav ul li a.active::after {
 }
 
 .hero-text h1 {
-    font-size: 4rem; /* Bigger font size for the main line */
+    font-size: 3rem; /* Bigger font size for the main line */
     margin: 0;
 }
 
@@ -96,7 +96,6 @@ nav ul li a.active::after {
 
 .cta-button {
     grid-row: 2;
-    padding: 0.75rem 1.5rem;
     font-size: 1.2rem;
     color: white;
     background: #333;
