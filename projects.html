@@ -3,31 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills - Fuad Rahman Biswas</title>
+    <title>Projects - Fuad Rahman Biswas</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Base styles */
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-        
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        main {
-            flex: 1;
-        }
-        
+    <link rel="stylesheet" href="style.css">
+    <skills>
         header {
             background: #383549; /* Dark grayish-blue color */
             color: white;
             padding: 1rem 0;
             text-align: center;
         }
-        
+
         nav ul {
             list-style: none;
             display: flex;
@@ -35,11 +21,11 @@
             padding: 0;
             margin: 0;
         }
-        
+
         nav ul li {
             margin: 0 15px;
         }
-        
+
         nav ul li a {
             color: white;
             text-decoration: none;
@@ -47,71 +33,24 @@
             padding: 10px 20px;
             transition: background 0.3s, color 0.3s;
         }
-        
+
         nav ul li a:hover,
         nav ul li a.active {
             background: #5a2d9e; /* Darker purple for hover and active state */
             color: #f0f0f0;
             border-radius: 5px;
         }
-        
-        .main-content {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        h1 {
-            font-size: 2.2em;
-            color: #383549; /* Matching the header color */
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        p {
-            font-size: 1.1em;
-            margin: 15px 0;
-            line-height: 1.6;
-        }
-        
-        .highlight {
-            color: #383549; /* Matching the header color */
-            font-weight: bold;
-        }
-        
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin-left: 30px; /* Increased indent */
-        }
-        
-        ul li {
-            position: relative;
-            padding: 10px 0;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-            color: #555;
-        }
-        
-        ul li::before {
-            content: '•';
-            color: #383549; /* Matching the header color */
-            font-size: 1.5em;
-            position: absolute;
-            left: -30px;
-            top: 0;
-        }
-        
-        footer {
+
+
+
+
+footer {
             background: #383549; /* Dark grayish-blue color */
             color: white;
             padding: 20px;
             text-align: center;
         }
-        
+
         footer ul {
             list-style: none;
             display: flex;
@@ -119,11 +58,11 @@
             padding: 0;
             margin: 0;
         }
-        
+
         footer ul li {
             margin: 0 15px;
         }
-        
+
         footer ul li a {
             color: white;
             text-decoration: none;
@@ -131,102 +70,66 @@
             padding: 10px 20px;
             transition: background 0.3s, color 0.3s;
         }
-        
+
         footer ul li a:hover,
         footer ul li a.active {
             background: #5a2d9e; /* Darker purple for hover and active state */
             color: #f0f0f0;
             border-radius: 5px;
         }
-        
-        /* Centering the GitHub links as buttons */
-        .project-item {
-            margin-bottom: 30px;
-        }
-        
-        .project-item a {
-            display: inline-block;
-            background-color: #5a2d9e; /* Darker purple */
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-            text-align: center;
-        }
-        
-        .project-item a:hover {
-            background-color: #4a1d7e; /* Even darker purple for hover */
-        }
-        
-        .project-item {
-            text-align: center; /* Center align content in each project item */
-        }
-    </style>
-</head>
+    </skills>
+</head>    
 <body>
     <header>
-        <h1>Fuad Rahman Biswas</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html" class="active">Skills</a></li>
+                <li><a href="skills.html">Skills</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="main-content">
-            <h1>Skills & Tools</h1>
-        
-            <h2>Languages</h2>
-            <div class="skills-category">
-                <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" alt="Java">
-                <img src="https://img.shields.io/badge/Kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin">
-                <img src="https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-                <img src="https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
-                <img src="https://img.shields.io/badge/HTML-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
+        <section class="projects">
+            <h1>Projects 🌟</h1>
+            <div class="project-item">
+                <h2>Project 1: Currency Converter 💱</h2>
+                <p>This Java application allows users to convert between various currencies with a user-friendly interface.</p>
+                <p><strong>Technologies Used:</strong> Java, Swing</p>
+                <a href="https://github.com/fuad-rahman-biswas/Currency-Converter" target="_blank">View on GitHub</a>
             </div>
-        
-            <h2>Tools & Apps</h2>
-            <div class="skills-category">
-                <img src="https://img.shields.io/badge/Arduino-%2300979D.svg?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
-                <img src="https://img.shields.io/badge/Blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white" alt="Blender">
-                <img src="https://img.shields.io/badge/Figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
-                <img src="https://img.shields.io/badge/Git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-                <img src="https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=google-colab&logoColor=white" alt="Google Colab">
-                <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle">
-                <img src="https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white" alt="Salesforce">
+            <div class="project-item">
+                <h2>Project 2: Budget Tracker Application 📊</h2>
+                <p>Track expenses and income, categorize transactions, and view current balance with this MySQL-integrated app.</p>
+                <p><strong>Technologies Used:</strong> Java, MySQL, Swing</p>
+                <a href="https://github.com/fuad-rahman-biswas/budget-tracker" target="_blank">View on GitHub</a>
             </div>
-        
-            <h2>Tools in Action</h2>
-            <div class="skills-category">
-                <img src="https://img.shields.io/badge/NetBeans-%231B6AC6.svg?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white" alt="NetBeans">
-                <img src="https://img.shields.io/badge/Visual_Studio-%235C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white" alt="Visual Studio">
-                <img src="https://img.shields.io/badge/Spyder-FF0000?style=for-the-badge&logo=spyder&logoColor=white" alt="Spyder">
-                <img src="https://img.shields.io/badge/Android_Studio-%233DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white" alt="Android Studio">
+            <div class="project-item">
+                <h2>Project 3: Quiz Application ❓</h2>
+                <p>A web-based quiz app featuring user registration, quiz-taking, and score tracking.</p>
+                <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+                <a href="https://github.com/fuad-rahman-biswas/quiz-application" target="_blank">View on GitHub</a>
             </div>
-        
-            <h2>CV Download</h2>
-            <a href="Fuad_Rahman_Biswas_CV.pdf" class="cv-button" download>Download CV</a>
+            <div class="project-item">
+                <h2>Project 4: Currency Converter (Android) 📱</h2>
+                <p>An Android app for currency conversion with support for a wide range of currencies.</p>
+                <p><strong>Technologies Used:</strong> Java, Android Studio, XML</p>
+                <a href="https://github.com/fuad-rahman-biswas/Global-exchange" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-item">
+                <h2>Project 5: Weather App ☀️🌧️</h2>
+                <p>Provides current weather conditions and forecasts based on location.</p>
+                <p><strong>Technologies Used:</strong> Python</p>
+                <a href="https://github.com/fuad-rahman-biswas/WeatherApp" target="_blank">View on GitHub</a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Fuad Rahman Biswas</p>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html" class="active">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+        <p>&copy; 2024 Fuad Rahman Biswas. Crafted with 💻 and ☕.</p>
     </footer>
 </body>
 </html>
