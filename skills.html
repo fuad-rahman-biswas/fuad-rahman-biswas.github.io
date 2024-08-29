@@ -7,19 +7,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-                /* Base styles */
+        /* Base styles */
         html, body {
             height: 100%;
             margin: 0;
+            font-family: 'Roboto', sans-serif;
         }
         
         body {
             display: flex;
             flex-direction: column;
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Soft gradient background */
         }
         
         main {
             flex: 1;
+            padding: 20px;
         }
         
         header {
@@ -27,6 +30,7 @@
             color: white;
             padding: 1rem 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         
         nav ul {
@@ -63,6 +67,7 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #ffffff, #f7f9fc); /* Light gradient for main content */
         }
         
         h1 {
@@ -111,6 +116,7 @@
             color: white;
             padding: 20px;
             text-align: center;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
         }
         
         footer ul {
@@ -139,7 +145,31 @@
             color: #f0f0f0;
             border-radius: 5px;
         }
+        
+        .skills-category {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
 
+        .cv-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            color: #ffffff;
+            background: #5a2d9e;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .cv-button:hover {
+            background: #4a1d7b;
+            color: #e0e0e0;
+        }
     </style>
 </head>
 <body>
@@ -183,28 +213,25 @@
             <div class="skills-category">
                 <img src="https://img.shields.io/badge/NetBeans-%231B6AC6.svg?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white" alt="NetBeans">
                 <img src="https://img.shields.io/badge/Visual_Studio-%235C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white" alt="Visual Studio">
-                <img src="https://img.shields.io/badge/Spyder-FF0000?style=for-the-badge&logo=spyder-ide&logoColor=white" alt="Spyder">
-                <img src="https://img.shields.io/badge/Android-%233DDC84.svg?style=for-the-badge&logo=android&logoColor=white" alt="Android">
-                <img src="https://img.shields.io/badge/MySQL-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+                <img src="https://img.shields.io/badge/Spyder-FF0000?style=for-the-badge&logo=spyder&logoColor=white" alt="Spyder">
+                <img src="https://img.shields.io/badge/Android%20Studio-%233DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white" alt="Android Studio">
             </div>
-        </section>
-
-        <section class="cv">
-            <h2>📄 CV</h2>
-            <p>View or download my CV to learn more about my qualifications and experience:</p>
-            <a href="images/CV.pdf" download class="cv-button">Download CV</a>
-            <a href="images/CV.pdf" target="_blank" class="cv-button">View CV</a>
+        
+            <h2>CV Download 📄</h2>
+            <a href="path_to_your_cv_file.pdf" class="cv-button" download>Download My CV</a>
         </section>
     </main>
 
     <footer>
-        <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="skills.html" class="active">Skills</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>
