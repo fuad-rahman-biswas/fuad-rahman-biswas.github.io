@@ -80,7 +80,7 @@ nav ul li a.active::after {
 }
 
 .hero-text {
-    margin-bottom: 20px; /* Space between text and button */
+    margin-bottom: 40px; /* Increased space between text and button */
 }
 
 .hero-text h1 {
@@ -102,7 +102,7 @@ nav ul li a.active::after {
     background: #333;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px; /* Space between text and button */
+    margin-top: 40px; /* Space between text and button */
     animation: pulse 1s infinite;
 }
 
