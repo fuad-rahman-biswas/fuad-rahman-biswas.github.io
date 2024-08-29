@@ -98,7 +98,7 @@ nav ul li a.active::after {
     background: #333;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px; /* Space between text and button */
+    margin-top: 40px; /* Space between text and button */
 }
 
 .cta-button:hover {
