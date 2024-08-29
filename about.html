@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Add a pop of color and animation */
+        /* Background with gradient */
         body {
-            background: #f0f0f0;
+            background: linear-gradient(to right, #f0f0f0, #d1e8e2);
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: #333;
@@ -26,7 +26,11 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding: 40px;
+            padding: 60px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px;
         }
 
         .about-text {
@@ -37,6 +41,8 @@
         .about-image img {
             width: 450px;
             height: 450px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         ul {
@@ -48,10 +54,39 @@
             padding: 8px 0;
             font-size: 1.2em;
             animation: fadeIn 2s ease-in-out;
+            position: relative;
+            padding-left: 25px;
         }
 
-        nav ul li a.active {
+        ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-size: 1.2em;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #28a745;
             text-decoration: underline;
         }
 
@@ -60,6 +95,7 @@
             padding: 20px;
             background: #28a745;
             color: white;
+            border-radius: 0 0 10px 10px;
         }
 
         /* Keyframes for animations */
