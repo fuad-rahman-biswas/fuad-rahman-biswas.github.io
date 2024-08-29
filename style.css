@@ -413,27 +413,6 @@ footer a:hover {
     transform: scale(1.05);
 }
 
-/* Footer Styling */
-footer {
-    background: #343a40; /* Consistent background color */
-    color: white;
-    text-align: center;
-    padding: 20px 10px; /* Consistent padding */
-    position: relative;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer a {
-    color: #28a745; /* Consistent color for links */
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -464,15 +443,3 @@ footer a:hover {
     }
 }
 
-/* Animations */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
