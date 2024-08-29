@@ -63,23 +63,24 @@ nav ul li a.active::after {
 }
 
 .hero-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto auto auto;
     align-items: center;
-    position: relative;
+    justify-items: center;
+    text-align: center;
 }
 
 .hero-image {
-    width: 40%; /* Keep the image size as it was */
+    width: 80%; /* Keep the image size as it was */
     height: auto;
     border-radius: 50%;
-    margin-right: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    grid-row: span 2; /* Make image span multiple rows if needed */
+    margin-bottom: 20px;
 }
 
 .hero-text {
-    max-width: 700px; /* Adjust as needed */
-    text-align: center;
+    grid-row: 1;
     margin: 0;
 }
 
@@ -94,7 +95,7 @@ nav ul li a.active::after {
 }
 
 .cta-button {
-    display: inline-block;
+    grid-row: 2;
     padding: 0.75rem 1.5rem;
     font-size: 1.2rem;
     color: white;
@@ -102,13 +103,11 @@ nav ul li a.active::after {
     text-decoration: none;
     border-radius: 5px;
     animation: pulse 1.5s infinite;
-    margin-top: 1rem;
 }
 
 .cta-button:hover {
     background: #555;
 }
-
 
 .card h3 {
     margin-top: 0;
@@ -164,6 +163,7 @@ footer {
         transform: scale(1);
     }
 }
+
 
 @keyframes slideInUp {
     from {
