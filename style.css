@@ -114,14 +114,14 @@ nav ul li a.active::after {
 }
 
 .highlights h2 {
-    font-size: 2.5rem; /* Size for section heading */
+    font-size: 2.5em;
     color: #333;
     margin-bottom: 30px;
 }
 
 .highlight-cards {
     display: flex;
-    justify-content: center; /* Center cards horizontally */
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -132,23 +132,23 @@ nav ul li a.active::after {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1;
-    max-width: 300px; /* Ensure cards don't get too wide */
+    max-width: 300px;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
+.card:hover{
     background: #e0f7fa;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 
 .card h3 {
     margin-top: 0;
 }
 
-
 footer {
     text-align: center;
-    padding: 1rem;
+    padding: 20px;
     background: #333;
     color: white;
 }
@@ -196,7 +196,6 @@ footer {
         transform: scale(1);
     }
 }
-
 
 @keyframes slideInUp {
     from {
