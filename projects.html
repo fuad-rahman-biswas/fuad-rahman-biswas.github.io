@@ -6,6 +6,99 @@
     <title>Projects - Fuad Rahman Biswas</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Consistent background color with the About Me page */
+        body {
+            background: #e9ecef;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header styling */
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            background: #28a745;
+            padding: 10px;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover,
+        header nav ul li a.active {
+            color: #d4edda;
+        }
+
+        /* Projects section styling */
+        .projects {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .projects h1 {
+            font-size: 3em;
+            color: #28a745;
+            margin-bottom: 40px;
+        }
+
+        .project-item {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-item h2 {
+            font-size: 1.8em;
+            color: #343a40;
+        }
+
+        .project-item p {
+            font-size: 1.2em;
+            color: #6c757d;
+        }
+
+        .project-item a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .project-item a:hover {
+            background: #218838;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #28a745;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,7 +106,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
