@@ -1,8 +1,8 @@
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .hero {
         flex-direction: column;
         height: auto;
-    }
+    }*/
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -24,12 +24,10 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 0;
-    flex-direction: column;/* wasnt there*/
-    align-items: center;/*wasnt there*/
 }
 
 nav ul li {
-    margin: 10px 0;/* was 0 15px*/
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -59,7 +57,6 @@ nav ul li a:hover::after,
 
 .hero {
     display: flex;
-    flex-direction: column; /* wasnt there*/
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -73,15 +70,14 @@ nav ul li a:hover::after,
 
 
 .hero-image {
-    position: relative; /*was absolute*/
+    position: absolute; 
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 80%; /* was 40*/
     height: auto;
     border-radius: 50%;
-    margin-left: 0px; /*was 20*/
-    margin-bottom: 20px; /*didnt exist*/
+    margin-left: 20px; 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -89,18 +85,18 @@ nav ul li a:hover::after,
     position: relative;
     z-index: 1;
     max-width: 500px;
-    margin-left: 0; /* was 400px*/
-    text-align: center; /*was left*/
+    margin-left: 400px; 
+    text-align: left; 
     animation: fadeIn 2s ease-in-out;
 }
 
 .hero-text h1 {
-    font-size: 2em; /* was 3em*/
+    font-size: 3em; 
     margin-bottom: 20px;
 }
 
 .hero-text p {
-    font-size: 1em; /* was 1.2 em*/
+    font-size: 1.2em; 
     margin-bottom: 30px;
     animation: fadeIn 2.5s ease-in-out;
 }
@@ -138,8 +134,6 @@ nav ul li a:hover::after,
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
-    flex-direction: column;/*wasnt there*/
-    align-items: center;/*wasnt there*/
 }
 
 .card {
@@ -235,19 +229,16 @@ footer {
     border-radius: 8px;
     max-width: 1200px;
     margin: 20px auto;
-    flex-direction: column; /*wasnt there*/
-    text-align: center; /*wasnt there*/
 }
 
 .about-text {
     flex: 1;
-    margin-right: 0; /* Space between text and image */ /* was 20px*/
-    margin-bottom: 20px; /*wasnt there*/
+    margin-right: 20px; /* Space between text and image */ 
     text-align: left;
 }
 
 .about-text h1, .about-text h2 {
-    font-size: 2em; /* was 2.5 em*/
+    font-size: 2.5em; 
     color: #383549;
     margin-bottom: 20px;
 }
@@ -269,7 +260,7 @@ footer {
 
 .about-image img {
     width: 100%;
-    max-width: 80%; /* Adjust based on your image size */ /*was 500px*/
+    max-width: 500px; /* Adjust based on your image size */ 
     height: auto;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -385,7 +376,6 @@ footer {
     gap: 20px; /* Increased gap for better spacing */
     justify-content: center;
     margin-bottom: 40px; /* More space below each category */
-    flex-direction: column; /*wasnt there*/
 }
 
 .skills-category img {
