@@ -59,54 +59,52 @@ nav ul li a.active::after {
     color: white;
     text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
 .hero-content {
-    display: grid;
-    grid-template-rows: auto auto auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     text-align: center;
 }
 
 .hero-image {
-    width: 80%; /* Keep the image size as it was */
+    width: 40%; /* Maintain the image size */
     height: auto;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    grid-row: span 2; /* Make image span multiple rows if needed */
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Space between image and text */
 }
 
 .hero-text {
-    grid-row: 1;
-    margin: 0;
+    margin-bottom: 20px; /* Space between text and button */
 }
 
 .hero-text h1 {
-    font-size: 3rem; /* Bigger font size for the main line */
+    font-size: 3.5rem; /* Larger font size for the main line */
     margin: 0;
 }
 
 .hero-text p {
-    font-size: 1.5rem; /* Smaller font size for the next line */
-    margin: 1rem 0 2rem;
+    font-size: 1.2rem; /* Smaller font size for the next line */
+    margin: 0;
 }
 
 .cta-button {
-    grid-row: 2;
+    padding: 0.75rem 1.5rem;
     font-size: 1.2rem;
     color: white;
     background: #333;
     text-decoration: none;
     border-radius: 5px;
-    animation: pulse 1.5s infinite;
+    margin-top: 20px; /* Space between text and button */
 }
 
 .cta-button:hover {
     background: #555;
 }
+
 
 .card h3 {
     margin-top: 0;
