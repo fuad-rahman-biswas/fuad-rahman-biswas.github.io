@@ -7,36 +7,69 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Base styles */
+                /* Base styles */
         html, body {
             height: 100%;
             margin: 0;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            background-color: #f4f4f4;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
         }
         
         main {
+            flex: 1;
+        }
+        
+        header {
+            background: #383549; /* Dark grayish-blue color */
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        nav ul li a:hover,
+        nav ul li a.active {
+            background: #5a2d9e; /* Darker purple for hover and active state */
+            color: #f0f0f0;
+            border-radius: 5px;
+        }
+        
+        .main-content {
+            max-width: 800px;
+            margin: 40px auto;
             padding: 20px;
-            margin: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         
         h1 {
-            font-size: 2.4em;
-            color: #007bff;
+            font-size: 2.2em;
+            color: #383549; /* Matching the header color */
             text-align: center;
             margin-bottom: 20px;
-        }
-        
-        h2 {
-            color: #333;
-            margin-top: 20px;
-            font-size: 1.8em;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
         }
         
         p {
@@ -46,14 +79,14 @@
         }
         
         .highlight {
-            color: #007bff;
-            font-weight: 700;
+            color: #383549; /* Matching the header color */
+            font-weight: bold;
         }
         
         ul {
             list-style-type: none;
             padding: 0;
-            margin-left: 20px;
+            margin-left: 30px; /* Increased indent */
         }
         
         ul li {
@@ -66,60 +99,67 @@
         
         ul li::before {
             content: '•';
-            color: #007bff;
+            color: #383549; /* Matching the header color */
             font-size: 1.5em;
             position: absolute;
-            left: -25px;
+            left: -30px;
             top: 0;
         }
         
-        .skills-category {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 10px;
+        footer {
+            background: #383549; /* Dark grayish-blue color */
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
-
-        .cv-button {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            color: #ffffff;
-            background-color: #007bff;
+        
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+        
+        footer ul li {
+            margin: 0 15px;
+        }
+        
+        footer ul li a {
+            color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: 700;
+            font-weight: 600;
+            padding: 10px 20px;
             transition: background 0.3s, color 0.3s;
         }
-
-        .cv-button:hover {
-            background-color: #0056b3;
-            color: #ffffff;
+        
+        footer ul li a:hover,
+        footer ul li a.active {
+            background: #5a2d9e; /* Darker purple for hover and active state */
+            color: #f0f0f0;
+            border-radius: 5px;
         }
+
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Fuad Rahman Biswas</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="skills.html" class="active">Skills</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section class="skills">
-            <h1>Skills & Tools</h1>
+            <h1>Skills & Tools 🌟</h1>
         
-            <h2>Languages</h2>
+            <h2>Languages 🗣️</h2>
             <div class="skills-category">
                 <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" alt="Java">
                 <img src="https://img.shields.io/badge/Kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin">
@@ -128,7 +168,7 @@
                 <img src="https://img.shields.io/badge/HTML-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
             </div>
         
-            <h2>Tools & Apps</h2>
+            <h2>Tools & Apps ⚙️</h2>
             <div class="skills-category">
                 <img src="https://img.shields.io/badge/Arduino-%2300979D.svg?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
                 <img src="https://img.shields.io/badge/Blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white" alt="Blender">
@@ -139,23 +179,32 @@
                 <img src="https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white" alt="Salesforce">
             </div>
         
-            <h2>Tools in Action</h2>
+            <h2>Tools in Action 📱</h2>
             <div class="skills-category">
                 <img src="https://img.shields.io/badge/NetBeans-%231B6AC6.svg?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white" alt="NetBeans">
                 <img src="https://img.shields.io/badge/Visual_Studio-%235C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white" alt="Visual Studio">
-                <img src="https://img.shields.io/badge/Spyder-FF0000?style=for-the-badge&logo=spyder&logoColor=white" alt="Spyder">
-                <img src="https://img.shields.io/badge/Android_Studio-%233DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white" alt="Android Studio">
+                <img src="https://img.shields.io/badge/Spyder-FF0000?style=for-the-badge&logo=spyder-ide&logoColor=white" alt="Spyder">
+                <img src="https://img.shields.io/badge/Android-%233DDC84.svg?style=for-the-badge&logo=android&logoColor=white" alt="Android">
+                <img src="https://img.shields.io/badge/MySQL-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
             </div>
-        
-            <h2>CV Download</h2>
-            <a href="Fuad_Rahman_Biswas_CV.pdf" class="cv-button" download>Download CV</a>
+        </section>
+
+        <section class="cv">
+            <h2>📄 CV</h2>
+            <p>View or download my CV to learn more about my qualifications and experience:</p>
+            <a href="images/CV.pdf" download class="cv-button">Download CV</a>
+            <a href="images/CV.pdf" target="_blank" class="cv-button">View CV</a>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
-        </div>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html" class="active">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
     </footer>
 </body>
 </html>
