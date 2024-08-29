@@ -78,7 +78,7 @@ nav ul li a.active::after {
 }
 
 .hero-text {
-    margin-bottom: 20px; /* Space between text and button */
+    margin-bottom: 40px; /* Space between text and button */
 }
 
 .hero-text h1 {
