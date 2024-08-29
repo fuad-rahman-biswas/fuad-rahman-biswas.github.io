@@ -74,7 +74,7 @@ nav ul li a:hover::after,
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 80%; /* was 40*/
+    width: 40%; 
     height: auto;
     border-radius: 50%;
     margin-left: 20px; 
