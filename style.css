@@ -134,6 +134,42 @@ header nav ul li a.active {
     margin-top: 0;
 }
 
+/* Footer Styling */
+footer {
+    background: #343a40; /* Consistent background color */
+    color: white;
+    text-align: center;
+    padding: 20px 10px; /* Consistent padding */
+    position: relative;
+}
+
+footer .footer-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display links horizontally */
+    justify-content: center; /* Center align the links */
+}
+
+footer .footer-links li {
+    margin: 0 15px; /* Space between links */
+}
+
+footer .footer-links a {
+    color: #28a745; /* Consistent color for links */
+    text-decoration: none;
+    font-weight: bold; /* Optional: make links bold */
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+}
+
+
 /* About Section */
 .about {
     display: flex;
