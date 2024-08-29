@@ -355,40 +355,29 @@ footer a:hover {
 }
 
 .project-item {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    padding: 20px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.project-item:hover {
-    background: #e0f7fa;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.project-item h2 {
-    font-size: 1.8em;
-    color: #333;
-}
-
-.project-item p {
-    font-size: 1.1em;
-    color: #555;
+    margin-bottom: 30px;
 }
 
 .project-item a {
     display: inline-block;
-    margin-top: 10px;
-    font-size: 1.1em;
-    color: #4CAF50;
+    background-color: #5a2d9e; /* Darker purple */
+    color: white;
     text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-align: center;
 }
 
 .project-item a:hover {
-    text-decoration: underline;
+    background-color: #4a1d7e; /* Even darker purple for hover */
 }
+
+.project-item {
+    text-align: center; /* Center align content in each project item */
+}
+
 
 /* Skills Section */
 .skills {
