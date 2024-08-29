@@ -9,7 +9,7 @@ body {
 
 /* Header Styling */
 header {
-    background: #343a40; /* Dark grey background */
+    background: #383549; /* Dark grey background */
     color: white;
     padding: 10px 0; /* Padding for spacing */
     text-align: center;
@@ -42,7 +42,7 @@ header nav ul li a.active {
 
 /* Footer Styling */
 footer {
-    background: #343a40; /* Same dark grey background */
+    background: #383549; /* Same dark grey background */
     color: white;
     text-align: center;
     padding: 20px 10px; /* Padding for spacing */
