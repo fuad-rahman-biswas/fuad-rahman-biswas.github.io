@@ -6,76 +6,142 @@
     <title>Contact - Fuad Rahman Biswas</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-</head>
-    
-    <style>/* Consistent background color with the About Me page */
-body {
-    background: #e9ecef;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
+    <style>
+        /* Base styles */
+        body {
+            background: #e9ecef;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Header styling */
-header {
-    background: #383549; 
-    padding: 10px 0; /* Same as about.html */
-}
+        header {
+            background: #383549; /* Dark grayish-blue color */
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
 
-header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
 
-header nav ul li {
-    margin: 0 15px;
-}
+        header nav ul li {
+            margin: 0 15px;
+        }
 
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
-    padding: 5px 10px;
-}
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            transition: background 0.3s, color 0.3s;
+        }
 
-header nav ul li a:hover,
-header nav ul li a.active {
-    color: #28a745; /* Same green as about.html */
-}
+        header nav ul li a:hover,
+        header nav ul li a.active {
+            background: #5a2d9e; /* Darker purple for hover and active state */
+            color: #f0f0f0;
+            border-radius: 5px;
+        }
 
-/* Footer styling */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #383549; /* Same as header background */
-    color: white;
-    margin-top: 40px;
-}
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-footer .footer-links {
-    list-style: none;
-    padding: 0;
-}
+        h1 {
+            font-size: 2.2em;
+            color: #383549;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-footer .footer-links li {
-    display: inline;
-    margin: 0 10px;
-}
+        form {
+            display: flex;
+            flex-direction: column;
+        }
 
-footer .footer-links a {
-    color: white;
-    text-decoration: none;
-}
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
 
-footer .footer-links a:hover {
-    text-decoration: underline;
-}
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background: #383549;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background: #5a2d9e;
+        }
+
+        .contact-details {
+            margin-top: 20px;
+        }
+
+        .contact-details a {
+            color: #383549;
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #383549; /* Dark grayish-blue color */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer .footer-links a:hover,
+        footer .footer-links a.active {
+            color: #5a2d9e; /* Darker purple for hover and active state */
+            text-decoration: underline;
+        }
     </style>
-    
+</head>
 <body>
     <header>
         <nav>
@@ -122,6 +188,5 @@ footer .footer-links a:hover {
         </ul>
         <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
