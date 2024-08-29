@@ -9,7 +9,7 @@ body {
 header {
     background: #383549; 
     color: white;
-    padding: 20px 0;
+    padding: 1rem 0;
     text-align: center;
 }
 
@@ -18,10 +18,11 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 1rem;
 }
 
 nav ul li a {
@@ -45,9 +46,9 @@ nav ul li a.active::after {
 }
 
 nav ul li a:hover::after,
-        nav ul li a.active::after {
-            width: 100%;
-        }
+nav ul li a.active::after {
+    width: 100%;
+}
 
 .hero {
     display: flex;
@@ -62,50 +63,57 @@ nav ul li a:hover::after,
     animation: fadeInUp 1.5s ease-in-out;
 }
 
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 .hero-image {
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 40%;
+    width: 30%;
     height: auto;
     border-radius: 50%;
-    margin-left: 50px;
+    margin-left: 2rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero-text {
     position: relative;
     z-index: 1;
-    max-width: 900px;
-    margin-left: 650px;
+    max-width: 600px;
+    margin-left: 40%;
     text-align: left;
     animation: fadeIn 2s ease-in-out;
 }
 
 .hero-text h1 {
-    font-size: 4em;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero-text p {
-    font-size: 1.7em;
-    max-width: 700px;
-    margin-bottom: 80px;
+    font-size: 1.2rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
     animation: fadeIn 2.5s ease-in-out;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 10px 20px;
-    font-size: 2em;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
     color: white;
     background: #333;
     text-decoration: none;
     border-radius: 5px;
     animation: pulse 1.5s infinite;
-    margin-left: 300px;
+    margin-top: 1rem;
 }
 
 .cta-button:hover {
@@ -113,28 +121,28 @@ nav ul li a:hover::after,
 }
 
 .highlights {
-    padding: 40px 20px;
+    padding: 2rem;
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
 }
 
 .highlights h2 {
-    font-size: 2.5em;
+    font-size: 2rem;
     color: #333;
-    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
 }
 
 .highlight-cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1.5rem;
 }
 
 .card {
     background: white;
-    padding: 20px;
+    padding: 1.25rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1;
@@ -142,10 +150,9 @@ nav ul li a:hover::after,
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.card:hover{
+.card:hover {
     background: #e0f7fa;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
 }
 
 .card h3 {
@@ -154,7 +161,7 @@ nav ul li a:hover::after,
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 1rem;
     background: #333;
     color: white;
 }
@@ -213,6 +220,7 @@ footer {
         transform: translateY(0);
     }
 }
+
 
 
 .about {
