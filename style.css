@@ -267,7 +267,6 @@ footer a:hover {
     margin-bottom: 30px;
 }
 
-/* Projects Section */
 .projects {
     padding: 40px 20px;
     background: #ffffff;
@@ -285,52 +284,62 @@ footer a:hover {
 }
 
 .project-item {
-    margin-bottom: 30px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+    background: #e0f7fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h2 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.project-item p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.project-item a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .project-card {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.project-card:hover {
-    background-color: #80e7f2;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .project-card h3 {
     margin-top: 0;
 }
 
-/* Ensure button visibility */
-.project-item a {
-    display: inline-block;
-    background-color: #5a2d9e;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
-    visibility: visible; /* Ensure visibility even without hover */
-    opacity: 1; /* Make button fully visible */
-}
-
-.project-item a:hover {
-    background-color: #4a1d7e;
-}
-
-/* Ensure button visibility */
-.project-item a {
-    visibility: visible; /* Ensure visibility even without hover */
-}
 
 
 /* About Section */
