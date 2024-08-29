@@ -156,6 +156,7 @@ nav ul li a:hover::after,
     font-size: 2.5em;
     margin-bottom: 20px;
     max-width: 900px;
+    margin-left:100px;
 }
 
 .hero-text p {
