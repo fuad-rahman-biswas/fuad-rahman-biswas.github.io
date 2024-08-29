@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-                /* Base styles */
+        /* Base styles */
         html, body {
             height: 100%;
             margin: 0;
@@ -139,7 +139,31 @@
             color: #f0f0f0;
             border-radius: 5px;
         }
-
+        
+        /* Centering the GitHub links as buttons */
+        .project-item {
+            margin-bottom: 30px;
+        }
+        
+        .project-item a {
+            display: inline-block;
+            background-color: #5a2d9e; /* Darker purple */
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            text-align: center;
+        }
+        
+        .project-item a:hover {
+            background-color: #4a1d7e; /* Even darker purple for hover */
+        }
+        
+        .project-item {
+            text-align: center; /* Center align content in each project item */
+        }
     </style>
 </head>
 <body>
