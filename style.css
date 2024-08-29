@@ -176,6 +176,29 @@ footer a:hover {
     text-decoration: underline;
 }
 
+footer ul.footer-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0;       /* Remove padding */
+    margin: 0;        /* Remove margin */
+    display: flex;    /* Align items in a row */
+    justify-content: center; /* Center the links */
+}
+
+footer ul.footer-links li {
+    margin: 0 15px; /* Add space between links */
+}
+
+footer ul.footer-links li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #ffffff; /* Set link color */
+}
+
+footer ul.footer-links li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+
 /* Animations */
 @keyframes pulse {
     0% {
