@@ -79,31 +79,28 @@ nav ul li a:hover::after,
 .hero-text {
     position: relative;
     z-index: 1;
-    max-width: 700px;
-    margin-left: 400px;
+    max-width: 900px;
+    margin-left: 650px;
     text-align: left;
     animation: fadeIn 2s ease-in-out;
 }
 
 .hero-text h1 {
-    font-size: 2.5em;
+    font-size: 4em;
     margin-bottom: 20px;
-    max-width: 900px;
-    margin-left: 100px;
 }
 
 .hero-text p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+    font-size: 1.7em;
+    max-width: 700px;
+    margin-bottom: 80px;
     animation: fadeIn 2.5s ease-in-out;
-    max-width: 900px;
-    margin-left: 200px;
 }
 
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-size: 2em;
     color: white;
     background: #333;
     text-decoration: none;
