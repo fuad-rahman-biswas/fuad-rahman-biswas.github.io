@@ -9,9 +9,9 @@ body {
 
 /* Header Styling */
 header {
-    background: #343a40; /* Consistent background color */
+    background: #343a40; /* Dark grey background */
     color: white;
-    padding: 10px 0; /* Consistent padding */
+    padding: 10px 0; /* Padding for spacing */
     text-align: center;
 }
 
@@ -38,6 +38,46 @@ header nav ul li a {
 header nav ul li a:hover,
 header nav ul li a.active {
     color: #28a745; /* Green color for active and hover */
+}
+
+/* Footer Styling */
+footer {
+    background: #343a40; /* Same dark grey background */
+    color: white;
+    text-align: center;
+    padding: 20px 10px; /* Padding for spacing */
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #28a745; /* Same green color for links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cta-button:hover {
+    background: #555;
+    animation: pulse 1s infinite;
 }
 
 /* Hero Section */
@@ -132,41 +172,6 @@ header nav ul li a.active {
 
 .project-card h3 {
     margin-top: 0;
-}
-
-/* Footer Styling */
-footer {
-    background: #343a40; /* Consistent background color */
-    color: white;
-    text-align: center;
-    padding: 20px 10px; /* Consistent padding */
-    position: relative;
-}
-
-footer .footer-links {
-    list-style: none; /* Remove bullet points */
-    padding: 0;
-    margin: 0;
-    display: flex; /* Display links horizontally */
-    justify-content: center; /* Center align the links */
-}
-
-footer .footer-links li {
-    margin: 0 15px; /* Space between links */
-}
-
-footer .footer-links a {
-    color: #28a745; /* Consistent color for links */
-    text-decoration: none;
-    font-weight: bold; /* Optional: make links bold */
-}
-
-footer .footer-links a:hover {
-    text-decoration: underline;
-}
-
-footer p {
-    margin: 0;
 }
 
 
