@@ -18,69 +18,74 @@
         
         /* Header Styling */
         header {
-            background: #343a40; /* Dark grey background */
+            background: #383549; /* Dark grayish-blue color */
             color: white;
-            padding: 20px 0; /* Increased padding for larger header */
+            padding: 1rem 0;
             text-align: center;
         }
-        
-        header nav ul {
+
+        nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
             padding: 0;
             margin: 0;
         }
-        
-        header nav ul li {
+
+        nav ul li {
             margin: 0 15px;
         }
-        
-        header nav ul li a {
+
+        nav ul li a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-            padding: 5px 10px;
-            font-size: 1.2em; /* Ensure font size is consistent */
+            font-weight: 600;
+            padding: 10px 20px;
+            transition: background 0.3s, color 0.3s;
         }
-        
-        header nav ul li a:hover,
-        header nav ul li a.active {
-            color: #28a745; /* Green color for active and hover states */
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background: #5a2d9e; /* Darker purple for hover and active state */
+            color: #f0f0f0;
+            border-radius: 5px;
         }
+
+
         
         /* Footer Styling */
         footer {
-            background: #343a40; /* Same dark grey background */
+            background: #383549; /* Dark grayish-blue color */
             color: white;
+            padding: 20px;
             text-align: center;
-            padding: 20px 10px; /* Padding for spacing */
-            position: relative;
         }
-        
+
         footer ul {
-            list-style: none; /* Remove bullet points */
+            list-style: none;
+            display: flex;
+            justify-content: center;
             padding: 0;
             margin: 0;
         }
-        
+
         footer ul li {
-            display: inline;
-            margin: 0 10px;
+            margin: 0 15px;
         }
-        
+
         footer ul li a {
-            color: #28a745; /* Same green color for links */
+            color: white;
             text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            transition: background 0.3s, color 0.3s;
         }
-        
-        footer ul li a:hover {
-            text-decoration: underline;
-        }
-        
-        footer p {
-            margin: 0;
+
+        footer ul li a:hover,
+        footer ul li a.active {
+            background: #5a2d9e; /* Darker purple for hover and active state */
+            color: #f0f0f0;
+            border-radius: 5px;
         }
         
         /* Projects section styling */
