@@ -52,7 +52,6 @@ nav ul li a.active::after {
 
 .hero {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -60,7 +59,6 @@ nav ul li a.active::after {
     color: white;
     text-align: center;
     position: relative;
-    animation: fadeIn 1s ease-out;
 }
 
 .hero-content {
@@ -68,6 +66,8 @@ nav ul li a.active::after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .hero-image {
@@ -76,23 +76,20 @@ nav ul li a.active::after {
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px; /* Space between image and text */
-    animation: bounceIn 1s ease-out;
 }
 
 .hero-text {
-    margin-bottom: 40px; /* Increased space between text and button */
+    margin-bottom: 20px; /* Space between text and button */
 }
 
 .hero-text h1 {
     font-size: 3.5rem; /* Larger font size for the main line */
     margin: 0;
-    animation: fadeInUp 1s ease-out;
 }
 
 .hero-text p {
     font-size: 1.2rem; /* Smaller font size for the next line */
     margin: 0;
-    animation: fadeInUp 1.5s ease-out; /* Slight delay for the smaller text */
 }
 
 .cta-button {
@@ -103,35 +100,36 @@ nav ul li a.active::after {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 40px; /* Space between text and button */
-    animation: pulse 1s infinite;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
 }
 
 .cta-button:hover {
     background: #555;
+    animation: pulse 1s infinite;
 }
 
-.highlights {
+.recent-projects {
     padding: 40px 20px;
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
 }
 
-.highlights h2 {
+.recent-projects h2 {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 30px;
-    animation: fadeIn 1s ease-out;
 }
 
-.highlight-cards {
+.project-cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.card {
+.project-card {
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -139,16 +137,31 @@ nav ul li a.active::after {
     flex: 1;
     max-width: 300px;
     transition: background-color 0.3s, box-shadow 0.3s;
-    animation: slideInUp 1s ease-out;
 }
 
-.card:hover{
-    background: #e0f7fa;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card h3 {
+.project-card h3 {
     margin-top: 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ddd;
 }
 
 footer {
