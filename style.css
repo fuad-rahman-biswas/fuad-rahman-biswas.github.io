@@ -148,7 +148,7 @@ nav ul li a:hover::after,
     z-index: 1;
     max-width: 700px;
     margin-left: 400px;
-    text-align: left;
+    /*text-align: left;*/
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -164,7 +164,7 @@ nav ul li a:hover::after,
     margin-bottom: 30px;
     animation: fadeIn 2.5s ease-in-out;
     max-width: 900px;
-    margin-left: 100px;
+    margin-left: 300px;
 }
 
 .cta-button {
