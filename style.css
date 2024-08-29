@@ -164,7 +164,7 @@ nav ul li a:hover::after,
     margin-bottom: 30px;
     animation: fadeIn 2.5s ease-in-out;
     max-width: 900px;
-    margin-left: 300px;
+    margin-left: 200px;
 }
 
 .cta-button {
@@ -176,7 +176,7 @@ nav ul li a:hover::after,
     text-decoration: none;
     border-radius: 5px;
     animation: pulse 1.5s infinite;
-    margin-left: 400px;
+    margin-left: 300px;
 }
 
 .cta-button:hover {
