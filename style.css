@@ -445,6 +445,36 @@ footer {
 /* style.css */
 
 /* Existing styles remain unchanged */
+/* Header styling */
+header {
+    background: #343a40; /* Consistent background color */
+    padding: 10px 0; /* Consistent padding */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #28a745; /* Green color for active and hover */
+}
 
 .contact {
     padding: 40px 20px;
@@ -510,5 +540,33 @@ footer {
 }
 
 .contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #343a40; /* Same as header background */
+    color: white;
+    margin-top: 40px;
+}
+
+footer .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-links a:hover {
     text-decoration: underline;
 }
