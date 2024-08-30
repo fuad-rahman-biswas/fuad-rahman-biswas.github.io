@@ -640,13 +640,18 @@ footer ul.footer-links li a:hover {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+    body {
+        margin-left: 16px; /* Adjust as needed */
+        margin-right: 16px; /* Optional: add right margin to avoid edge issues */
+    }
+    
     .main-content {
         padding: 0 0px; /* Reduce horizontal padding for very small screens */
     }
     
     .container {
-        width: 110%; /* Increase width to 95% for very small screens */
+        width: calc(100% - 32px); /* Adjust the width to account for left and right margins */
         margin: 0 auto; /* Center the container */
     }
     
