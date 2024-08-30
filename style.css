@@ -600,43 +600,36 @@ footer ul.footer-links li a:hover {
 }
 
 /* Responsive Adjustments for Phone Section */
+/* Responsive Styles */
 @media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0; /* Increase vertical spacing between items */
+    }
+    
+    .hero {
+        padding: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8em;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    
     .main-content {
-        padding: 0 0px; /* Adjust horizontal padding for tablets */
-    }
-    
-    .container {
-        width: 110%; /* Increase width to 90% for tablets and small devices */
-        margin: 0 auto; /* Center the container */
-    }
-    
-    .contact {
-        padding: 20px;
-    }
-
-    .contact h1 {
-        font-size: 2em; /* Adjusted for smaller screens */
-    }
-
-    .contact form {
-        padding: 15px;
-    }
-
-    .contact form input,
-    .contact form textarea {
-        padding: 12px;
-        font-size: 1em; /* Increased font size for better readability */
-    }
-
-    .contact form button {
-        padding: 12px 24px;
-        font-size: 1em; /* Ensure button text is readable */
-    }
-
-    /* Adjust form layout on smaller screens */
-    .contact form {
-        display: flex;
-        flex-direction: column;
+        padding: 0 10px; /* Reduced padding on small screens */
     }
 }
 
@@ -668,6 +661,25 @@ footer ul.footer-links li a:hover {
     .contact form button {
         padding: 10px 20px;
         font-size: 0.9em; /* Adjust button size for very small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5em;
+    }
+    
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+    
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .contact form input, .contact form textarea {
+        font-size: 0.9rem;
     }
 }
 
