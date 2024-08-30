@@ -602,7 +602,7 @@ footer ul.footer-links li a:hover {
 /* Responsive Adjustments for Phone Section */
 @media (max-width: 768px) {
     .main-content {
-        padding: 0 10px; /* Adjust horizontal padding for tablets */
+        padding: 0 0px; /* Adjust horizontal padding for tablets */
     }
     
     .container {
@@ -642,7 +642,7 @@ footer ul.footer-links li a:hover {
 
 @media (max-width: 480px) {
     .main-content {
-        padding: 0 5px; /* Reduce horizontal padding for very small screens */
+        padding: 0 0px; /* Reduce horizontal padding for very small screens */
     }
     
     .container {
