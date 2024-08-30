@@ -38,14 +38,16 @@ header {
     text-align: center;
 }
 
+/* Adjust Navigation Menu */
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Ensures items are centered */
     padding: 0;
     margin: 0;
-    flex-wrap: wrap; /* Allows wrapping of nav items on smaller screens */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
 }
+
 
 nav ul li {
     margin: 0 15px;
@@ -66,8 +68,8 @@ nav ul li a.active {
     border-radius: 5px;
 }
 
-.main-content {
-    max-width: 800px;
+.main-content, .projects {
+    max-width: 1000px; /* Constrain the content width */
     margin: 40px auto;
     padding: 20px;
     background: white;
@@ -236,8 +238,10 @@ footer ul.footer-links li a:hover {
     color: white;
     text-align: center;
     position: relative;
-    padding: 20px; /* Add padding for smaller screens */
-    box-sizing: border-box; /* Ensure padding is included in width/height */
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 1200px; /* Added max-width for desktop */
+    margin: 0 auto; /* Center on large screens */
 }
 
 .hero-content {
@@ -249,7 +253,7 @@ footer ul.footer-links li a:hover {
 }
 
 .hero-image {
-    width: 80%; /* Adjust for smaller screens */
+    max-width: 80%; /* Added max-width to constrain image size */
     height: auto;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -261,9 +265,9 @@ footer ul.footer-links li a:hover {
 }
 
 .hero-text h1 {
-    color: white; /* Keep the text white */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Black shadow with some transparency */
-    font-size: 2em; /* Adjust font size for smaller screens */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 2em;
     margin: 0;
 }
 
@@ -569,74 +573,47 @@ footer ul.footer-links li a:hover {
 }
 
 
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    /* Navigation Adjustments */
     nav ul {
         flex-direction: column;
         align-items: center;
     }
 
-    .projects {
-        padding: 20px 10px;
+    /* Hero Section Adjustments */
+    .hero {
+        height: auto; /* Adjust height for mobile */
+        padding: 40px 20px; /* Adjust padding */
     }
 
-    .project-item {
-        padding: 15px;
+    .hero-image {
+        width: 70%; /* Adjust image size */
     }
 
     .hero-text h1 {
         font-size: 1.8rem;
     }
 
-    .hero-text p {
-        font-size: 1rem;
-    }
-
-    .cta-button {
-        font-size: 1rem;
-    }
-
-    .recent-projects h2 {
-        font-size: 2rem;
+    /* Content Section Adjustments */
+    .main-content, .projects {
+        padding: 20px 10px;
+        margin: 20px auto;
     }
 }
 
 @media (max-width: 480px) {
-    header {
-        padding: 5px 0;
-    }
-
+    /* Further Mobile Adjustments */
     .hero-image {
-        width: 70%;
+        width: 60%; /* Further reduce image size */
     }
 
     .hero-text h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Adjust text size */
     }
 
-    .hero-text p {
-        font-size: 0.9rem;
-    }
-
-    .cta-button {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-    }
-
-    .recent-projects h2 {
-        font-size: 1.8rem;
-    }
-
-    .project-item h2 {
-        font-size: 1.5rem;
-    }
-
-    .project-item p {
-        font-size: 0.9rem;
-    }
-
-    .projects, .skills, .cv, .contact {
-        padding: 20px;
+    .main-content, .projects {
+        padding: 15px 10px;
+        margin: 20px auto;
     }
 }
 
