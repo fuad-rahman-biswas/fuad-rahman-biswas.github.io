@@ -606,7 +606,7 @@ footer ul.footer-links li a:hover {
     }
     
     .container {
-        width: 90%; /* Increase width to 90% for tablets and small devices */
+        width: 110%; /* Increase width to 90% for tablets and small devices */
         margin: 0 auto; /* Center the container */
     }
     
@@ -646,7 +646,7 @@ footer ul.footer-links li a:hover {
     }
     
     .container {
-        width: 100%; /* Increase width to 95% for very small screens */
+        width: 110%; /* Increase width to 95% for very small screens */
         margin: 0 auto; /* Center the container */
     }
     
