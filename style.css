@@ -20,6 +20,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+    overflow-wrap: break-word; /* Prevents overflow of long words */
 }
 
 main {
@@ -43,6 +44,7 @@ nav ul {
     justify-content: center;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap; /* Allows wrapping of nav items on smaller screens */
 }
 
 nav ul li {
@@ -141,6 +143,10 @@ header nav ul {
     margin: 0;
 }
 
+header nav ul {
+    flex-wrap: wrap; /* Ensures the nav items wrap on smaller screens */
+}
+
 header nav ul li {
     margin: 0 15px;
 }
@@ -186,6 +192,7 @@ footer ul.footer-links {
     margin: 0;        /* Remove margin */
     display: flex;    /* Align items in a row */
     justify-content: center; /* Center the links */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 footer ul.footer-links li {
@@ -200,8 +207,6 @@ footer ul.footer-links li a {
 footer ul.footer-links li a:hover {
     text-decoration: underline; /* Add underline on hover */
 }
-
-
 
 /* Animations */
 @keyframes pulse {
@@ -231,6 +236,8 @@ footer ul.footer-links li a:hover {
     color: white;
     text-align: center;
     position: relative;
+    padding: 20px; /* Add padding for smaller screens */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
 }
 
 .hero-content {
@@ -242,7 +249,7 @@ footer ul.footer-links li a:hover {
 }
 
 .hero-image {
-    width: 40%;
+    width: 80%; /* Adjust for smaller screens */
     height: auto;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -256,7 +263,7 @@ footer ul.footer-links li a:hover {
 .hero-text h1 {
     color: white; /* Keep the text white */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Black shadow with some transparency */
-    font-size: 2.5em;
+    font-size: 2em; /* Adjust font size for smaller screens */
     margin: 0;
 }
 
@@ -303,7 +310,8 @@ footer ul.footer-links li a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
     margin: 20px auto;
-    text-allign: center;
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
 }
 
 .projects h1 {
@@ -320,7 +328,6 @@ footer ul.footer-links li a:hover {
     margin-bottom: 20px;
     padding: 20px;
     transition: background-color 0.3s, box-shadow 0.3s;
-    text-allign: center;
 }
 
 .project-item:hover {
@@ -341,17 +348,16 @@ footer ul.footer-links li a:hover {
 .project-item a {
     display: inline-block;
     color: white;
-    background-color: #5a2d9e; /* Button color */
-    padding: 10px 20px; /* Button padding */
-    border-radius: 5px; /* Rounded corners */
+    background-color: #28a745;
+    padding: 10px 20px;
+    border-radius: 5px;
     text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s;
+    margin-top: 15px;
 }
 
 .project-item a:hover {
-    background-color: #4a237e; /* Darker color on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+    background-color: #1d7c30;
 }
 
 .project-cards {
@@ -563,28 +569,70 @@ footer ul.footer-links li a:hover {
 }
 
 
-/* Responsive Design */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .hero {
+    nav ul {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+    }
+
+    .projects {
+        padding: 20px 10px;
+    }
+
+    .project-item {
+        padding: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+    }
+
+    .recent-projects h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px 0;
     }
 
     .hero-image {
-        width: 60%;
+        width: 70%;
     }
 
-    .about {
-        flex-direction: column;
-        text-align: center;
+    .hero-text h1 {
+        font-size: 1.5rem;
     }
 
-    .about-text {
-        margin-right: 0;
+    .hero-text p {
+        font-size: 0.9rem;
     }
 
-    .about-image {
-        margin-top: 20px;
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .recent-projects h2 {
+        font-size: 1.8rem;
+    }
+
+    .project-item h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-item p {
+        font-size: 0.9rem;
     }
 
     .projects, .skills, .cv, .contact {
