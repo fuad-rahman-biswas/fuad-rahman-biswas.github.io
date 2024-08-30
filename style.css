@@ -21,6 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow-wrap: break-word; /* Prevents overflow of long words */
+    overflow-x: hidden;
 }
 
 main {
@@ -29,6 +30,13 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 header {
@@ -240,7 +248,7 @@ footer ul.footer-links li a:hover {
     position: relative;
     padding: 20px;
     box-sizing: border-box;
-    max-width: 1200px; /* Added max-width for desktop */
+    max-width: 90%px; /* or a percentage */
     margin: 0 auto; /* Center on large screens */
 }
 
@@ -587,7 +595,8 @@ footer ul.footer-links li a:hover {
     }
 
     .hero-image {
-        width: 70%; /* Adjust image size */
+        width: 1000%; /* Adjust image size */
+        height: auto;
     }
 
     .hero-text h1 {
@@ -605,6 +614,12 @@ footer ul.footer-links li a:hover {
     /* Further Mobile Adjustments */
     .hero-image {
         width: 60%; /* Further reduce image size */
+    }
+
+    .container {
+    width: 100%;
+    padding: 10px;
+    max-width: 100%;
     }
 
     .hero-text h1 {
