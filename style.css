@@ -591,64 +591,52 @@ footer ul.footer-links li a:hover {
     outline: 2px solid #007bff;
 }
 
+/* Responsive Adjustments for Phone Section */
 @media (max-width: 768px) {
-    /* Navigation Adjustments */
-    nav ul {
+    .contact {
+        padding: 20px;
+    }
+
+    .contact h1 {
+        font-size: 2em; /* Adjusted for smaller screens */
+    }
+
+    .contact form {
+        padding: 15px;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        padding: 12px;
+        font-size: 1em; /* Increased font size for better readability */
+    }
+
+    .contact form button {
+        padding: 12px 24px;
+        font-size: 1em; /* Ensure button text is readable */
+    }
+
+    /* Adjust form layout on smaller screens */
+    .contact form {
+        display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-    
-    .about {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .about-text, .about-image {
-        margin-right: 0;
-    }
-
-
-    /* Hero Section Adjustments */
-    .hero {
-        height: auto; /* Adjust height for mobile */
-        padding: 40px 20px; /* Adjust padding */
-    }
-
-    .hero-image {
-        width: 1000%; /* Adjust image size */
-        height: auto;
-    }
-
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    /* Content Section Adjustments */
-    .main-content, .projects {
-        padding: 20px 10px;
-        margin: 20px auto;
     }
 }
 
 @media (max-width: 480px) {
-    /* Further Mobile Adjustments */
-    .hero-image {
-        width: 60%; /* Further reduce image size */
+    .contact h1 {
+        font-size: 1.5em; /* Further adjusted for very small screens */
     }
 
-    .container {
-    width: 100%;
-    padding: 10px;
-    max-width: 100%;
+    .contact form input,
+    .contact form textarea {
+        padding: 10px;
+        font-size: 0.9em; /* Adjust for very small screens */
     }
 
-    .hero-text h1 {
-        font-size: 1.5rem; /* Adjust text size */
-    }
-
-    .main-content, .projects {
-        padding: 15px 10px;
-        margin: 20px auto;
+    .contact form button {
+        padding: 10px 20px;
+        font-size: 0.9em; /* Adjust button size for very small screens */
     }
 }
 
