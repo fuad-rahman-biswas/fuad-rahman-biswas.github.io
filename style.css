@@ -6,6 +6,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Base styles */
@@ -76,6 +77,13 @@ nav ul li a.active {
     border-radius: 5px;
 }
 
+.main-content {
+    width: 100%;
+    max-width: 1200px; /* You can set this to your desired max width */
+    margin: 0 auto;
+    padding: 0 20px; /* Add horizontal padding */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
 .main-content, .projects {
     max-width: 1000px; /* Constrain the content width */
     margin: 40px auto;
@@ -593,6 +601,10 @@ footer ul.footer-links li a:hover {
 
 /* Responsive Adjustments for Phone Section */
 @media (max-width: 768px) {
+    .main-content {
+        padding: 0 10px; /* Adjust horizontal padding for tablets */
+    }
+    
     .container {
         width: 90%; /* Increase width to 90% for tablets and small devices */
         margin: 0 auto; /* Center the container */
@@ -629,8 +641,12 @@ footer ul.footer-links li a:hover {
 }
 
 @media (max-width: 480px) {
+    .main-content {
+        padding: 0 5px; /* Reduce horizontal padding for very small screens */
+    }
+    
     .container {
-        width: 95%; /* Increase width to 95% for very small screens */
+        width: 100%; /* Increase width to 95% for very small screens */
         margin: 0 auto; /* Center the container */
     }
     
