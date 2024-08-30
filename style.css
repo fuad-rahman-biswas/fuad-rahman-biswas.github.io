@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -593,6 +593,11 @@ footer ul.footer-links li a:hover {
 
 /* Responsive Adjustments for Phone Section */
 @media (max-width: 768px) {
+    .container {
+        width: 90%; /* Increase width to 90% for tablets and small devices */
+        margin: 0 auto; /* Center the container */
+    }
+    
     .contact {
         padding: 20px;
     }
@@ -624,6 +629,11 @@ footer ul.footer-links li a:hover {
 }
 
 @media (max-width: 480px) {
+    .container {
+        width: 95%; /* Increase width to 95% for very small screens */
+        margin: 0 auto; /* Center the container */
+    }
+    
     .contact h1 {
         font-size: 1.5em; /* Further adjusted for very small screens */
     }
