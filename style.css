@@ -602,8 +602,9 @@ footer ul.footer-links li a:hover {
     outline: 2px solid #007bff;
 }
 
-/* Responsive Adjustments for Phone Section */
-/* Responsive Styles */
+/* Responsive Adjustments */
+
+/* Styles for devices with a max-width of 768px (small tablets and phones) */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column; /* Stack menu items vertically */
@@ -616,14 +617,15 @@ footer ul.footer-links li a:hover {
     
     .hero {
         padding: 10px;
+        flex-direction: column; /* Stack hero content vertically */
     }
 
     .hero-text h1 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
     
     .hero-text p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .cta-button {
@@ -634,20 +636,14 @@ footer ul.footer-links li a:hover {
     .main-content {
         padding: 0 10px; /* Reduced padding on small screens */
     }
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-    }
-
+    
     .about {
         flex-direction: column;
     }
 
     .about-image {
-        margin-top: 20px;
+        width: 100%; /* Adjust as needed */
+        height: auto;
     }
 
     .project-cards {
@@ -656,6 +652,7 @@ footer ul.footer-links li a:hover {
     }
 }
 
+/* Styles for devices with a max-width of 480px (phones) */
 @media (max-width: 480px) {
     .hero-text h1 {
         font-size: 1.5em;
@@ -666,8 +663,8 @@ footer ul.footer-links li a:hover {
     }
 
     .cta-button {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
     }
 
     .recent-projects h2, .projects h1 {
@@ -675,10 +672,10 @@ footer ul.footer-links li a:hover {
     }
 
     .skills h1 {
-        font-size: 2.2em;
+        font-size: 2em;
     }
 
     .contact h1 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
 }
