@@ -351,7 +351,6 @@ footer ul.footer-links li a:hover {
 }
 
 .projects {
-    padding: 40px 20px;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -362,13 +361,14 @@ footer ul.footer-links li a:hover {
     gap: 20px; /* Space between project items */
     display: flex;
     flex-wrap: wrap;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
 }
 
 .projects h1 {
-    font-size: 2.5em;
-    color: #4CAF50;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .project-item {
@@ -376,8 +376,12 @@ footer ul.footer-links li a:hover {
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 2rem;
     transition: background-color 0.3s, box-shadow 0.3s;
+    text-align: center; /* Center the content inside .project-item */
+    width: 100%;
+    max-width: 600px; /* Set a max-width to control the card's width */
+    box-sizing: border-box;
 }
 
 .project-item:hover {
@@ -403,12 +407,13 @@ footer ul.footer-links li a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s;
-    margin-top: 15px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 1rem;
 }
 
 .project-item a:hover {
     background-color: #1d7c30;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
 }
 
 .project-cards {
