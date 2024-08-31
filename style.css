@@ -262,8 +262,7 @@ footer ul.footer-links li a:hover {
     position: relative;
     padding: 20px;
     box-sizing: border-box;
-    max-width: 90%; /* or a percentage */
-    margin: 0 auto; /* Center on large screens */
+    margin: 0; /* Center on large screens */
 }
 
 .hero-content {
