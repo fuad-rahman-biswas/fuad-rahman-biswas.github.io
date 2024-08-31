@@ -73,8 +73,10 @@
         }
         /* Center the title on the screen */
         .projects h1 {
+            font-size: 2.5em;
+            color: #4CAF50;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 20px;
             padding: 2rem;
             display: flex;
             flex-direction: column;
@@ -82,7 +84,11 @@
         }
 
         .projects {
-            padding: 2rem;
+            padding: 40px 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
             text-align: center; /* Center the content inside .projects */
         }
 
@@ -90,12 +96,13 @@
             background: #f4f4f4;
             border: 1px solid #ddd;
             border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
+            padding: 20px;
+            margin-bottom: 20px;
             text-align: center; /* Center the content inside .project-item */
-             width: 100%;
+            width: 100%;
             max-width: 600px; /* Set a max-width to control the card's width */
             box-sizing: border-box;
+            transition: background-color 0.3s, box-shadow 0.3s;
         }
 
         .project-item h2 {
@@ -113,10 +120,35 @@
             transition: background 0.3s, box-shadow 0.3s;
             margin-top: 1rem; /* Add some space above the button */
         }
+        
+        .project-item:hover {
+            background: #e0f7fa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-item h2 {
+            font-size: 1.8em;
+            color: #333;
+        }
+        
+        .project-item p {
+            font-size: 1.1em;
+            color: #555;
+        }
+        
+        .project-item a {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
 
         .project-item a:hover {
             background-color: #4a237e; /* Darker color on hover */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+            text-decoration: underline;
         }
     </style>
 </head>    
