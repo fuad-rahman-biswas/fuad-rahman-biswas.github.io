@@ -26,17 +26,18 @@ body {
 
 main {
     flex: 1;
-    padding-bottom: 100px; /* Adjust based on footer height */
+    padding-bottom: 100px; /* Adjust as necessary */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%; /* Ensure full width */
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     box-sizing: border-box;
+    width: 100%; /* Ensure it covers the full width */
 }
 
 /* Header */
@@ -249,20 +250,21 @@ footer ul.footer-links li a:hover {
     animation: pulse 1s infinite;
 }
 
-/* Hero Section */
+
+
 .hero {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    width: 100%; /* Ensure full width coverage */
+    width: 100%; /* Full width */
     background: linear-gradient(135deg, #312755 50%, #43316a 50%);
     color: white;
     text-align: center;
     position: relative;
     padding: 20px;
     box-sizing: border-box;
-    margin: 0; /* Center on large screens */
+    margin: 0;
 }
 
 .hero-content {
