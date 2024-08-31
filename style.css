@@ -720,13 +720,6 @@ footer ul.footer-links li a:hover {
         box-sizing: border-box; /* Apply box-sizing to all elements */
     }
 
-    /* Ensure no horizontal overflow */
-    body {
-        margin: 0; /* Remove default margin */
-        padding: 0; /* Remove default padding */
-        overflow-x: hidden; /* Prevent horizontal scroll */
-    }
-
     /* Ensure full width for the projects container */
     .projects {
         padding: 20px; /* Adjust padding as needed */
@@ -735,6 +728,13 @@ footer ul.footer-links li a:hover {
         text-align: center; /* Center the content */
         width: 100%; /* Ensure the container spans the full width */
         max-width: none; /* Override any max-width constraints */
+    }
+
+    /* Ensure no horizontal overflow */
+    body {
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        overflow-x: hidden; /* Prevent horizontal scroll */
     }
 
 }
