@@ -7,20 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 20px; /* Add some padding if needed */
-        }
-        
         header {
             background: #383549; /* Dark grayish-blue color */
             color: white;
             padding: 1rem 0;
             text-align: center;
         }
-        
+
         nav ul {
             list-style: none;
             display: flex;
@@ -28,11 +21,11 @@
             padding: 0;
             margin: 0;
         }
-        
+
         nav ul li {
             margin: 0 15px;
         }
-        
+
         nav ul li a {
             color: white;
             text-decoration: none;
@@ -40,13 +33,12 @@
             padding: 10px 20px;
             transition: background 0.3s, color 0.3s;
         }
-        
+
         header nav ul li a:hover,
         header nav ul li a.active {
             color: #28a745; /* Green color for active and hover */
             border-radius: 5px;
         }
-
 
         footer {
             background: #383549; /* Dark grayish-blue color */
@@ -78,7 +70,14 @@
             color: #5a2d9e; /* Darker purple for hover and active state */
             text-decoration: underline;
         }
-        /* Center the title on the screen */
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0; /* Remove padding to utilize full width */
+        }
+
         .projects h1 {
             font-size: 2.5em;
             color: #4CAF50;
@@ -91,31 +90,15 @@
         }
 
         .projects {
-            padding: 40px 20px;
+            padding: 20px; /* Adjust padding for mobile */
             background: #ffffff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
+            margin: 0; /* Remove margin to fit the full width */
             text-align: center;
-            max-width: 1100px;
-            width: 100%;
+            width: 100%; /* Ensure full width on mobile */
+            max-width: 100%; /* Ensure it doesn’t exceed viewport width */
             box-sizing: border-box;
-        }
-        
-        @media (max-width: 768px) {
-            .projects {
-                padding: 20px;
-                width: 90%;
-                max-width: none;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .projects {
-                padding: 15px;
-                width: 100%;
-                border-radius: 0;
-            }
         }
 
         .project-item {
@@ -124,9 +107,9 @@
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
-            text-align: center; /* Center the content inside .project-item */
+            text-align: center;
             width: 100%;
-            max-width: 900px; /* Set a max-width to control the card's width */
+            max-width: 900px;
             box-sizing: border-box;
             transition: background-color 0.3s, box-shadow 0.3s;
         }
@@ -146,22 +129,22 @@
             transition: background 0.3s, box-shadow 0.3s;
             margin-top: 1rem; /* Add some space above the button */
         }
-        
+
         .project-item:hover {
             background: #e0f7fa;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        
+
         .project-item h2 {
             font-size: 1.8em;
             color: #333;
         }
-        
+
         .project-item p {
             font-size: 1.1em;
             color: #555;
         }
-        
+
         .project-item a {
             display: inline-block;
             margin-top: 10px;
@@ -170,14 +153,30 @@
             text-decoration: none;
         }
 
-
         .project-item a:hover {
             background-color: #4a237e; /* Darker color on hover */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
             text-decoration: underline;
         }
+
+        @media (max-width: 768px) {
+            .projects {
+                padding: 15px; /* Adjust padding for tablets and smaller screens */
+                width: 100%; /* Ensure full width on tablets */
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .projects {
+                padding: 10px; /* Further adjust padding for very small screens */
+                width: 100%; /* Ensure full width on small screens */
+                max-width: 100%;
+                border-radius: 0; /* Optional: Remove border-radius for small screens */
+            }
+        }
     </style>
-</head>    
+</head>
 <body>
     <header>
         <nav>
@@ -192,7 +191,7 @@
     </header>
 
     <main>
-        <section class="projects" style="width: 100% !important; padding: 20px; margin: 0;">
+        <section class="projects">
             <h1>Projects 🌟</h1>
             <div class="project-item">
                 <h2>Project 1: Currency Converter 💱</h2>
@@ -203,33 +202,23 @@
             <div class="project-item">
                 <h2>Project 2: Budget Tracker Application 📊</h2>
                 <p>Track expenses and income, categorize transactions, and view current balance with this MySQL-integrated app.</p>
-                <p><strong>Technologies Used:</strong> Java, MySQL, Swing</p>
-                <a href="https://github.com/fuad-rahman-biswas/budget-tracker" target="_blank">View on GitHub</a>
+                <p><strong>Technologies Used:</strong> Java, MySQL</p>
+                <a href="https://github.com/fuad-rahman-biswas/Budget-Tracker" target="_blank">View on GitHub</a>
             </div>
             <div class="project-item">
-                <h2>Project 3: Quiz Application ❓</h2>
-                <p>A web-based quiz app featuring user registration, quiz-taking, and score tracking.</p>
-                <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
-                <a href="https://github.com/fuad-rahman-biswas/quiz-application" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-item">
-                <h2>Project 4: Currency Converter (Android) 📱</h2>
-                <p>An Android app for currency conversion with support for a wide range of currencies.</p>
-                <p><strong>Technologies Used:</strong> Java, Android Studio, XML</p>
-                <a href="https://github.com/fuad-rahman-biswas/Global-exchange" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-item">
-                <h2>Project 5: Weather App ☀️🌧️</h2>
-                <p>Provides current weather conditions and forecasts based on location.</p>
-                <p><strong>Technologies Used:</strong> Python</p>
-                <a href="https://github.com/fuad-rahman-biswas/WeatherApp" target="_blank">View on GitHub</a>
+                <h2>Project 3: Weather App ☀️</h2>
+                <p>Provides weather information for any location with a modern interface and real-time updates.</p>
+                <p><strong>Technologies Used:</strong> JavaScript, APIs, HTML, CSS</p>
+                <a href="https://github.com/fuad-rahman-biswas/weather-app" target="_blank">View on GitHub</a>
             </div>
         </section>
     </main>
 
     <footer>
         <ul class="footer-links">
-            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
             <li><a href="skills.html">Skills</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
