@@ -620,7 +620,6 @@ footer ul.footer-links li a:hover {
 }
 
 /* Responsive Adjustments */
-/* Responsive Adjustments */
 
 /* Styles for devices with a max-width of 768px (small tablets and phones) */
 @media (max-width: 768px) {
@@ -706,5 +705,26 @@ footer ul.footer-links li a:hover {
         margin: 0; /* Remove default margin */
         padding: 0; /* Remove default padding */
         overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+}
+
+
+/* Large Screen Styles */
+@media (min-width: 1025px) {
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .projects {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .project-item {
+        width: calc(33.333% - 20px);
     }
 }
