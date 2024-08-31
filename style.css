@@ -618,6 +618,7 @@ footer ul.footer-links li a:hover {
     .hero {
         padding: 10px;
         flex-direction: column; /* Stack hero content vertically */
+        box-sizing: border-box; /* Ensure padding does not overflow */
     }
 
     .hero-text h1 {
@@ -677,5 +678,16 @@ footer ul.footer-links li a:hover {
 
     .contact h1 {
         font-size: 1.8em;
+    }
+
+    /* Ensure no horizontal overflow on small screens */
+    * {
+        box-sizing: border-box; /* Apply box-sizing to all elements */
+    }
+    
+    body {
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        overflow-x: hidden; /* Prevent horizontal scroll */
     }
 }
