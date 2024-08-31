@@ -720,23 +720,22 @@ footer ul.footer-links li a:hover {
     * {
         box-sizing: border-box; /* Apply box-sizing to all elements */
     }
-    .projects {
-            padding: 40px 20px;
-            border-radius: 10px;
-            margin: 20px auto;
-            text-align: center; /* Center the content inside .projects */
-            max-width: 1100px; /* Increase the max-width to make the container wider */
-            /* Optional: adjust the width to your preference */
-            width: 80%; /* Optional: adjusts the width relative to the viewport */
-        }
-    
+
     body {
         margin: 0; /* Remove default margin */
         padding: 0; /* Remove default padding */
         overflow-x: hidden; /* Prevent horizontal scroll */
     }
-}
 
+    .projects {
+        padding: 40px 10px; /* Adjusted padding */
+        border-radius: 10px;
+        margin: 20px auto;
+        text-align: center; /* Center the content inside .projects */
+        width: 100%; /* Make the container full-width */
+        box-sizing: border-box; /* Ensure padding is included in the width */
+    }
+}
 
 /* Responsive Styles for Laptops and Larger Devices */
 @media (max-width: 1200px) and (min-width: 769px) {
