@@ -673,6 +673,16 @@ footer ul.footer-links li a:hover {
         margin-top: 20px;
     }
 
+    .projects {
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            text-align: center; /* Center the content inside .projects */
+            max-width: 1100px; /* Increase the max-width to make the container wider */
+            /* Optional: adjust the width to your preference */
+            width: 80%; /* Optional: adjusts the width relative to the viewport */
+        }
+
     .project-cards {
         flex-direction: column;
         align-items: center;
@@ -710,6 +720,15 @@ footer ul.footer-links li a:hover {
     * {
         box-sizing: border-box; /* Apply box-sizing to all elements */
     }
+    .projects {
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            text-align: center; /* Center the content inside .projects */
+            max-width: 1100px; /* Increase the max-width to make the container wider */
+            /* Optional: adjust the width to your preference */
+            width: 80%; /* Optional: adjusts the width relative to the viewport */
+        }
     
     body {
         margin: 0; /* Remove default margin */
@@ -734,7 +753,15 @@ footer ul.footer-links li a:hover {
         padding: 0.75rem 1.5rem;
         font-size: 1.2rem;
     }
-
+    .projects {
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            text-align: center; /* Center the content inside .projects */
+            max-width: 1100px; /* Increase the max-width to make the container wider */
+            /* Optional: adjust the width to your preference */
+            width: 80%; /* Optional: adjusts the width relative to the viewport */
+        }
     .recent-projects h2 {
         font-size: 2.2rem;
     }
