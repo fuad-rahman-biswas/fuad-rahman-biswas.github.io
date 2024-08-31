@@ -273,7 +273,8 @@ footer ul.footer-links li a:hover {
 }
 
 .hero-image {
-    max-width: 60%; /* Added max-width to constrain image size */
+    max-width: 300px; /* Added max-width to constrain image size */
+    width: 100%;
     height: auto;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
