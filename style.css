@@ -674,12 +674,12 @@ footer ul.footer-links li a:hover {
     }
 
     .projects {
-        padding: 40px 10px; /* Adjusted padding */
+        padding: 40px 20px;
         border-radius: 10px;
         margin: 20px auto;
-        text-align: center; /* Center the content inside .projects */
-        width: 100%; /* Make the container full-width */
-        box-sizing: border-box; /* Ensure padding is included in the width */
+        text-align: center;
+        width: 90%; /* Increase width for smaller screens */
+        max-width: none; /* Remove max-width constraint */
     }
 
     .project-cards {
