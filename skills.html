@@ -12,175 +12,108 @@
             height: 100%;
             margin: 0;
             font-family: 'Roboto', sans-serif;
-            color: #333;
         }
-
-        body {
+        
+        main {
+            padding: 40px 20px;
+            background: #f5f5f5;
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
-
-        main {
-            flex: 1;
-        }
-
-        header {
-            background: #4a2c7d; /* Dark purple color */
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            background: #6f42c1; /* Lighter purple for hover and active state */
-            color: #f0f0f0;
-        }
-
+        
         .main-content {
             max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #ffffff;
+            width: 100%;
+            padding: 30px;
+            background: white;
             border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
-
+        
         h1 {
-            font-size: 2.5em;
-            color: #4a2c7d;
+            font-size: 2.8em;
+            color: #333;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             font-weight: 700;
         }
-
+        
         h2 {
             font-size: 2.2em;
-            color: #4a2c7d;
+            color: #444;
             margin-top: 30px;
             margin-bottom: 15px;
             border-bottom: 3px solid #4a2c7d;
             padding-bottom: 10px;
-            text-align: center;
         }
-
+        
         .skills-category {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 30px;
             justify-content: center;
         }
-
+        
         .skill-item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 220px;
-            background: #ffffff;
+            width: 240px;
+            background: #fff;
             border: 1px solid #ddd;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
+            padding: 20px;
         }
-
+        
         .skill-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
         }
-
+        
         .skill-item img {
             width: 100px;
             height: 100px;
             object-fit: contain;
-            margin-top: 20px;
+            margin-bottom: 15px;
             transition: transform 0.3s;
         }
-
+        
         .skill-item:hover img {
             transform: scale(1.1);
         }
-
+        
         .skill-description {
-            padding: 15px;
-            background: #f9f9f9;
-            color: #333;
-            font-size: 0.9em;
+            font-size: 0.95em;
+            color: #555;
         }
 
         .cv-section {
-            margin-top: 40px;
+            margin-top: 50px;
             text-align: center;
         }
 
         .cv-button {
             display: inline-block;
-            padding: 12px 25px;
-            font-size: 1em;
+            padding: 15px 30px;
+            font-size: 1.2em;
             color: #fff;
             background: #4a2c7d;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 10px;
             transition: background 0.3s, transform 0.3s;
             margin: 0 10px;
+            text-transform: uppercase;
         }
 
         .cv-button:hover {
             background: #6f42c1;
             transform: scale(1.05);
-        }
-
-        footer {
-            background: #4a2c7d;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        footer .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        footer .footer-links li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        footer .footer-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer .footer-links a:hover,
-        footer .footer-links a.active {
-            color: #f0f0f0;
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -198,7 +131,7 @@
     </header>
 
     <main>
-        <section class="main-content skills">
+        <section class="main-content">
             <h1>Skills & Tools 🌟</h1>
         
             <h2>Languages 🗣️</h2>
@@ -254,39 +187,41 @@
                     <a href="https://www.mysql.com/" target="_blank">
                         <img src="https://img.shields.io/badge/MySQL-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
                     </a>
-                    <div class="skill-description">MySQL: Popular relational database management system.</div>
+                    <div class="skill-description">MySQL: Open-source relational database management system.</div>
                 </div>
-                <!-- Blender -->
+                <!-- GitHub -->
                 <div class="skill-item">
-                    <a href="https://www.blender.org/" target="_blank">
-                        <img src="https://img.shields.io/badge/Blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white" alt="Blender">
+                    <a href="https://github.com/" target="_blank">
+                        <img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
                     </a>
-                    <div class="skill-description">Blender: Powerful tool for 3D modeling and animation.</div>
+                    <div class="skill-description">GitHub: Platform for version control and collaboration.</div>
+                </div>
+                <!-- NetBeans -->
+                <div class="skill-item">
+                    <a href="https://netbeans.apache.org/" target="_blank">
+                        <img src="https://img.shields.io/badge/NetBeans-%23000000.svg?style=for-the-badge&logo=apache-netbeans&logoColor=white" alt="NetBeans">
+                    </a>
+                    <div class="skill-description">NetBeans: IDE for Java, HTML5, PHP, and more.</div>
                 </div>
                 <!-- Android Studio -->
                 <div class="skill-item">
                     <a href="https://developer.android.com/studio" target="_blank">
-                        <img src="https://img.shields.io/badge/Android_Studio-%233DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white" alt="Android Studio">
+                        <img src="https://img.shields.io/badge/Android_Studio-%2300B2A1.svg?style=for-the-badge&logo=android-studio&logoColor=white" alt="Android Studio">
                     </a>
                     <div class="skill-description">Android Studio: Official IDE for Android development.</div>
                 </div>
             </div>
 
-            <div class="cv-section">
-                <a class="cv-button" href="resume.pdf" download>Download My CV 📄</a>
-            </div>
+            <section class="cv-section">
+                <h2>Download My CV 📄</h2>
+                <a href="path/to/your-cv.pdf" class="cv-button" download>Download CV</a>
+                <a href="path/to/your-cv.pdf" class="cv-button" target="_blank">View CV</a>
+            </section>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 Fuad Rahman Biswas. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="skills.html" class="active">Skills</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
     </footer>
 </body>
 </html>
