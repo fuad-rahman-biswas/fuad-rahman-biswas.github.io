@@ -6,165 +6,97 @@
     <title>Contact - Fuad Rahman Biswas</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Base styles */
         body {
-            background: #f4f4f4;
+            background: #f7f7f7;
             font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
             color: #333;
             margin: 0;
             padding: 0;
         }
 
-        header {
-            background: #383549; /* Dark grayish-blue color */
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-            position: fixed; /* Fix the header at the top */
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000; /* Ensure it stays on top */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better separation */
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 10px 20px;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            background: #5a2d9e; /* Darker purple for hover and active state */
-            color: #f0f0f0;
-            border-radius: 5px;
-        }
-
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: calc(100vh - 160px); /* Adjust height based on header and footer */
-            padding: 20px;
-            padding-top: 80px; /* Ensure content is not hidden under the fixed header */
-        }
-
+        /* Contact Section */
         .contact {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 600px; /* Center content and limit width */
+            padding: 50px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin: 60px auto;
+            max-width: 800px;
+            width: 90%;
         }
 
         .contact h1 {
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-            color: #383549;
             text-align: center;
+            font-size: 2.5rem;
+            color: #383549;
+            margin-bottom: 2rem;
+            font-weight: 700;
         }
 
         .contact form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact form label {
-            margin-bottom: 5px;
-            font-weight: 700;
-            color: #333;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
         }
 
         .contact form input,
         .contact form textarea {
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 15px;
             font-size: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            transition: border 0.3s ease;
+            width: 100%;
+        }
+
+        .contact form textarea {
+            grid-column: span 2;
+        }
+
+        .contact form input:focus,
+        .contact form textarea:focus {
+            border-color: #5a2d9e;
+            outline: none;
         }
 
         .contact form button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            background: #5a2d9e;
-            color: white;
+            grid-column: span 2;
+            padding: 15px;
             font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            background-color: #5a2d9e;
+            border: none;
+            border-radius: 8px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background-color 0.3s ease, transform 0.3s;
         }
 
         .contact form button:hover {
-            background: #4a1c7e;
+            background-color: #4a2387;
+            transform: translateY(-3px);
         }
 
         .contact-details {
-            margin-top: 20px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .contact-details a {
+            font-size: 1.8rem;
             color: #5a2d9e;
-            text-decoration: none;
-            font-size: 2rem; /* Adjust icon size */
-            margin: 0 10px;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.3s;
         }
 
         .contact-details a:hover {
-            color: #4a1c7e;
-        }
-
-        footer {
-            background: #383549; /* Dark grayish-blue color */
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.875rem;
-        }
-
-        footer .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        footer .footer-links li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        footer .footer-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer .footer-links a:hover,
-        footer .footer-links a.active {
-            color: #5a2d9e; /* Darker purple for hover and active state */
-            text-decoration: underline;
+            color: #4a2387;
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -185,21 +117,15 @@
         <section class="contact">
             <h1>Contact Me</h1>
             <form action="https://formspree.io/f/mgvwdlgr" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
             <div class="contact-details">
-                <a href="mailto:fuadrahman185@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/fuad185" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/fuad-rahman-biswas" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:fuadrahman185@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/fuad185" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/fuad-rahman-biswas" target="_blank"><i class="fa fa-github"></i></a>
             </div>
         </section>
     </main>
