@@ -66,45 +66,87 @@
         }
         
         h1 {
-            font-size: 2.2em;
-            color: #383549; /* Matching the header color */
+            font-size: 2.4em;
+            color: #4a2c7d; /* Header color */
             text-align: center;
             margin-bottom: 20px;
+            font-weight: 700;
         }
         
-        p {
+        h2 {
+            font-size: 2em;
+            color: #4a2c7d; /* Header color */
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #4a2c7d; /* Underline effect */
+            padding-bottom: 10px;
+        }
+        
+        .skills-category {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 220px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .skill-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-top: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .skill-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .skill-description {
+            padding: 15px;
+            background: #f9f9f9;
+            color: #333;
+            font-size: 0.9em;
+        }
+
+        .cv-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .cv-section a {
+            display: inline-block;
+            padding: 15px 30px;
             font-size: 1.1em;
-            margin: 15px 0;
-            line-height: 1.6;
+            color: #fff;
+            background: #4a2c7d;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .cv-section a:hover {
+            background: #6f42c1;
         }
         
-        .highlight {
-            color: #383549; /* Matching the header color */
-            font-weight: bold;
-        }
-        
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin-left: 30px; /* Increased indent */
-        }
-        
-        ul li {
-            position: relative;
-            padding: 10px 0;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-            color: #555;
-        }
-        
-        ul li::before {
-            content: '•';
-            color: #383549; /* Matching the header color */
-            font-size: 1.5em;
-            position: absolute;
-            left: -30px;
-            top: 0;
-        }
         
         footer {
             background: #383549; /* Dark grayish-blue color */
@@ -158,31 +200,101 @@
         
             <h2>Languages 🗣️</h2>
             <div class="skills-category">
-                <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" alt="Java">
-                <img src="https://img.shields.io/badge/Kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin">
-                <img src="https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-                <img src="https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
-                <img src="https://img.shields.io/badge/HTML-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
+                <!-- Java -->
+                <div class="skill-item">
+                    <a href="https://www.oracle.com/java/" target="_blank">
+                        <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" alt="Java">
+                    </a>
+                    <div class="skill-description">Java: Widely used for backend systems and Android apps.</div>
+                </div>
+                <!-- Kotlin -->
+                <div class="skill-item">
+                    <a href="https://kotlinlang.org/" target="_blank">
+                        <img src="https://img.shields.io/badge/Kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin">
+                    </a>
+                    <div class="skill-description">Kotlin: Modern language for Android development.</div>
+                </div>
+                <!-- Python -->
+                <div class="skill-item">
+                    <a href="https://www.python.org/" target="_blank">
+                        <img src="https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+                    </a>
+                    <div class="skill-description">Python: Ideal for AI, data science, and web development.</div>
+                </div>
+                <!-- CSS -->
+                <div class="skill-item">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                        <img src="https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
+                    </a>
+                    <div class="skill-description">CSS: Brings websites to life with styling and animations.</div>
+                </div>
+                <!-- HTML -->
+                <div class="skill-item">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+                        <img src="https://img.shields.io/badge/HTML-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
+                    </a>
+                    <div class="skill-description">HTML: The foundation of all web pages.</div>
+                </div>
             </div>
         
             <h2>Tools & Apps ⚙️</h2>
             <div class="skills-category">
-                <img src="https://img.shields.io/badge/Arduino-%2300979D.svg?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
-                <img src="https://img.shields.io/badge/Blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white" alt="Blender">
-                <img src="https://img.shields.io/badge/Figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
-                <img src="https://img.shields.io/badge/Git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-                <img src="https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=google-colab&logoColor=white" alt="Google Colab">
-                <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle">
-                <img src="https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white" alt="Salesforce">
-            </div>
-        
-            <h2>Tools in Action 📱</h2>
-            <div class="skills-category">
-                <img src="https://img.shields.io/badge/NetBeans-%231B6AC6.svg?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white" alt="NetBeans">
-                <img src="https://img.shields.io/badge/Visual_Studio-%235C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white" alt="Visual Studio">
-                <img src="https://img.shields.io/badge/Spyder-FF0000?style=for-the-badge&logo=spyder-ide&logoColor=white" alt="Spyder">
-                <img src="https://img.shields.io/badge/Android-%233DDC84.svg?style=for-the-badge&logo=android&logoColor=white" alt="Android">
-                <img src="https://img.shields.io/badge/MySQL-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+                <!-- Arduino -->
+                <div class="skill-item">
+                    <a href="https://www.arduino.cc/" target="_blank">
+                        <img src="https://img.shields.io/badge/Arduino-%2300979D.svg?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
+                    </a>
+                    <div class="skill-description">Arduino: Open-source electronics platform for prototyping.</div>
+                </div>
+                <!-- Blender -->
+                <div class="skill-item">
+                    <a href="https://www.blender.org/" target="_blank">
+                        <img src="https://img.shields.io/badge/Blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white" alt="Blender">
+                    </a>
+                    <div class="skill-description">Blender: 3D creation suite for modeling, animation, and rendering.</div>
+                </div>
+                <!-- Git -->
+                <div class="skill-item">
+                    <a href="https://git-scm.com/" target="_blank">
+                        <img src="https://img.shields.io/badge/Git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+                    </a>
+                    <div class="skill-description">Git: Version control system for tracking changes.</div>
+                </div>
+                <!-- GitHub -->
+                <div class="skill-item">
+                    <a href="https://github.com/" target="_blank">
+                        <img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+                    </a>
+                    <div class="skill-description">GitHub: Platform for hosting and sharing code repositories.</div>
+                </div>
+                <!-- NetBeans -->
+                <div class="skill-item">
+                    <a href="https://netbeans.apache.org/" target="_blank">
+                        <img src="https://img.shields.io/badge/NetBeans-%23000000.svg?style=for-the-badge&logo=apache-netbeans&logoColor=white" alt="NetBeans">
+                    </a>
+                    <div class="skill-description">NetBeans: IDE for Java, PHP, and HTML5 development.</div>
+                </div>
+                <!-- Android Studio -->
+                <div class="skill-item">
+                    <a href="https://developer.android.com/studio" target="_blank">
+                        <img src="https://img.shields.io/badge/Android_Studio-%233DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white" alt="Android Studio">
+                    </a>
+                    <div class="skill-description">Android Studio: IDE for Android app development.</div>
+                </div>
+                <!-- Spyder -->
+                <div class="skill-item">
+                    <a href="https://docs.spyder-ide.org/current/" target="_blank">
+                        <img src="https://img.shields.io/badge/Spyder-%23113472.svg?style=for-the-badge&logo=spyder&logoColor=white" alt="Spyder">
+                    </a>
+                    <div class="skill-description">Spyder: IDE for scientific programming with Python.</div>
+                </div>
+                <!-- Visual Studio -->
+                <div class="skill-item">
+                    <a href="https://visualstudio.microsoft.com/" target="_blank">
+                        <img src="https://img.shields.io/badge/Visual_Studio-%235C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white" alt="Visual Studio">
+                    </a>
+                    <div class="skill-description">Visual Studio: IDE for developing and debugging applications.</div>
+                </div>
             </div>
         </section>
 
