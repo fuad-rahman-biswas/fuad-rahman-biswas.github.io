@@ -158,10 +158,26 @@
 
         .cv-section {
             margin-top: 80px;
-            text-align: left;
+            text-align: center;
         }
 
-        .cv-section a {
+        .cv-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .cv-section p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .cv-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cv-button {
             display: inline-block;
             padding: 15px 30px;
             font-size: 1.1em;
@@ -172,7 +188,7 @@
             transition: background 0.3s;
         }
 
-        .cv-section a:hover {
+        .cv-button:hover {
             background: #6f42c1;
         }
     </style>
@@ -247,56 +263,36 @@
                     <a href="https://www.blender.org/" target="_blank">
                         <img src="https://img.shields.io/badge/Blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white" alt="Blender">
                     </a>
-                    <div class="skill-description">Blender: 3D creation suite for modeling, animation, and rendering.</div>
+                    <div class="skill-description">Blender: Comprehensive tool for 3D modeling and animation.</div>
                 </div>
-                <!-- GitHub -->
+                <!-- MetaMask -->
                 <div class="skill-item">
-                    <a href="https://github.com/" target="_blank">
-                        <img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+                    <a href="https://metamask.io/" target="_blank">
+                        <img src="https://img.shields.io/badge/MetaMask-%232C3E50.svg?style=for-the-badge&logo=metamask&logoColor=white" alt="MetaMask">
                     </a>
-                    <div class="skill-description">GitHub: Platform for hosting and sharing code repositories.</div>
-                </div>
-                <!-- NetBeans -->
-                <div class="skill-item">
-                    <a href="https://netbeans.apache.org/" target="_blank">
-                        <img src="https://img.shields.io/badge/NetBeans-%23000000.svg?style=for-the-badge&logo=apache-netbeans&logoColor=white" alt="NetBeans">
-                    </a>
-                    <div class="skill-description">NetBeans: IDE for Java, PHP, and HTML5 development.</div>
-                </div>
-                <!-- Android Studio -->
-                <div class="skill-item">
-                    <a href="https://developer.android.com/studio" target="_blank">
-                        <img src="https://img.shields.io/badge/Android_Studio-%233DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white" alt="Android Studio">
-                    </a>
-                    <div class="skill-description">Android Studio: Official IDE for Android development.</div>
-                </div>
-                <!-- Spyder -->
-                <div class="skill-item">
-                    <a href="https://docs.spyder-ide.org/current/" target="_blank">
-                        <img src="https://img.shields.io/badge/Spyder-%23113472.svg?style=for-the-badge&logo=spyder&logoColor=white" alt="Spyder">
-                    </a>
-                    <div class="skill-description">Spyder: IDE for scientific programming with Python.</div>
-                </div>
-                <!-- Visual Studio -->
-                <div class="skill-item">
-                    <a href="https://visualstudio.microsoft.com/" target="_blank">
-                        <img src="https://img.shields.io/badge/Visual_Studio-%235C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white" alt="Visual Studio">
-                    </a>
-                    <div class="skill-description">Visual Studio: IDE for developing and debugging applications.</div>
+                    <div class="skill-description">MetaMask: Secure Ethereum wallet for managing crypto assets.</div>
                 </div>
             </div>
 
             <div class="cv-section">
                 <h2>Download My CV 📄</h2>
-                <p>View or download my CV to learn more about my qualifications and experience:</p>
-                <a href="images/CV.pdf" download class="cv-button">Download CV</a>
-                <a href="images/CV.pdf" target="_blank" class="cv-button">View CV</a>
+                <p>For a detailed overview of my skills and experience, download my CV below:</p>
+                <div class="cv-buttons">
+                    <a href="Fuad_Rahman_Biswas_CV.pdf" class="cv-button" download>Download CV (PDF)</a>
+                    <a href="Fuad_Rahman_Biswas_CV.docx" class="cv-button" download>Download CV (Word)</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </footer>
 </body>
 </html>
