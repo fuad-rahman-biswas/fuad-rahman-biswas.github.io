@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-                /* Base styles */
+        /* Base styles */
         html, body {
             height: 100%;
             margin: 0;
@@ -132,7 +132,7 @@
             text-align: center;
         }
 
-        .cv-section a {
+        .cv-button {
             display: inline-block;
             padding: 15px 30px;
             font-size: 1.1em;
@@ -141,13 +141,13 @@
             text-decoration: none;
             border-radius: 8px;
             transition: background 0.3s;
+            margin: 0 10px;
         }
 
-        .cv-section a:hover {
+        .cv-button:hover {
             background: #6f42c1;
         }
-        
-        
+
         footer {
             background: #383549; /* Dark grayish-blue color */
             color: white;
@@ -178,7 +178,6 @@
             color: #5a2d9e; /* Darker purple for hover and active state */
             text-decoration: underline;
         }
-
     </style>
 </head>
 <body>
@@ -242,77 +241,56 @@
                 <!-- Arduino -->
                 <div class="skill-item">
                     <a href="https://www.arduino.cc/" target="_blank">
-                        <img src="https://img.shields.io/badge/Arduino-%2300979D.svg?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
+                        <img src="https://img.shields.io/badge/Arduino-%23006B44.svg?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
                     </a>
-                    <div class="skill-description">Arduino: Open-source electronics platform for prototyping.</div>
+                    <div class="skill-description">Arduino: Microcontroller platform for DIY electronics.</div>
                 </div>
-                <!-- Blender -->
+                <!-- SQL -->
                 <div class="skill-item">
-                    <a href="https://www.blender.org/" target="_blank">
-                        <img src="https://img.shields.io/badge/Blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white" alt="Blender">
+                    <a href="https://www.mysql.com/" target="_blank">
+                        <img src="https://img.shields.io/badge/MySQL-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
                     </a>
-                    <div class="skill-description">Blender: 3D creation suite for modeling, animation, and rendering.</div>
-                </div>
-                <!-- Git -->
-                <div class="skill-item">
-                    <a href="https://git-scm.com/" target="_blank">
-                        <img src="https://img.shields.io/badge/Git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-                    </a>
-                    <div class="skill-description">Git: Version control system for tracking changes.</div>
+                    <div class="skill-description">MySQL: Open-source relational database management system.</div>
                 </div>
                 <!-- GitHub -->
                 <div class="skill-item">
                     <a href="https://github.com/" target="_blank">
                         <img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
                     </a>
-                    <div class="skill-description">GitHub: Platform for hosting and sharing code repositories.</div>
+                    <div class="skill-description">GitHub: Platform for version control and collaboration.</div>
                 </div>
                 <!-- NetBeans -->
                 <div class="skill-item">
                     <a href="https://netbeans.apache.org/" target="_blank">
                         <img src="https://img.shields.io/badge/NetBeans-%23000000.svg?style=for-the-badge&logo=apache-netbeans&logoColor=white" alt="NetBeans">
                     </a>
-                    <div class="skill-description">NetBeans: IDE for Java, PHP, and HTML5 development.</div>
+                    <div class="skill-description">NetBeans: IDE for Java, HTML5, PHP, and more.</div>
                 </div>
                 <!-- Android Studio -->
                 <div class="skill-item">
                     <a href="https://developer.android.com/studio" target="_blank">
-                        <img src="https://img.shields.io/badge/Android_Studio-%233DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white" alt="Android Studio">
+                        <img src="https://img.shields.io/badge/Android_Studio-%2300B2A1.svg?style=for-the-badge&logo=android-studio&logoColor=white" alt="Android Studio">
                     </a>
-                    <div class="skill-description">Android Studio: IDE for Android app development.</div>
-                </div>
-                <!-- Spyder -->
-                <div class="skill-item">
-                    <a href="https://docs.spyder-ide.org/current/" target="_blank">
-                        <img src="https://img.shields.io/badge/Spyder-%23113472.svg?style=for-the-badge&logo=spyder&logoColor=white" alt="Spyder">
-                    </a>
-                    <div class="skill-description">Spyder: IDE for scientific programming with Python.</div>
-                </div>
-                <!-- Visual Studio -->
-                <div class="skill-item">
-                    <a href="https://visualstudio.microsoft.com/" target="_blank">
-                        <img src="https://img.shields.io/badge/Visual_Studio-%235C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white" alt="Visual Studio">
-                    </a>
-                    <div class="skill-description">Visual Studio: IDE for developing and debugging applications.</div>
+                    <div class="skill-description">Android Studio: Official IDE for Android development.</div>
                 </div>
             </div>
-        </section>
-
-        <section class="cv">
-            <h2>📄 CV</h2>
-            <p>View or download my CV to learn more about my qualifications and experience:</p>
-            <a href="images/CV.pdf" download class="cv-button">Download CV</a>
-            <a href="images/CV.pdf" target="_blank" class="cv-button">View CV</a>
+        
+            <div class="cv-section">
+                <a href="Fuad_Rahman_Biswas_Resume.pdf" class="cv-button" download>Download My CV 📥</a>
+                <a href="Fuad_Rahman_Biswas_Resume.pdf" class="cv-button" target="_blank">View My CV 👁️</a>
+            </div>
         </section>
     </main>
 
     <footer>
+        <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
         <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="skills.html" class="active">Skills</a></li>
+            <li><a href="skills.html">Skills</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
     </footer>
 </body>
 </html>
