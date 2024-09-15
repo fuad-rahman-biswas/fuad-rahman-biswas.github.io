@@ -4,35 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Fuad Rahman Biswas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* Base styles */
         body {
-            background: #f7f7f7;
             font-family: 'Roboto', sans-serif;
-            color: #333;
             margin: 0;
             padding: 0;
+            background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
         }
 
-        /* Contact Section */
+        header {
+            background: rgba(56, 53, 73, 0.85);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        header nav ul li a:hover,
+        header nav ul li a.active {
+            color: #28a745; /* Green for active and hover */
+            border-radius: 5px;
+        }
+
+        main {
+            padding-top: 100px; /* Ensure this matches the header height */
+        }
+
+
+        /* Contact Section Styles */
         .contact {
-            padding: 50px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            margin: 60px auto;
-            max-width: 800px;
-            width: 90%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 50px 30px;
+            border-radius: 20px;
+            max-width: 900px;
+            margin: 80px auto;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
         }
 
         .contact h1 {
             text-align: center;
-            font-size: 2.5rem;
-            color: #383549;
-            margin-bottom: 2rem;
-            font-weight: 700;
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #444;
         }
 
         .contact form {
@@ -43,60 +87,142 @@
 
         .contact form input,
         .contact form textarea {
-            padding: 15px;
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
             font-size: 1rem;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-            transition: border 0.3s ease;
-            width: 100%;
+            background-color: rgba(255, 255, 255, 0.6);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
         }
 
-        .contact form textarea {
-            grid-column: span 2;
+        .contact form input:hover,
+        .contact form textarea:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(106, 103, 206, 0.2);
         }
 
         .contact form input:focus,
         .contact form textarea:focus {
-            border-color: #5a2d9e;
+            border-color: #6a67ce;
+            box-shadow: 0 4px 15px rgba(106, 103, 206, 0.2);
             outline: none;
+        }
+
+        .contact form textarea {
+            grid-column: span 2;
+            height: 150px;
+            resize: none;
         }
 
         .contact form button {
             grid-column: span 2;
             padding: 15px;
-            font-size: 1rem;
-            font-weight: 700;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, #6a67ce, #574b90);
             color: white;
-            background-color: #5a2d9e;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
 
         .contact form button:hover {
-            background-color: #4a2387;
+            background: linear-gradient(135deg, #574b90, #6a67ce);
             transform: translateY(-3px);
         }
 
+        /* Updated Social Media Icons */
         .contact-details {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 30px;
+            gap: 40px;
             margin-top: 40px;
+            text-decoration: none;
         }
 
         .contact-details a {
-            font-size: 1.8rem;
-            color: #5a2d9e;
-            transition: color 0.3s, transform 0.3s;
+            color: #6a67ce;
+            font-size: 2rem;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         .contact-details a:hover {
-            color: #4a2387;
-            transform: scale(1.1);
+            color: #333;
+            transform: scale(1.2);
+        }
+
+        .contact-details i {
+            padding: 15px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .contact-details i:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            background: #383549; /* Dark grayish-blue color */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer .footer-links a:hover,
+        footer .footer-links a.active {
+            color: #5a2d9e; /* Darker purple for hover and active state */
+            text-decoration: underline;
+        }
+
+        /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+            .contact form {
+                grid-template-columns: 1fr;
+            }
+
+            .contact form textarea,
+            .contact form button {
+                grid-column: span 1;
+            }
+
+            .contact h1 {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
@@ -107,26 +233,48 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- Curved Section Divider -->
+        <div class="divider"></div>
+
         <section class="contact">
             <h1>Contact Me</h1>
             <form action="https://formspree.io/f/mgvwdlgr" method="post">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
-            <div class="contact-details">
-                <a href="mailto:fuadrahman185@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/fuad185" target="_blank"><i class="fa fa-linkedin"></i></a>
-                <a href="https://github.com/fuad-rahman-biswas" target="_blank"><i class="fa fa-github"></i></a>
-            </div>
+
+            <!-- Updated Social Media Icons -->
+        <div class="contact-details">
+            <!-- Mail Icon -->
+            <a href="mailto:fuadrahman185@gmail.com" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" alt="Email Icon">
+            </a>
+
+            <!-- WhatsApp Icon -->
+            <a href="https://wa.me/+60173464190" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/000000/whatsapp.png" alt="WhatsApp Icon">
+            </a>
+
+            <!-- GitHub Icon -->
+            <a href="https://github.com/fuadrahman185" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub Icon">
+            </a>
+
+            <!-- LinkedIn Icon -->
+            <a href="https://www.linkedin.com/in/fuadrahman185/" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn Icon">
+            </a>
+        </div>
+
         </section>
     </main>
 
