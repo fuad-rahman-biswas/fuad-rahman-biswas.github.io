@@ -185,7 +185,8 @@ header nav ul li a {
 
 header nav ul li a:hover,
 header nav ul li a.active {
-    color: #28a745; /* Green color for active and hover */
+    color: #58a6ff;
+    transform: scale(1.1);
 }
 
 /* Footer Styling */
