@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects - Fuad Rahman Biswas</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>/* General Styles */
+    <style>
+        /* General Styles */
+        /* General Styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            background-attachment: fixed;
+            background: linear-gradient(135deg, #0d1117, #161b22);
+            color: #c9d1d9;
+            scroll-behavior: smooth;
         }
-        
+
         header {
-            background: #383549; /* Dark grayish-blue color */
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
+            background: #161b22;
+            color: #c9d1d9;
+            padding: 20px;
+            position: fixed;
+            top: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 4px 8px rgba (0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         nav ul {
             list-style: none;
-            display: flex;
-            justify-content: center;
             padding: 0;
             margin: 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
@@ -39,156 +41,96 @@
         }
 
         nav ul li a {
-            color: white;
+            color: #c9d1d9;
             text-decoration: none;
-            font-weight: 600;
-            padding: 10px 20px;
-            transition: background 0.3s, color 0.3s;
-            font-size: 1.2em;
-        }
-
-        header nav ul li a:hover{
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 5px;
-        }
-        header nav ul li a.active {
-            color: #28a745; /* Green color for active and hover */
-            border-radius: 5px;
-        }
-        
-        /* Footer Styling */
-        footer {
-            background: #2c2f36;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        footer .footer-quote {
-            font-size: 1.3em;
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        
-        footer .footer-social {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-        }
-        
-        footer .footer-social a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.2em;
+            font-weight: bold;
+            font-size: 16px;
             transition: color 0.3s;
         }
-        
-        footer .footer-social a:hover {
-            color: #4caf50;
+
+        nav ul li a.active, nav ul li a:hover {
+            color: #58a6ff;
         }
-        
-        footer p {
-            margin-top: 10px;
-            font-size: 1.1em;
-        }
-        
-        /* Project Section */
+
         main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 80px 20px 20px;
-        }
-        
-        .projects {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            padding: 30px;
+            padding: 100px 20px;
+            max-width: 1200px; /* Increased max-width for wider content */
             margin: 0 auto;
-            max-width: 1200px;
-            width: 100%;
-            box-sizing: border-box;
-            animation: fadeIn 1s ease-in-out;
         }
-        
-        .projects h1 {
-            font-size: 2.8em;
-            color: #5a2d9e;
+
+        h1 {
             text-align: center;
-            margin-bottom: 30px;
-            padding: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            color: #58a6ff;
+            margin-bottom: 50px;
+            font-size: 2.5em;
+            font-weight: 700;
         }
-        
+
+       /* Single column layout for project items */
         .project-item {
-            background: #fafafa;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            text-align: center;
-            transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
-            position: relative;
-            overflow: hidden;
+            background: #1e242f;
+            padding: 20px; /* Adjusted padding for content */
+            margin: 20px auto; /* Added margin to create space between project items and centered horizontally */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            text-align: center; /* Center text inside the project item */
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, border 0.3s;
+            border: 1px solid #2d353b;
+            width: 90%; /* Adjusted width to ensure items don't touch edges */
+            max-width: 900px; /* Maximum width for project items */
         }
-        
+
+
         .project-item:hover {
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-            transform: translateY(-5px);
-            background: #eaf4f4;
+            background: #2d353b;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+            transform: translateY(-8px);
+            border-color: #58a6ff;
         }
-        
+
         .project-item h2 {
+            color: #58a6ff;
             margin-top: 0;
-            font-size: 1.8em;
-            color: #333;
+            font-size: 2em;
+            font-weight: 700;
         }
-        
+
         .project-item p {
+            color: #c9d1d9;
             font-size: 1.2em;
-            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
-        
-        .project-item a {
+
+        /* Style for GitHub button */
+        .project-item a.github-button {
             display: inline-block;
-            color: #ffffff;
-            background-color: #5a2d9e;
-            padding: 10px 25px;
-            border-radius: 5px;
+            background: linear-gradient(135deg, #58a6ff, #1f6feb);
+            color: #0d1117;
+            padding: 14px 28px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s, transform 0.3s;
-            margin-top: 15px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s, transform 0.3s;
+            font-size: 1.2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        
-        .project-item a:hover {
-            background-color: #4a237e;
-            transform: scale(1.1);
+
+        /* Hover effect for GitHub button */
+        .project-item a.github-button:hover {
+            background: linear-gradient(135deg, #1f6feb, #58a6ff);
+            color: #fff;
+            transform: scale(1.05);
         }
-        
-        @media (max-width: 768px) {
-            .projects {
-                padding: 20px;
-                width: 100%;
-                max-width: 100%;
-            }
-        
-            .project-item {
-                padding: 15px;
-            }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #161b22;
+            color: #c9d1d9;
+            margin-top: 40px;
         }
-        
-        @media (max-width: 480px) {
-            .projects {
-                padding: 10px;
-                width: 100%;
-                max-width: 100%;
-            }
-        }
+
     </style>
 </head>
 <body>
@@ -205,56 +147,53 @@
     </header>
 
     <main>
-        <section class="projects">
-            <h1>Projects 🌟</h1>
-            <div class="project-item">
-                <h2>Currency Converter 💱</h2>
-                <p>A Java application allowing users to convert between various currencies with a sleek interface.</p>
-                <p><strong>Technologies Used:</strong> Java, Swing</p>
-                <a href="https://github.com/fuad-rahman-biswas/Currency-Converter" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-item">
-                <h2>Budget Tracker 📊</h2>
-                <p>An app for tracking expenses and income, categorizing transactions, and viewing balances.</p>
-                <p><strong>Technologies Used:</strong> Java, MySQL, Swing</p>
-                <a href="https://github.com/fuad-rahman-biswas/budget-tracker" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-item">
-                <h2>Currency Converter (Android) 📱</h2>
-                <p>An Android app for currency conversion with support for a wide range of currencies.</p>
-                <p><strong>Technologies Used:</strong> Java, Android Studio, XML</p>
-                <a href="https://github.com/fuad-rahman-biswas/currency-converter-android" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-item">
-                <h2>Weather Application ☀️</h2>
-                <p>A weather application providing current weather conditions and forecasts.</p>
-                <p><strong>Technologies Used:</strong> JavaScript, HTML, CSS, OpenWeather API</p>
-                <a href="https://github.com/fuad-rahman-biswas/weather-app" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-item">
-                <h2>Tribute to Jensen Huang 💻🎨</h2>
-                <p>A tribute page dedicated to Jensen Huang, the co-founder and CEO of NVIDIA, highlighting his contributions to the tech industry.</p>
-                <p><strong>Technologies Used:</strong> HTML, CSS</p>
-                <a href="https://github.com/fuad-rahman-biswas/jensen-huang-tribute" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-item">
-                <h2>Modern Tic-Tac-Toe Game 🎮🕹️</h2>
-                <p>A sleek and interactive Tic-Tac-Toe game with a modern UI and smooth animations, showcasing HTML, CSS, and JavaScript skills.</p>
-                <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
-                <a href="https://github.com/fuad-rahman-biswas/tic-tac-toe" target="_blank">View on GitHub</a>
-            </div>
-        </section>
+        <h1>Projects 🌟</h1>
+
+        <div class="project-item">
+            <h2>Currency Converter 💱</h2>
+            <p>A Java application allowing users to convert between various currencies with a sleek interface.</p>
+            <p><strong>Technologies Used:</strong> Java, Swing</p>
+            <a href="https://github.com/fuad-rahman-biswas/Currency-Converter" class="github-button" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-item">
+            <h2>Budget Tracker 📊</h2>
+            <p>An app for tracking expenses and income, categorizing transactions, and viewing balances.</p>
+            <p><strong>Technologies Used:</strong> Java, MySQL, Swing</p>
+            <a href="https://github.com/fuad-rahman-biswas/budget-tracker" class="github-button" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-item">
+            <h2>Currency Converter (Android) 📱</h2>
+            <p>An Android app for currency conversion with support for a wide range of currencies.</p>
+            <p><strong>Technologies Used:</strong> Java, Android Studio, XML</p>
+            <a href="https://github.com/fuad-rahman-biswas/currency-converter-android" class="github-button" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-item">
+            <h2>Weather Application ☀️</h2>
+            <p>A weather application providing current weather conditions and forecasts.</p>
+            <p><strong>Technologies Used:</strong> JavaScript, HTML, CSS, OpenWeather API</p>
+            <a href="https://github.com/fuad-rahman-biswas/weather-app" class="github-button" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-item">
+            <h2>Tribute to Jensen Huang 💻🎨</h2>
+            <p>A tribute page dedicated to Jensen Huang, the co-founder and CEO of NVIDIA, highlighting his contributions to the tech industry.</p>
+            <p><strong>Technologies Used:</strong> HTML, CSS</p>
+            <a href="https://github.com/fuad-rahman-biswas/jensen-huang-tribute" class="github-button" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-item">
+            <h2>Modern Tic-Tac-Toe Game 🎮🕹️</h2>
+            <p>A sleek and interactive Tic-Tac-Toe game with a modern UI and smooth animations, showcasing HTML, CSS, and JavaScript skills.</p>
+            <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+            <a href="https://github.com/fuad-rahman-biswas/tic-tac-toe" class="github-button" target="_blank">View on GitHub</a>
+        </div>
     </main>
 
     <footer>
-        <div class="footer-quote">
-            <p>"The best way to predict the future is to invent it." - Alan Kay</p>
-        </div>
-        <div class="footer-social">
-            <a href="https://github.com/fuad-rahman-biswas" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/fuad-rahman-biswas/" target="_blank">LinkedIn</a>
-        </div>
-        <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
+        <p>&copy; 2024 Fuad Rahman Biswas. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
