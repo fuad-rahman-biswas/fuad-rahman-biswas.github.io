@@ -350,72 +350,80 @@ footer ul.footer-links li a:hover {
     margin-bottom: 30px;
 }
 
+/* Container for the Projects section */
 .projects {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            padding: 30px;
-            margin: 0 auto;
-            max-width: 1200px;
-            width: 100%;
-            box-sizing: border-box;
-            animation: fadeIn 1s ease-in-out;
-        }
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5; /* Light background for contrast */
+}
 
-        .projects h1 {
-            font-size: 2.8em;
-            color: #5a2d9e;
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
+/* Project item container */
+.project-item {
+    background: #fff; /* White background for each project item */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+    position: relative;
+}
 
-        .project-item {
-            background: #fafafa;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            text-align: center;
-            transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
+/* Hover effect for project items */
+.project-item:hover {
+    transform: translateY(-5px);
+    background: #eaf4f4; /* Light color on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
 
-        .project-item:hover {
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-            transform: translateY(-5px);
-            background: #eaf4f4;
-        }
+/* Image within the project item */
+.project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
-        .project-item h2 {
-            margin-top: 0;
-            font-size: 1.8em;
-            color: #333;
-        }
+/* Title of the project */
+.project-item .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 15px;
+    color: #333; /* Dark text color for readability */
+}
 
-        .project-item p {
-            font-size: 1.2em;
-            color: #555;
-        }
+/* Description of the project */
+.project-item .description {
+    font-size: 1em;
+    margin: 0 15px 15px;
+    color: #666; /* Slightly lighter text for description */
+}
 
-        .project-item a {
-            display: inline-block;
-            color: #ffffff;
-            background-color: #5a2d9e;
-            padding: 10px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s, transform 0.3s;
-            margin-top: 15px;
-        }
+/* Link within the project item */
+.project-item a {
+    text-decoration: none;
+    color: #007BFF; /* Primary color for links */
+    font-weight: bold;
+}
 
-        .project-item a:hover {
-            background-color: #4a237e;
-            transform: scale(1.1);
-        }
+.project-item a:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in animation to projects */
+.projects {
+    animation: fadeIn 1s ease-in-out;
+}
 
 
 /* About Section */
