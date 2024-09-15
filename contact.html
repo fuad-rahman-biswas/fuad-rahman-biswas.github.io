@@ -12,17 +12,18 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
+            background: #121212; /* Dark background for the page */
+            color: #e0e0e0; /* Light text color */
         }
 
         header {
-            background: #383549; /* Dark grayish-blue color */
-            color: white;
+            background: #1e1e1e; /* Darker gray background for the header */
+            color: #e0e0e0;
             padding: 2rem 0;
             text-align: center;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 4px 8px rgba (0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         nav ul {
@@ -38,7 +39,7 @@
         }
 
         nav ul li a {
-            color: white;
+            color: #e0e0e0;
             text-decoration: none;
             font-weight: 600;
             padding: 10px 20px;
@@ -46,11 +47,12 @@
             font-size: 1.2em;
         }
 
-        header nav ul li a:hover{
+        header nav ul li a:hover {
             color: #ffffff;
             background: rgba(255, 255, 255, 0.3);
             border-radius: 5px;
-        } 
+        }
+
         header nav ul li a.active {
             color: #28a745; /* Green color for active and hover */
             border-radius: 5px;
@@ -59,16 +61,16 @@
         main {
             padding-top: 100px; /* Ensure this matches the header height */
         }
-        
+
         /* Contact Section Styles */
         .contact {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(40, 40, 40, 0.8);
             backdrop-filter: blur(10px);
             padding: 50px 30px;
             border-radius: 20px;
             max-width: 900px;
             margin: 80px auto;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
             animation: fadeIn 1s ease-in-out;
         }
 
@@ -76,7 +78,7 @@
             text-align: center;
             font-size: 2.8rem;
             margin-bottom: 30px;
-            color: #444;
+            color: #e0e0e0;
         }
 
         .contact form {
@@ -89,9 +91,9 @@
         .contact form textarea {
             padding: 16px;
             border-radius: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid #444;
             font-size: 1rem;
-            background-color: rgba(255, 255, 255, 0.6);
+            background-color: rgba(60, 60, 60, 0.6);
             transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
         }
 
@@ -147,23 +149,23 @@
         }
 
         .contact-details a:hover {
-            color: #333;
+            color: #e0e0e0;
             transform: scale(1.2);
         }
 
         .contact-details i {
             padding: 15px;
             border-radius: 50%;
-            background-color: #f0f0f0;
+            background-color: #2c2c2c;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: box-shadow 0.3s ease;
         }
 
         .contact-details i:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
         }
 
         /* Fade-in Animation */
@@ -179,8 +181,8 @@
         }
 
         footer {
-            background: #383549; /* Dark grayish-blue color */
-            color: white;
+            background: #1e1e1e; /* Darker gray background for the footer */
+            color: #e0e0e0;
             padding: 20px;
             text-align: center;
             margin-top: 40px;
@@ -198,14 +200,14 @@
         }
 
         footer .footer-links a {
-            color: white;
+            color: #e0e0e0;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         footer .footer-links a:hover,
         footer .footer-links a.active {
-            color: #5a2d9e; /* Darker purple for hover and active state */
+            color: #28a745; /* Green color for hover and active state */
             text-decoration: underline;
         }
 
@@ -253,39 +255,38 @@
             </form>
 
             <!-- Updated Social Media Icons -->
-        <div class="contact-details">
-            <!-- Mail Icon -->
-            <a href="mailto:fuadrahman185@gmail.com" target="_blank">
-                <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" alt="Email Icon">
-            </a>
+            <div class="contact-details">
+                <!-- Mail Icon -->
+                <a href="mailto:fuadrahman185@gmail.com" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="Email Icon">
+                </a>
 
-            <!-- WhatsApp Icon -->
-            <a href="https://wa.me/+60173464190" target="_blank">
-                <img src="https://img.icons8.com/ios-filled/50/000000/whatsapp.png" alt="WhatsApp Icon">
-            </a>
+                <!-- WhatsApp Icon -->
+                <a href="https://wa.me/+60173464190" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp Icon">
+                </a>
 
-            <!-- GitHub Icon -->
-            <a href="https://github.com/fuad-rahman-biswas" target="_blank">
-                <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub Icon">
-            </a>
+                <!-- GitHub Icon -->
+                <a href="https://github.com/fuad-rahman-biswas" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub Icon">
+                </a>
 
-            <!-- LinkedIn Icon -->
-            <a href="https://www.linkedin.com/in/fuad185/" target="_blank">
-                <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn Icon">
-            </a>
-        </div>
-
+                <!-- LinkedIn Icon -->
+                <a href="https://www.linkedin.com/in/fuad-rahman-biswas" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn Icon">
+                </a>
+            </div>
         </section>
     </main>
 
     <footer>
         <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="skills.html">Skills</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-        <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
     </footer>
 </body>
 </html>
