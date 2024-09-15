@@ -19,15 +19,13 @@
 
         header {
             background: #161b22; /* Dark background for the header */
-            color: #e1e4e8;
-            padding: 15px 0;
+            color: #c9d1d9;
+            padding: 20px;
+            position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         nav ul {
@@ -39,21 +37,27 @@
         }
 
         nav ul li {
-            margin: 0 20px;
+            margin: 0 15px;
         }
 
         nav ul li a {
-            color: #e1e4e8;
+            color: #c9d1d9;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 18px;
-            transition: color 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
         }
 
-        nav ul li a:hover,
         nav ul li a.active {
             color: #58a6ff;
-            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #161b22;
+            color: #c9d1d9;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         .content-wrapper {
@@ -97,18 +101,6 @@
             text-align: justify;
         }
 
-        footer {
-            text-align: center; /* Center-aligns text inside the footer */
-            padding: 20px 0; /* Adjusted padding for a more balanced look */
-            background: #161b22; /* Matching background color with header */
-            color: #e1e4e8; /* Lighter text color for readability */
-            position: relative; /* Changed from fixed to relative for better alignment */
-            margin-top: 40px; /* Increased space above footer to separate from content */
-            width: 100%; /* Ensures the footer spans the full width */
-            box-sizing: border-box; /* Ensures padding is included in the total width */
-            display: flex; /* Use flexbox for centering content */
-            justify-content: center; /* Center-aligns content horizontally */
-        }
 
         @keyframes fadeIn {
             from {
