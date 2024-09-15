@@ -17,21 +17,19 @@
             overflow-x: hidden;
         }
 
-        header {
+         header {
             background: #161b22; /* Dark background for the header */
-            color: #e1e4e8;
-            padding: 15px 0;
+            color: #c9d1d9;
+            padding: 20px;
+            position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         nav ul {
-            list-style: none; /* Remove bullets */
+            list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
@@ -39,22 +37,19 @@
         }
 
         nav ul li {
-            margin: 0 20px;
+            margin: 0 15px;
         }
 
         nav ul li a {
-            color: #e1e4e8;
+            color: #c9d1d9;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 18px;
-            transition: color 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
         }
 
-        nav ul li a:hover,
         nav ul li a.active {
             color: #58a6ff;
-            transform: scale(1.1);
         }
+
 
         .content-wrapper {
             background: rgba(22, 27, 34, 0.8); /* Darker background with transparency */
