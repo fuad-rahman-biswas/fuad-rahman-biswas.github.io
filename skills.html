@@ -7,16 +7,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Base styles */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #e0e0e0;
+            background-color: #121212; /* Dark background color */
+        }
+
         header {
-            background: #383549; /* Dark grayish-blue color */
-            color: white;
+            background: #1f1f1f; /* Darker gray for the header */
+            color: #e0e0e0;
             padding: 2rem 0;
             text-align: center;
             width: 100%;
             z-index: 1000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        
+
         nav ul {
             list-style: none;
             display: flex;
@@ -24,138 +32,130 @@
             padding: 0;
             margin: 0;
         }
-        
+
         nav ul li {
             margin: 0 15px;
         }
-        
+
         nav ul li a {
-            color: white;
+            color: #e0e0e0;
             text-decoration: none;
             font-weight: 600;
             padding: 10px 20px;
             transition: background 0.3s, color 0.3s;
             font-size: 1.2em;
         }
-        
-        header nav ul li a:hover{
+
+        header nav ul li a:hover {
             color: #ffffff;
             background: rgba(255, 255, 255, 0.3);
             border-radius: 5px;
         }
-        
+
         header nav ul li a.active {
-            color: #28a745; /* Green color for active and hover */
+            color: #4caf50; /* Green color for active and hover */
             border-radius: 5px;
         }
-        
+
         /* Footer Styling */
         footer {
-            background: #2c2f36; /* Dark background for the footer */
-            color: white;
+            background: #1f1f1f; /* Darker gray for the footer */
+            color: #e0e0e0;
             padding: 20px; /* Padding around the content */
             text-align: center;
             margin-top: 40px; /* Space above the footer */
             border-top: 2px solid #5a2d9e; /* Border to separate footer from content */
         }
-        
+
         .footer-quote {
             font-size: 1.2em; /* Larger font size for the quote */
             font-style: italic; /* Italic style for the quote */
             margin-bottom: 10px; /* Space below the quote */
         }
-        
+
         .footer-social {
             margin-top: 10px; /* Space above social links */
             display: flex;
             justify-content: center; /* Center the social links */
             gap: 15px; /* Space between social links */
         }
-        
+
         .footer-social a {
-            color: white; /* White color for social links */
+            color: #e0e0e0; /* Light color for social links */
             text-decoration: none; /* Remove underline */
             font-size: 1.1em; /* Font size for social links */
             transition: color 0.3s; /* Smooth transition on hover */
         }
-        
+
         .footer-social a:hover {
             color: #4caf50; /* Change color on hover */
         }
-        
+
         footer p {
             margin-top: 10px; /* Space above copyright text */
             font-size: 1.1em; /* Font size for copyright text */
         }
-        
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            background-color: #f0f4f8;
-        }
-        
+
         main {
             display: flex;
             justify-content: center;
             padding: 20px;
-            background: #fff;
+            background: #1e1e1e; /* Dark background for main content */
         }
-        
+
         .main-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background: white;
+            background: #2a2a2a; /* Slightly lighter dark background for content */
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
-        
+
         h1 {
             font-size: 2.4em;
-            color: #4a2c7d; /* Header color */
+            color: #e0e0e0; /* Light color for the main header */
             text-align: center;
             margin-bottom: 20px;
             font-weight: 700;
         }
-        
+
         h2 {
             font-size: 2em;
-            color: #4a2c7d; /* Header color */
+            color: #e0e0e0; /* Light color for section headers */
             margin-top: 40px;
             margin-bottom: 20px;
             border-bottom: 2px solid #4a2c7d; /* Underline effect */
             padding-bottom: 10px;
             text-align: center;
         }
-        
+
         .skills-category {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
         }
-        
+
         .skill-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 220px;
-            background: #ffffff;
-            border: 1px solid #ddd;
+            background: #333333; /* Dark background for skill items */
+            border: 1px solid #444444;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
         }
-        
+
         .skill-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-        
+
         .skill-item img {
             width: 120px;
             height: 120px;
@@ -163,54 +163,53 @@
             margin-top: 15px;
             transition: transform 0.3s;
         }
-        
+
         .skill-item:hover img {
             transform: scale(1.1);
         }
-        
+
         .skill-description {
             padding: 15px;
-            background: #f9f9f9;
-            color: #333;
+            background: #444444; /* Slightly lighter background for description */
+            color: #e0e0e0;
             font-size: 0.9em;
         }
-        
+
         .cv-section {
             margin-top: 80px;
             text-align: center;
         }
-        
+
         .cv-section h2 {
             margin-bottom: 20px;
         }
-        
+
         .cv-section p {
             margin-bottom: 20px;
             font-size: 1.1em;
-            color: #333;
+            color: #e0e0e0;
         }
-        
+
         .cv-buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
         }
-        
+
         .cv-button {
             display: inline-block;
             padding: 15px 30px;
             font-size: 1.1em;
-            color: #fff;
-            background: #4a2c7d;
+            color: #e0e0e0;
+            background: #4a2c7d; /* Dark color for buttons */
             text-decoration: none;
             border-radius: 8px;
             transition: background 0.3s;
         }
-        
+
         .cv-button:hover {
             background: #6f42c1;
         }
-
     </style>
 </head>
 <body>
@@ -329,26 +328,28 @@
                 </div>
             </div>
 
-            <div class="cv-section">
-                <h2>View or Download My CV 📄</h2>
-                <p>For a detailed overview of my skills and experience, you can view or download my CV below:</p>
+
+            <section class="cv-section">
+                <h2>Download My CV 📄</h2>
+                <p>For more detailed information about my professional experience and skills, you can download my CV.</p>
                 <div class="cv-buttons">
-                    <a href="images/CV.pdf" class="cv-button" download>Download CV</a>
-                    <a href="images/CV.pdf" class="cv-button" target="_blank">View CV</a>
+                    <a href="path-to-your-cv.pdf" class="cv-button" download>Download CV (PDF)</a>
+                    <a href="path-to-your-cv.docx" class="cv-button" download>Download CV (DOCX)</a>
                 </div>
-            </div>
+            </section>
         </section>
     </main>
 
     <footer>
-    <div class="footer-quote">
-        <p>"The more you learn, the more you earn." – Warren Buffett</p>
-    </div>
-    <div class="footer-social">
-        <a href="https://github.com/fuad-rahman-biswas" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/fuad-rahman-biswas/" target="_blank">LinkedIn</a>
-    </div>
-    <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
-</footer>
+        <div class="footer-quote">
+            "The best way to predict the future is to invent it." - Alan Kay
+        </div>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/fuad-rahman-biswas" target="_blank">LinkedIn</a>
+            <a href="https://github.com/fuadrahman" target="_blank">GitHub</a>
+            <a href="https://twitter.com/fuadrahman" target="_blank">Twitter</a>
+        </div>
+        <p>&copy; 2024 Fuad Rahman Biswas. All rights reserved.</p>
+    </footer>
 </body>
 </html>
