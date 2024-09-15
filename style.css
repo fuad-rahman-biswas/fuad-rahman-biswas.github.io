@@ -160,6 +160,7 @@ header {
     color: white;
     padding: 10px 0; /* Padding for spacing */
     text-align: center;
+    list-style: none;
 }
 
 header nav ul {
