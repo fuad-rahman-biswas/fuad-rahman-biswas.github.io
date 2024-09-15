@@ -20,7 +20,10 @@
         header {
             background: #383549; /* Dark grayish-blue color */
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            z-index: 1000;
             text-align: center;
         }
 
@@ -41,13 +44,15 @@
             text-decoration: none;
             font-weight: 600;
             padding: 10px 20px;
-            transition: background 0.3s, color 0.3s;
+            transition: background 0.3s, color 0.3s, transform 0.3s;;
         }
 
         header nav ul li a:hover,
         header nav ul li a.active {
-            color: #28a745; /* Green color for active and hover */
             border-radius: 5px;
+            transform: scale(1.1);
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.3);
         }
         
         /* Footer Styling */
