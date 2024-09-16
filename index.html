@@ -15,12 +15,13 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: #0d1117; /* Dark background for a modern look */
-            color: #c9d1d9; /* Light gray text color */
+            background: #0d1117;
+            color: #c9d1d9;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         header {
-            background: #161b22; /* Dark background for the header */
+            background: #161b22;
             color: #c9d1d9;
             padding: 20px;
             position: fixed;
@@ -46,8 +47,10 @@
             color: #c9d1d9;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
 
+        nav ul li a:hover,
         nav ul li a.active {
             color: #58a6ff;
         }
@@ -58,9 +61,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Behind other content */
+            z-index: -1;
             overflow: hidden;
-            pointer-events: none; /* Prevent interactions */
+            pointer-events: none;
         }
 
         .code-snippet {
@@ -70,7 +73,7 @@
             color: #58a6ff;
             white-space: nowrap;
             opacity: 0;
-            transition: opacity 0.4s ease-in-out;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
 
         .hero {
@@ -92,7 +95,7 @@
             background: rgba(0, 0, 0, 0.7);
             border-radius: 8px;
             position: relative;
-            z-index: 1; /* Above code snippets */
+            z-index: 1;
         }
 
         .hero-text h1 {
@@ -114,11 +117,12 @@
             border: none;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .cta-button:hover {
             background-color: #1f6feb;
+            transform: scale(1.05);
         }
 
         .highlights {
@@ -126,7 +130,7 @@
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
-            margin-bottom: 80px; /* Add margin at the bottom to create space before the footer */
+            margin-bottom: 80px;
         }
 
         .highlights h2 {
@@ -172,7 +176,6 @@
             width: 100%;
         }
 
-        /* Animation Keyframes */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -249,33 +252,29 @@
                 const snippet = document.createElement('div');
                 snippet.classList.add('code-snippet');
                 
-                // Select a random code snippet
                 const randomSnippet = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
                 snippet.textContent = randomSnippet;
                 
-                // Randomize position
-                const randomX = Math.random() * (window.innerWidth - 200); // Ensure it fits on screen
-                const randomY = Math.random() * (window.innerHeight - 50); // Ensure it fits on screen
+                const randomX = Math.random() * (window.innerWidth - 200);
+                const randomY = Math.random() * (window.innerHeight - 100);
+                
                 snippet.style.left = `${randomX}px`;
                 snippet.style.top = `${randomY}px`;
                 
-                // Add fade-in animation
+                snippet.style.opacity = 1;
                 snippet.style.animation = `fadeIn 0.5s ease-in-out forwards`;
                 
-                // Append the snippet to the container
                 codeAnimationContainer.appendChild(snippet);
-
-                // Remove the snippet after 1.5 seconds
+                
                 setTimeout(() => {
-                    snippet.style.opacity = 0; // Fade out
+                    snippet.style.opacity = 0;
                     setTimeout(() => {
                         snippet.remove();
-                    }, 400); // Delay to match animation duration
-                }, 1500); // Time to stay on screen
+                    }, 400);
+                }, 1000);
             }
 
-            // Generate multiple snippets at once every 50 milliseconds
-            setInterval(createCodeSnippet, 50);
+            setInterval(createCodeSnippet, 30); // Faster snippet creation
         });
     </script>
 </body>
