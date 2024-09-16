@@ -188,6 +188,114 @@
                 transform: scale(1);
             }
         }
+
+
+        /* Tablets (Portrait) - Adjusts for screens with a width between 768px and 1024px */
+        @media screen and (max-width: 1024px) {
+            header {
+                padding: 25px;
+            }
+        
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+        
+            nav ul li {
+                margin: 10px 0;
+            }
+        
+            .hero-text h1 {
+                font-size: 2em;
+            }
+        
+            .hero-text p {
+                font-size: 1em;
+            }
+        
+            .highlights {
+                padding: 40px 10px;
+            }
+        
+            .highlight-cards {
+                flex-direction: column;
+            }
+        
+            .card {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+        
+        /* Phones (Portrait) - Adjusts for screens with a width of up to 768px */
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 20px;
+            }
+        
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        
+            .hero {
+                height: 80vh;
+            }
+        
+            .hero-text {
+                max-width: 90%;
+                padding: 15px;
+            }
+        
+            .hero-text h1 {
+                font-size: 1.8em;
+            }
+        
+            .hero-text p {
+                font-size: 0.9em;
+            }
+        
+            .cta-button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        
+            .highlight-cards {
+                flex-direction: column;
+                gap: 20px;
+            }
+        
+            .card {
+                max-width: 100%;
+            }
+        
+            footer {
+                padding: 15px;
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Small Phones - For screens smaller than 480px */
+        @media screen and (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 1.5em;
+            }
+        
+            .hero-text p {
+                font-size: 0.8em;
+            }
+        
+            .cta-button {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        
+            nav ul li a {
+                font-size: 18px;
+            }
+        }
+
     </style>
 </head>
 <body>
