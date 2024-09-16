@@ -227,103 +227,128 @@
             }
         }
         
-        /* Phones (Portrait) - Adjusts for screens with a width of up to 768px */
-        @media screen and (max-width: 768px) {
-            header {
-                padding: 20px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-        
-            /* Navigation styles for horizontal layout */
-            nav ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                width: 100%;
-                padding: 0;
-                margin: 0;
-            }
-        
-            nav ul li {
-                margin: 0;
-                padding: 0 10px;
-            }
-        
-            nav ul li a {
-                font-size: 0.9rem;
-                padding: 10px;
-                text-align: center;
-            }
-        
-            .hero {
-                height: 90vh;
-                padding: 15px;
-                width: 100%;
-            }
-        
-            .hero-text {
-                max-width: 90%;
-                padding: 15px;
-                text-align: center;
-            }
-        
-            .hero-text h1 {
-                font-size: 1.8em;
-            }
-        
-            .hero-text p {
-                font-size: 0.9em;
-            }
-        
-            .cta-button {
-                font-size: 1rem;
-                padding: 10px 20px;
-            }
-        
-            /* Adjust cards for smaller screens */
-            .highlight-cards {
-                flex-direction: column;
-                gap: 20px;
-            }
-        
-            .card {
-                max-width: 100%;
-            }
-        
-            footer {
-                padding: 15px;
-                font-size: 0.8rem;
-                width: 100%;
-            }
-        }
-        
-        /* Small Phones - For screens smaller than 480px */
-        @media screen and (max-width: 480px) {
-            header {
-                flex-wrap: wrap;
-                justify-content: space-around;
-            }
-        
-            nav ul li a {
-                font-size: 18px;
-            }
-        
-            .hero-text h1 {
-                font-size: 1.5em;
-            }
-        
-            .hero-text p {
-                font-size: 0.8em;
-            }
-        
-            .cta-button {
-                font-size: 0.9rem;
-                padding: 8px 16px;
-            }
-        }
+       /* Phones (Portrait) - Adjusts for screens with a width of up to 768px */
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    header, footer {
+        width: 100%;
+        max-width: 1200px; /* or your desired max-width */
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hero {
+        height: 90vh;
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        padding: 15px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-text p {
+        font-size: 0.9em;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    /* Adjust cards for smaller screens */
+    .highlight-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .card {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Small Phones - For screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    header, footer {
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-text p {
+        font-size: 0.8em;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
 
 
     </style>
