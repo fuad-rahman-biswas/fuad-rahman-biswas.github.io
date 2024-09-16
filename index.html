@@ -61,6 +61,7 @@
             height: 100%;
             z-index: -1; /* Behind other content */
             overflow: hidden;
+            pointer-events: none; /* Prevent interactions */
         }
 
         .code-snippet {
@@ -71,22 +72,11 @@
             white-space: nowrap;
             opacity: 0.8;
             pointer-events: none;
-            animation: floatUp 5s ease-in-out infinite; /* Snippets float up and disappear */
+            transition: opacity 0.5s ease;
         }
 
-        /* Keyframes for floating effect */
-        @keyframes floatUp {
-            0% {
-                transform: translateY(100vh); /* Start below screen */
-                opacity: 0.5;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh); /* End above screen */
-                opacity: 0;
-            }
+        .code-snippet.fade-out {
+            opacity: 0;
         }
 
         .hero {
@@ -250,29 +240,37 @@
             const codeAnimationContainer = document.querySelector('.code-animation-container');
 
             function createCodeSnippet() {
-                const snippet = document.createElement('div');
-                snippet.classList.add('code-snippet');
+                const snippetContainer = document.createElement('div');
+                snippetContainer.classList.add('code-snippet-container');
 
-                // Select a random code snippet
-                const randomSnippet = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
-                snippet.textContent = randomSnippet;
+                for (let i = 0; i < 5; i++) { // Adjust the number of lines to appear at once
+                    const snippet = document.createElement('div');
+                    snippet.classList.add('code-snippet');
+                    
+                    // Select a random code snippet
+                    const randomSnippet = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+                    snippet.textContent = randomSnippet;
+                    
+                    // Randomize position
+                    const randomX = Math.random() * (window.innerWidth - 200); // Ensure it fits on screen
+                    const randomY = Math.random() * (window.innerHeight - 50); // Ensure it fits on screen
+                    snippet.style.left = `${randomX}px`;
+                    snippet.style.top = `${randomY}px`;
 
-                // Randomize position
-                const randomX = Math.random() * (window.innerWidth - 200); // Ensure it fits on screen
-                snippet.style.left = `${randomX}px`;
-                snippet.style.top = `${window.innerHeight}px`; // Start off-screen at the bottom
+                    snippetContainer.appendChild(snippet);
+                }
 
-                // Add the snippet to the container
-                codeAnimationContainer.appendChild(snippet);
+                // Append the snippet container
+                codeAnimationContainer.appendChild(snippetContainer);
 
-                // Remove the snippet after animation completes (5 seconds)
+                // Remove the snippet container after 5 seconds
                 setTimeout(() => {
-                    snippet.remove();
+                    snippetContainer.remove();
                 }, 5000);
             }
 
-            // Generate a new snippet every second
-            setInterval(createCodeSnippet, 1000);
+            // Generate a new snippet every 2 seconds
+            setInterval(createCodeSnippet, 2000);
         });
     </script>
 </body>
