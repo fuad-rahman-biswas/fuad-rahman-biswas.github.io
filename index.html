@@ -238,44 +238,57 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const codeSnippets = [
-                'console.log("Hello, World!");',        // JavaScript
-                'print("Hello, World!")',               // Python
-                'System.out.println("Hello, World!");', // Java
-                'echo "Hello, World!";',                // PHP
-                'printf("Hello, World!\\n");'           // C
-            ];
+    const codeSnippets = [
+        'console.log("Hello, World!");',        // JavaScript
+        'print("Hello, World!")',               // Python
+        'System.out.println("Hello, World!");', // Java
+        'echo "Hello, World!";',                // PHP
+        'printf("Hello, World!\\n");'           // C
+    ];
 
-            const codeAnimationContainer = document.querySelector('.code-animation-container');
+    const codeAnimationContainer = document.querySelector('.code-animation-container');
+    const usedPositions = new Set(); // To track used positions
 
-            function createCodeSnippet() {
-                const snippet = document.createElement('div');
-                snippet.classList.add('code-snippet');
-                
-                const randomSnippet = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
-                snippet.textContent = randomSnippet;
-                
-                const randomX = Math.random() * (window.innerWidth - 200);
-                const randomY = Math.random() * (window.innerHeight - 100);
-                
-                snippet.style.left = `${randomX}px`;
-                snippet.style.top = `${randomY}px`;
-                
-                snippet.style.opacity = 1;
-                snippet.style.animation = `fadeIn 0.5s ease-in-out forwards`;
-                
-                codeAnimationContainer.appendChild(snippet);
-                
-                setTimeout(() => {
-                    snippet.style.opacity = 0;
-                    setTimeout(() => {
-                        snippet.remove();
-                    }, 400);
-                }, 1000);
-            }
+    function getRandomPosition() {
+        let x, y, position;
+        do {
+            x = Math.random() * (window.innerWidth - 200);
+            y = Math.random() * (window.innerHeight - 100);
+            position = `${x},${y}`;
+        } while (usedPositions.has(position));
+        usedPositions.add(position);
+        return { x, y };
+    }
 
-            setInterval(createCodeSnippet, 30); // Faster snippet creation
-        });
+    function createCodeSnippet() {
+        const snippet = document.createElement('div');
+        snippet.classList.add('code-snippet');
+        
+        const randomSnippet = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+        snippet.textContent = randomSnippet;
+        
+        const { x, y } = getRandomPosition();
+        
+        snippet.style.left = `${x}px`;
+        snippet.style.top = `${y}px`;
+        
+        snippet.style.opacity = 1;
+        snippet.style.animation = `fadeIn 0.5s ease-in-out forwards`;
+        
+        codeAnimationContainer.appendChild(snippet);
+        
+        setTimeout(() => {
+            snippet.style.opacity = 0;
+            setTimeout(() => {
+                snippet.remove();
+                usedPositions.delete(`${x},${y}`); // Free up position after snippet is removed
+            }, 500);
+        }, 1500); // Keep snippet visible for longer
+    }
+
+    setInterval(createCodeSnippet, 150); // Increased interval for a more noticeable effect
+});
+
     </script>
 </body>
 </html>
