@@ -3,35 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
     <title>Fuad Rahman Biswas - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="style.css">
-    <style>/* General Styling */
     <style>
         /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
-            background-color: #f4f4f9;
             background: #0d1117; /* Dark background for a modern look */
             color: #c9d1d9; /* Light gray text color */
             overflow: auto; /* Allow scrolling */
         }
-
-        /* Hero Section */
-        .hero {
-            background-color: #5a2d9e;
-            color: #fff;
-            text-align: center;
-            padding: 60px 20px;
 
         header {
             background: #161b22; /* Dark background for the header */
@@ -43,10 +30,6 @@
             z-index: 1000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
-        .hero-content {
-            max-width: 1000px;
-            margin: 0 auto;
 
         nav ul {
             list-style: none;
@@ -108,7 +91,6 @@
         .hero {
             position: relative;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -119,13 +101,6 @@
             margin-top: 80px; /* Adjust for header */
         }
 
-        .hero-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-
         .hero-text {
             max-width: 800px;
             padding: 20px;
@@ -134,14 +109,11 @@
             position: relative;
             z-index: 1; /* Above code snippets */
         }
-        
 
         .hero-text h1 {
             font-size: 2.5em;
-            margin-bottom: 10px;
             margin-bottom: 20px;
         }
-
 
         .hero-text p {
             font-size: 1.2em;
@@ -149,10 +121,6 @@
         }
 
         .cta-button {
-            background-color: #383549;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
             display: inline-block;
             padding: 12px 24px;
             background-color: #58a6ff;
@@ -160,87 +128,54 @@
             font-size: 1.1rem;
             border: none;
             border-radius: 5px;
-            margin-top: 20px;
-            font-size: 1.1em;
             text-decoration: none;
             transition: background-color 0.3s ease;
         }
-        
 
         .cta-button:hover {
-
             background-color: #1f6feb;
         }
 
-        /* Highlights Section */
-
         .highlights {
-            padding: 40px 20px;
             padding: 60px 20px;
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
-            background-color: #fff;
             margin-bottom: 80px; /* Add margin at the bottom to create space before the footer */
         }
-        
 
         .highlights h2 {
-            font-size: 2em;
-            margin-bottom: 30px;
-            color: #5a2d9e;
             font-size: 2.2em;
             color: #c9d1d9;
             margin-bottom: 40px;
         }
-        
 
         .highlight-cards {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
             flex-wrap: wrap;
             gap: 20px;
         }
-        
 
         .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
             background: #161b22;
             padding: 20px;
-            width: 300px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Card shadow effect */
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             flex: 1;
             max-width: 300px;
             transition: background-color 0.3s, box-shadow 0.3s;
         }
-        
 
         .card:hover {
-            transform: translateY(-5px); /* Card hover effect */
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
             background: #1f2a34;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
-        
 
         .card h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #333;
             margin-top: 0;
             color: #58a6ff;
         }
-
-        .card p {
-            font-size: 1.1em;
-            color: #666;
 
         footer {
             text-align: center;
@@ -251,7 +186,6 @@
             bottom: 0;
             width: 100%;
         }
-
     </style>
 </head>
 <body>
@@ -262,17 +196,13 @@
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="skills.html">Skills</a></li>
-@@ -124,16 +203,16 @@
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <img src="images/Profile-Pic.jpeg" alt="Profile Picture" class="hero-image">
-                <div class="hero-text">
-                    <h1>Hello, I'm Fuad Rahman Biswas</h1>
-                    <p>Welcome to my portfolio</p>
-                </div>
-                <a href="#projects" class="cta-button">View My Projects</a>
             <div class="code-animation-container">
                 <!-- Animated code snippets will be inserted here -->
             </div>
@@ -282,19 +212,34 @@
                 <a href="projects.html" class="cta-button">View My Projects</a>
             </div>
         </section>
-
         
         <section class="highlights">
             <h2>What I Do</h2>
             <div class="highlight-cards">
-@@ -157,5 +236,41 @@ <h3>Tech Enthusiast</h3>
+                <div class="card">
+                    <h3>Web Development</h3>
+                    <p>Building responsive and modern websites with the latest technologies.</p>
+                </div>
+                <div class="card">
+                    <h3>Software Engineering</h3>
+                    <p>Creating innovative software solutions to solve real-world problems.</p>
+                </div>
+                <div class="card">
+                    <h3>Tech Enthusiast</h3>
+                    <p>Exploring new technologies and staying updated with industry trends.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <p>&copy; 2024 Fuad Rahman Biswas. Crafted with 💻 and ☕.</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const codeAnimationContainer = document.querySelector('.code-animation-container');
-
+            
             const codeSnippets = [
                 'console.log("Hello, World!");', // JavaScript
                 'print("Hello, World!")',        // Python
@@ -309,22 +254,15 @@
                     codeSnippet.className = 'code-snippet';
                     const randomIndex = Math.floor(Math.random() * codeSnippets.length);
                     codeSnippet.innerText = codeSnippets[randomIndex];
-                    const x = Math.random() * (codeAnimationContainer.clientWidth - 200);
-                    const y = Math.random() * (codeAnimationContainer.clientHeight - 50);
-                    codeSnippet.style.left = `${x}px`;
-                    codeSnippet.style.top = `${y}px`;
+                    const xPos = Math.random() * 100;
+                    const yPos = Math.random() * 100;
+                    codeSnippet.style.transform = `translate(${xPos}vw, ${yPos}vh)`;
+                    codeSnippet.style.opacity = Math.random();
                     codeAnimationContainer.appendChild(codeSnippet);
-
-                    // Remove the snippet after a while to prevent clutter
-                    setTimeout(() => {
-                        codeSnippet.style.opacity = 0;
-                        setTimeout(() => codeSnippet.remove(), 500);
-                    }, 3000);
                 }
             }
 
-            // Generate multiple code snippets at a time periodically
-            setInterval(() => createCodeSnippets(5), 500);
+            createCodeSnippets(10);
         });
     </script>
 </body>
