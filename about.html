@@ -28,7 +28,7 @@
         }
 
         nav ul {
-            list-style: none;
+            list-style: none; /* Removes dots from nav list */
             padding: 0;
             margin: 0;
             display: flex;
@@ -85,13 +85,24 @@
         }
 
         ul {
-            list-style-type: disc;
-            padding-left: 20px;
+            list-style-type: none; /* Remove default bullet points */
+            padding-left: 0;
             margin-top: 20px;
+            color: #e1e4e8; /* Ensures list items are visible */
         }
 
         ul li {
             margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '•'; /* Custom bullet point */
+            position: absolute;
+            left: 0;
+            color: #58a6ff; /* Custom bullet point color */
+            font-size: 1.2em;
         }
 
         p {
@@ -99,6 +110,9 @@
             text-align: justify;
         }
 
+        a {
+            color: #58a6ff;
+        }
 
         @keyframes fadeIn {
             from {
@@ -143,7 +157,7 @@
                 <li>🐾 Active volunteer at animal shelters</li>
             </ul>
 
-            <p>📩 Feel free to <a href="contact.html" style="color: #58a6ff;">get in touch</a> or explore my <a href="projects.html" style="color: #58a6ff;">projects</a> to see what I’ve been working on!</p>
+            <p>📩 Feel free to <a href="contact.html">get in touch</a> or explore my <a href="projects.html">projects</a> to see what I’ve been working on!</p>
         </main>
     </div>
 
