@@ -8,110 +8,123 @@
     <link rel="stylesheet" href="style.css"> <!-- Ensure your CSS file has the necessary styles -->
     <style>
     /* Base styles for About Me page */
-        body {
-            background: #0d1117; /* Dark background color */
-            color: #e1e4e8; /* Light text color */
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
+    body {
+        background: #0d1117; /* Dark background color */
+        color: #e1e4e8; /* Light text color */
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    header {
+        background: #161b22; /* Dark background for the header */
+        color: #c9d1d9;
+        padding: 20px;
+        width: 100%;
+        position: fixed; /* Fix header at the top */
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul {
+        list-style-type: none; /* Remove list bullets */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* Add some space between items */
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        color: #c9d1d9;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    nav ul li a.active {
+        color: #58a6ff; /* Active link highlight */
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #161b22;
+        color: #c9d1d9;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .content-wrapper {
+        background: rgba(22, 27, 34, 0.8); /* Darker background with transparency */
+        border-radius: 15px;
+        padding: 40px;
+        margin: 160px auto; /* Adjust margin to make space for fixed header */
+        max-width: 900px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    main {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #58a6ff; /* Highlight color */
+        text-align: center;
+    }
+
+    .highlight {
+        color: #58a6ff;
+    }
+
+    ul {
+        list-style-type: none; /* Remove default bullets */
+        padding-left: 0; /* Adjust padding */
+        margin-top: 20px;
+    }
+
+    ul li {
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: #e1e4e8; /* Ensure good visibility */
+    }
+
+    p {
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
         }
-    
-        header {
-            background: #161b22; /* Dark background for the header */
-            color: #c9d1d9;
-            padding: 20px;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
-    
-        nav ul {
-            list-style-type: none; /* Remove default bullets */
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-    
-        nav ul li {
-            margin: 0 15px;
-        }
-    
-        nav ul li a {
-            color: #c9d1d9;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    
-        nav ul li a.active {
-            color: #58a6ff;
-        }
-    
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #161b22;
-            color: #c9d1d9;
-            bottom: 0;
-            width: 100%;
-        }
-    
-        .content-wrapper {
-            background: rgba(22, 27, 34, 0.8); /* Darker background with transparency */
-            border-radius: 15px;
-            padding: 40px;
-            margin: 100px auto;
-            max-width: 900px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-            animation: fadeIn 1s ease-in-out;
-        }
-    
-        main {
-            font-size: 18px;
-            line-height: 1.7;
-        }
-    
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #58a6ff; /* Highlight color */
-            text-align: center;
-        }
-    
-        .highlight {
-            color: #58a6ff;
-        }
-    
-        ul {
-            list-style-type: none; /* Remove default bullets */
-            padding-left: 0; /* Adjust padding to align symbols */
-            margin-top: 20px;
-        }
-    
-        ul li {
-            margin-bottom: 15px;
-            font-size: 18px;
-            color: #e1e4e8; /* Ensure good visibility */
-        }
-    
-        p {
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-    
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    }
+</style>
+
 </head>
 <body>
     <header>
