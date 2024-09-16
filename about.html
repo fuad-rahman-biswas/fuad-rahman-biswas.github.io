@@ -21,44 +21,36 @@
         background: #161b22; /* Dark background for the header */
         color: #c9d1d9;
         padding: 20px;
-        width: 100%;
-        position: fixed; /* Fix header at the top */
+        position: fixed;
         top: 0;
-        left: 0;
+        width: 100%;
         z-index: 1000;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-
-    nav {
+    
+    nav ul {
+        list-style: none; /* Ensures the bullet points are removed */
+        padding: 0;
+        margin: 0;
         display: flex;
         justify-content: center;
-        margin: 0;
-        padding: 0;
     }
-
-    nav ul {
-        list-style-type: none; /* Remove list bullets */
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: space-between;
-        gap: 20px; /* Add some space between items */
-    }
-
+    
     nav ul li {
-        margin: 0;
+        margin: 0 15px;
+        display: inline-block; /* Ensure the list items are in a row */
     }
-
+    
     nav ul li a {
         color: #c9d1d9;
         text-decoration: none;
         font-weight: bold;
-        font-size: 1.2em;
+    }
+    
+    nav ul li a.active {
+        color: #58a6ff;
     }
 
-    nav ul li a.active {
-        color: #58a6ff; /* Active link highlight */
-    }
 
     footer {
         text-align: center;
