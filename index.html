@@ -11,6 +11,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <style>
        /* Basic reset for margin and padding */
+/* Basic reset for margin and padding */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +21,8 @@
 html, body {
     height: 100%;
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: #eee;
+    background: #121212; /* Dark background for the whole page */
 }
 
 .hero {
@@ -29,7 +31,7 @@ html, body {
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    background: linear-gradient(135deg, #f0f4f8, #cce0ff);
+    background: #1e1e1e; /* Dark background for hero section */
     position: relative;
     overflow: hidden;
 }
@@ -47,9 +49,9 @@ html, body {
 .code-snippet {
     position: absolute;
     font-family: 'Courier New', Courier, monospace;
-    color: #333;
+    color: #00ff00; /* Neon green for code snippets */
     font-size: 14px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 4px;
     padding: 5px;
     opacity: 0;
@@ -62,23 +64,23 @@ html, body {
     text-align: center;
     max-width: 600px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(30, 30, 30, 0.8); /* Semi-transparent dark background */
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transform: translateY(0);
     transition: transform 0.5s ease;
 }
 
 .hero-text h1 {
     font-size: 3rem;
-    color: #333;
+    color: #fff; /* White text for contrast */
     margin-bottom: 0.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
 }
 
 .hero-text p {
     font-size: 1.25rem;
-    color: #666;
+    color: #ccc; /* Light grey for less emphasis */
     margin-bottom: 1em;
     line-height: 1.5;
 }
@@ -93,13 +95,14 @@ html, body {
     border-radius: 4px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .cta-button:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
+
 
 
         .highlights {
