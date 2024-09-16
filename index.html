@@ -5,201 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fuad Rahman Biswas - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
     <style>
         /* General Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #0d1117; /* Dark background for a modern look */
-            color: #c9d1d9; /* Light gray text color */
-            overflow: auto; /* Allow scrolling */
-        }
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #0d1117; /* Dark background for a modern look */
+    color: #c9d1d9; /* Light gray text color */
+}
 
-        header {
-            background: #1e1e1e; /* Darker gray background for the header */
-            color: #e0e0e0;
-            padding: 2rem 0;
-            text-align: center;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-        }
+header {
+    background: #161b22;
+    color: #c9d1d9;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
 
-        nav ul li {
-            margin: 0 15px;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
 
-        nav ul li a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 10px 20px;
-            transition: background 0.3s, color 0.3s;
-            font-size: 1.2em;
-        }
+nav ul li {
+    margin: 0 15px;
+}
 
-        header nav ul li a:hover {
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 5px;
-        }
+nav ul li a {
+    color: #c9d1d9;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
 
-        header nav ul li a.active {
-            color: #58a6ff;
-            border-radius: 5px;
-        }
+nav ul li a.active,
+nav ul li a:hover {
+    color: #58a6ff;
+}
 
-        main {
-            padding-top: 100px; /* Ensure this matches the header height */
-        }
+nav ul li a.active::after,
+nav ul li a:hover::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #58a6ff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
 
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('images/code-background.jpg') no-repeat center center/cover;
+    color: #c9d1d9;
+    text-align: center;
+    padding: 0 20px;
+}
 
-        .code-animation-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1; /* Behind other content */
-        }
+.hero-text {
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
 
-        .code-snippet {
-            position: absolute;
-            color: #58a6ff;
-            font-family: monospace;
-            white-space: nowrap;
-            pointer-events: none;
-            transition: opacity 0.5s ease;
-            font-size: 16px;
-            opacity: 0.8;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 5px;
-            border-radius: 3px;
-        }
+.hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
 
-        /* Arrange code snippets in a grid */
-        .code-snippet:nth-child(odd) {
-            top: calc(10% + (20% * (var(--i, 0) % 5)));
-            left: calc(10% + (20% * Math.floor(var(--i, 0) / 5)));
-        }
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
 
-        .code-snippet:nth-child(even) {
-            top: calc(10% + (20% * (var(--i, 0) % 5)));
-            left: calc(10% + (20% * Math.floor(var(--i, 0) / 5) + 10%));
-        }
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #58a6ff;
+    color: #161b22;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
 
-        .hero {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('images/code-background.jpg') no-repeat center center/cover;
-            color: #c9d1d9;
-            text-align: center;
-            padding: 0 20px;
-            margin-top: 80px; /* Adjust for header */
-        }
+.cta-button:hover {
+    background-color: #1f6feb;
+}
 
-        .hero-text {
-            max-width: 800px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            position: relative;
-            z-index: 1; /* Above code snippets */
-        }
+.highlights {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-        .hero-text h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
+.highlights h2 {
+    font-size: 2.2em;
+    color: #c9d1d9;
+    margin-bottom: 40px;
+}
 
-        .hero-text p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
+.highlight-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-        .cta-button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #58a6ff;
-            color: #161b22;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
+.card {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    max-width: 300px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
 
-        .cta-button:hover {
-            background-color: #1f6feb;
-        }
+.card:hover {
+    background: #1f2a34;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
 
-        .highlights {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-            margin-bottom: 80px; /* Add margin at the bottom to create space before the footer */
-        }
+.card h3 {
+    margin-top: 0;
+    color: #58a6ff;
+}
 
-        .highlights h2 {
-            font-size: 2.2em;
-            color: #c9d1d9;
-            margin-bottom: 40px;
-        }
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #161b22;
+    color: #c9d1d9;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
-        .highlight-cards {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .card {
-            background: #161b22;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            flex: 1;
-            max-width: 300px;
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            background: #1f2a34;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .card h3 {
-            margin-top: 0;
-            color: #58a6ff;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #161b22;
-            color: #c9d1d9;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
     </style>
 </head>
 <body>
@@ -217,16 +184,14 @@
 
     <main>
         <section class="hero">
-            <div class="code-animation-container">
-                <!-- Animated code snippets will be inserted here -->
-            </div>
             <div class="hero-text">
                 <h1>Hello, I'm Fuad Rahman Biswas</h1>
                 <p>I'm a passionate software engineer and web developer. Welcome to my portfolio!</p>
                 <a href="projects.html" class="cta-button">View My Projects</a>
             </div>
         </section>
-        
+       
+
         <section class="highlights">
             <h2>What I Do</h2>
             <div class="highlight-cards">
@@ -244,47 +209,93 @@
                 </div>
             </div>
         </section>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script>
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#58a6ff"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 6,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    }
+                },
+                "retina_detect": true
+            });
+        </script>
     </main>
 
     <footer>
         <p>&copy; 2024 Fuad Rahman Biswas. Crafted with 💻 and ☕.</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const codeAnimationContainer = document.querySelector('.code-animation-container');
-            
-            const codeSnippets = [
-                'console.log("Hello, World!");', // JavaScript
-                'print("Hello, World!")',        // Python
-                'System.out.println("Hello, World!");', // Java
-                'echo "Hello, World!";',         // PHP
-                'printf("Hello, World!\\n");'    // C
-            ];
-
-            function createCodeSnippets(num) {
-                for (let i = 0; i < num; i++) {
-                    const codeSnippet = document.createElement('div');
-                    codeSnippet.className = 'code-snippet';
-                    const randomIndex = Math.floor(Math.random() * codeSnippets.length);
-                    codeSnippet.innerText = codeSnippets[randomIndex];
-                    const x = Math.random() * (codeAnimationContainer.clientWidth - 200);
-                    const y = Math.random() * (codeAnimationContainer.clientHeight - 50);
-                    codeSnippet.style.left = `${x}px`;
-                    codeSnippet.style.top = `${y}px`;
-                    codeAnimationContainer.appendChild(codeSnippet);
-
-                    // Remove the snippet after a while to prevent clutter
-                    setTimeout(() => {
-                        codeSnippet.style.opacity = 0;
-                        setTimeout(() => codeSnippet.remove(), 500);
-                    }, 3000);
-                }
-            }
-
-            // Generate multiple code snippets at a time periodically
-            setInterval(() => createCodeSnippets(5), 500);
-        });
-    </script>
 </body>
 </html>
