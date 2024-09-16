@@ -231,21 +231,42 @@
         @media screen and (max-width: 768px) {
             header {
                 padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
         
+            /* Navigation styles for horizontal layout */
             nav ul {
-                flex-direction: column;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
                 align-items: center;
-                gap: 10px;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+        
+            nav ul li {
+                margin: 0;
+                padding: 0 10px;
+            }
+        
+            nav ul li a {
+                font-size: 1rem;
+                padding: 10px;
+                text-align: center;
             }
         
             .hero {
                 height: 80vh;
+                padding: 15px;
             }
         
             .hero-text {
                 max-width: 90%;
                 padding: 15px;
+                text-align: center;
             }
         
             .hero-text h1 {
@@ -261,6 +282,7 @@
                 padding: 10px 20px;
             }
         
+            /* Adjust cards for smaller screens */
             .highlight-cards {
                 flex-direction: column;
                 gap: 20px;
@@ -278,6 +300,15 @@
         
         /* Small Phones - For screens smaller than 480px */
         @media screen and (max-width: 480px) {
+            header {
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+        
+            nav ul li a {
+                font-size: 18px;
+            }
+        
             .hero-text h1 {
                 font-size: 1.5em;
             }
@@ -290,11 +321,8 @@
                 font-size: 0.9rem;
                 padding: 8px 16px;
             }
-        
-            nav ul li a {
-                font-size: 18px;
-            }
         }
+
 
     </style>
 </head>
