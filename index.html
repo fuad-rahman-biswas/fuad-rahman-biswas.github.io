@@ -70,13 +70,12 @@
             font-size: 16px;
             color: #58a6ff;
             white-space: nowrap;
-            opacity: 0.8;
-            pointer-events: none;
-            transition: opacity 0.5s ease;
+            opacity: 0;
+            transition: opacity 1s ease;
         }
 
-        .code-snippet.fade-out {
-            opacity: 0;
+        .code-snippet.visible {
+            opacity: 1;
         }
 
         .hero {
@@ -177,6 +176,20 @@
             bottom: 0;
             width: 100%;
         }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
     </style>
 </head>
 <body>
@@ -243,22 +256,20 @@
                 const snippetContainer = document.createElement('div');
                 snippetContainer.classList.add('code-snippet-container');
 
-                for (let i = 0; i < 5; i++) { // Adjust the number of lines to appear at once
-                    const snippet = document.createElement('div');
-                    snippet.classList.add('code-snippet');
-                    
-                    // Select a random code snippet
-                    const randomSnippet = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
-                    snippet.textContent = randomSnippet;
-                    
-                    // Randomize position
-                    const randomX = Math.random() * (window.innerWidth - 200); // Ensure it fits on screen
-                    const randomY = Math.random() * (window.innerHeight - 50); // Ensure it fits on screen
-                    snippet.style.left = `${randomX}px`;
-                    snippet.style.top = `${randomY}px`;
+                const snippet = document.createElement('div');
+                snippet.classList.add('code-snippet', 'fade-in');
+                
+                // Select a random code snippet
+                const randomSnippet = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+                snippet.textContent = randomSnippet;
+                
+                // Randomize position
+                const randomX = Math.random() * (window.innerWidth - 200); // Ensure it fits on screen
+                const randomY = Math.random() * (window.innerHeight - 50); // Ensure it fits on screen
+                snippet.style.left = `${randomX}px`;
+                snippet.style.top = `${randomY}px`;
 
-                    snippetContainer.appendChild(snippet);
-                }
+                snippetContainer.appendChild(snippet);
 
                 // Append the snippet container
                 codeAnimationContainer.appendChild(snippetContainer);
