@@ -71,11 +71,7 @@
             color: #58a6ff;
             white-space: nowrap;
             opacity: 0;
-            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-        }
-
-        .code-snippet.visible {
-            opacity: 1;
+            transition: opacity 0.4s ease-in-out;
         }
 
         .hero {
@@ -181,11 +177,11 @@
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: scale(0.9);
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: scale(1);
             }
         }
     </style>
@@ -250,7 +246,7 @@
 
             const codeAnimationContainer = document.querySelector('.code-animation-container');
 
-            function createCodeSnippet(index) {
+            function createCodeSnippet() {
                 const snippet = document.createElement('div');
                 snippet.classList.add('code-snippet');
                 
@@ -264,8 +260,8 @@
                 snippet.style.left = `${randomX}px`;
                 snippet.style.top = `${randomY}px`;
                 
-                // Add a small delay for staggered effect
-                snippet.style.animation = `fadeIn 0.6s ease-in-out ${index * 0.1}s forwards`;
+                // Add animation
+                snippet.style.animation = `fadeIn 0.4s ease-in-out forwards`;
 
                 // Append the snippet to the container
                 codeAnimationContainer.appendChild(snippet);
@@ -275,17 +271,12 @@
                     snippet.style.opacity = 0; // Fade out
                     setTimeout(() => {
                         snippet.remove();
-                    }, 600); // Delay to match animation duration
+                    }, 400); // Delay to match animation duration
                 }, 1500); // Time to stay on screen
             }
 
-            // Generate multiple snippets at once every 200 milliseconds
-            let index = 0;
-            setInterval(() => {
-                for (let i = 0; i < 10; i++) {
-                    createCodeSnippet(index++);
-                }
-            }, 200);
+            // Generate multiple snippets at once every 100 milliseconds
+            setInterval(createCodeSnippet, 100);
         });
     </script>
 </body>
