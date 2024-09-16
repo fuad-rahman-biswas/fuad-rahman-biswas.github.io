@@ -17,7 +17,6 @@
             padding: 0;
             background: #0d1117; /* Dark background for a modern look */
             color: #c9d1d9; /* Light gray text color */
-            overflow: hidden; /* Hide scrollbars for a clean look */
         }
 
         header {
@@ -260,9 +259,9 @@
                 snippet.style.left = `${randomX}px`;
                 snippet.style.top = `${randomY}px`;
                 
-                // Add animation
-                snippet.style.animation = `fadeIn 0.4s ease-in-out forwards`;
-
+                // Add fade-in animation
+                snippet.style.animation = `fadeIn 0.5s ease-in-out forwards`;
+                
                 // Append the snippet to the container
                 codeAnimationContainer.appendChild(snippet);
 
@@ -275,8 +274,8 @@
                 }, 1500); // Time to stay on screen
             }
 
-            // Generate multiple snippets at once every 100 milliseconds
-            setInterval(createCodeSnippet, 100);
+            // Generate multiple snippets at once every 50 milliseconds
+            setInterval(createCodeSnippet, 50);
         });
     </script>
 </body>
