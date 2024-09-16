@@ -71,7 +71,7 @@
             color: #58a6ff;
             white-space: nowrap;
             opacity: 0;
-            transition: opacity 1s ease;
+            transition: opacity 0.8s ease-out;
         }
 
         .code-snippet.visible {
@@ -181,14 +181,16 @@
         @keyframes fadeIn {
             from {
                 opacity: 0;
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
 
         .fade-in {
-            animation: fadeIn 1s ease-out forwards;
+            animation: fadeIn 0.8s ease-out forwards;
         }
     </style>
 </head>
@@ -270,8 +272,6 @@
                 snippet.style.top = `${randomY}px`;
 
                 snippetContainer.appendChild(snippet);
-
-                // Append the snippet container
                 codeAnimationContainer.appendChild(snippetContainer);
 
                 // Remove the snippet container after 5 seconds
@@ -280,8 +280,8 @@
                 }, 5000);
             }
 
-            // Generate a new snippet every 2 seconds
-            setInterval(createCodeSnippet, 2000);
+            // Generate a new snippet every 1.5 seconds
+            setInterval(createCodeSnippet, 1500);
         });
     </script>
 </body>
