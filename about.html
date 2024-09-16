@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> <!-- Ensure your CSS file has the necessary styles -->
     <style>
-        /* Base styles for About Me page */
+    /* Base styles for About Me page */
         body {
             background: #0d1117; /* Dark background color */
             color: #e1e4e8; /* Light text color */
@@ -16,7 +16,7 @@
             padding: 0;
             overflow-x: hidden;
         }
-
+    
         header {
             background: #161b22; /* Dark background for the header */
             color: #c9d1d9;
@@ -26,29 +26,29 @@
             z-index: 1000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
+    
         nav ul {
-            list-style: none; /* Removes dots from nav list */
+            list-style-type: none; /* Remove default bullets */
             padding: 0;
             margin: 0;
             display: flex;
             justify-content: center;
         }
-
+    
         nav ul li {
             margin: 0 15px;
         }
-
+    
         nav ul li a {
             color: #c9d1d9;
             text-decoration: none;
             font-weight: bold;
         }
-
+    
         nav ul li a.active {
             color: #58a6ff;
         }
-
+    
         footer {
             text-align: center;
             padding: 20px;
@@ -57,7 +57,7 @@
             bottom: 0;
             width: 100%;
         }
-
+    
         .content-wrapper {
             background: rgba(22, 27, 34, 0.8); /* Darker background with transparency */
             border-radius: 15px;
@@ -67,53 +67,40 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
             animation: fadeIn 1s ease-in-out;
         }
-
+    
         main {
             font-size: 18px;
             line-height: 1.7;
         }
-
+    
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
             color: #58a6ff; /* Highlight color */
             text-align: center;
         }
-
+    
         .highlight {
             color: #58a6ff;
         }
-
+    
         ul {
-            list-style-type: none; /* Remove default bullet points */
-            padding-left: 0;
+            list-style-type: none; /* Remove default bullets */
+            padding-left: 0; /* Adjust padding to align symbols */
             margin-top: 20px;
-            color: #e1e4e8; /* Ensures list items are visible */
         }
-
+    
         ul li {
             margin-bottom: 15px;
-            padding-left: 20px;
-            position: relative;
+            font-size: 18px;
+            color: #e1e4e8; /* Ensure good visibility */
         }
-
-        ul li::before {
-            content: '•'; /* Custom bullet point */
-            position: absolute;
-            left: 0;
-            color: #58a6ff; /* Custom bullet point color */
-            font-size: 1.2em;
-        }
-
+    
         p {
             margin-bottom: 20px;
             text-align: justify;
         }
-
-        a {
-            color: #58a6ff;
-        }
-
+    
         @keyframes fadeIn {
             from {
                 opacity: 0;
