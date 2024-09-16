@@ -17,7 +17,7 @@
             padding: 0;
             background: #0d1117; /* Dark background for a modern look */
             color: #c9d1d9; /* Light gray text color */
-            overflow: auto; /* Allow scrolling */
+            overflow: hidden; /* Hide scrollbars for a clean look */
         }
 
         header {
@@ -71,7 +71,7 @@
             color: #58a6ff;
             white-space: nowrap;
             opacity: 0;
-            transition: opacity 0.8s ease-out;
+            transition: opacity 1s ease-in-out;
         }
 
         .code-snippet.visible {
@@ -190,7 +190,7 @@
         }
 
         .fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
+            animation: fadeIn 1s ease-in-out forwards;
         }
     </style>
 </head>
@@ -255,9 +255,6 @@
             const codeAnimationContainer = document.querySelector('.code-animation-container');
 
             function createCodeSnippet() {
-                const snippetContainer = document.createElement('div');
-                snippetContainer.classList.add('code-snippet-container');
-
                 const snippet = document.createElement('div');
                 snippet.classList.add('code-snippet', 'fade-in');
                 
@@ -271,13 +268,12 @@
                 snippet.style.left = `${randomX}px`;
                 snippet.style.top = `${randomY}px`;
 
-                snippetContainer.appendChild(snippet);
-                codeAnimationContainer.appendChild(snippetContainer);
+                codeAnimationContainer.appendChild(snippet);
 
-                // Remove the snippet container after 5 seconds
+                // Remove the snippet after 3 seconds
                 setTimeout(() => {
-                    snippetContainer.remove();
-                }, 5000);
+                    snippet.remove();
+                }, 3000);
             }
 
             // Generate a new snippet every 1.5 seconds
