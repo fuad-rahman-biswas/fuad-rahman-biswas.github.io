@@ -228,6 +228,7 @@
         }
         
        /* Phones (Portrait) - Adjusts for screens with a width of up to 768px */
+/* Phones (Portrait) - Adjusts for screens with a width of up to 768px */
 @media screen and (max-width: 768px) {
     body {
         margin: 0;
@@ -236,15 +237,18 @@
 
     header, footer {
         width: 100%;
-        max-width: 1200px; /* or your desired max-width */
+        max-width: 1200px; /* Adjust as needed */
         margin: 0 auto;
         padding: 20px;
+        box-sizing: border-box;
     }
 
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap; /* Allow items to wrap if needed */
+        gap: 10px; /* Space between header items */
     }
 
     nav ul {
@@ -274,6 +278,11 @@
         width: 100%;
         padding: 15px;
         box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover; /* Ensure background image covers the area */
+        background-position: center; /* Center the background image */
     }
 
     .hero-text {
@@ -281,6 +290,7 @@
         padding: 15px;
         text-align: center;
         margin: 0 auto;
+        box-sizing: border-box;
     }
 
     .hero-text h1 {
@@ -302,6 +312,7 @@
         flex-direction: column;
         gap: 20px;
         width: 100%;
+        padding: 0 15px; /* Optional padding */
     }
 
     .card {
@@ -321,6 +332,11 @@
         padding: 15px;
     }
 
+    header {
+        flex-direction: column; /* Stack header items vertically */
+        align-items: center; /* Center items */
+    }
+
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -333,6 +349,10 @@
     nav ul li a {
         font-size: 18px;
         padding: 10px;
+    }
+
+    .hero {
+        height: auto; /* Allow height to adjust */
     }
 
     .hero-text h1 {
@@ -349,15 +369,12 @@
     }
 }
 
-
-
     </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="skills.html">Skills</a></li>
