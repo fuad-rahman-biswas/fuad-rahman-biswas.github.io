@@ -21,35 +21,36 @@
         }
 
         header {
-            background: #161b22; /* Dark background for the header */
-            color: #c9d1d9;
-            padding: 20px;
-            position: fixed;
-            top: 0;
+            background: #1e1e1e; /* Darker gray background for the header */
+            color: #e0e0e0;
+            padding: 2rem 0;
+            text-align: center;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        
+
         nav ul {
-            list-style: none; /* Ensures the bullet points are removed */
-            padding: 0;
-            margin: 0;
+            list-style: none;
             display: flex;
             justify-content: center;
+            padding: 0;
+            margin: 0;
         }
-        
+
         nav ul li {
             margin: 0 15px;
-            display: inline-block; /* Ensure the list items are in a row */
         }
-        
+
         nav ul li a {
-            color: #c9d1d9;
+            color: #e0e0e0;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            padding: 10px 20px;
+            transition: background 0.3s, color 0.3s;
+            font-size: 1.2em;
         }
-        
+
         header nav ul li a:hover {
             color: #ffffff;
             background: rgba(255, 255, 255, 0.3);
@@ -59,6 +60,10 @@
         header nav ul li a.active {
             color: #58a6ff;
             border-radius: 5px;
+        }
+
+        main {
+            padding-top: 100px; /* Ensure this matches the header height */
         }
 
 
