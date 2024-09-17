@@ -215,7 +215,7 @@
             text-decoration: underline;
         }
 
-      /* Media Queries for Mobile */
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
     header {
         padding: 15px;
@@ -241,29 +241,28 @@
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
         height: 100vh; /* Full viewport height */
-        padding: 20px; /* Add padding for mobile */
+        padding: 0 20px; /* Add horizontal padding for mobile */
     }
 
     /* Contact Form Styles */
     .contact {
         width: 100%; /* Full width on mobile */
-        max-width: 600px; /* Keep it from being too wide */
+        max-width: 600px; /* Limit maximum width for better readability */
         padding: 30px; /* Padding inside the form */
         margin: 0 auto; /* Horizontal centering */
-        border-radius: 15px;
-        background-color: #f9f9f9; /* Background color for better visibility */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+        border-radius: 15px; /* Rounded corners */
+        box-sizing: border-box; /* Include padding and border in the element’s total width and height */
     }
 
     .contact h1 {
-        font-size: 2rem; /* Responsive heading */
+        font-size: 2rem; /* Responsive heading size */
         text-align: center;
         margin-bottom: 20px;
     }
 
     .contact form {
         display: grid;
-        grid-template-columns: 1fr; /* Stack form elements vertically */
+        grid-template-columns: 1fr; /* Single column layout */
         gap: 15px; /* Space between form elements */
     }
 
