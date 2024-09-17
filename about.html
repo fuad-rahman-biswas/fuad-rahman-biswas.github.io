@@ -29,6 +29,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 /* Header Styles */
@@ -40,6 +41,7 @@ header {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 nav ul {
@@ -211,11 +213,18 @@ footer {
 
 /* Mobile (max-width: 768px) */
 @media screen and (max-width: 768px) {
+     /* Extra adjustments for body if needed */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
     header {
-        padding: 15px;
+        padding: 10px;
         flex-direction: row
         align-items: center;
         width: 100%
+        margin: 0;
     }
 
     nav ul {
@@ -259,7 +268,8 @@ footer {
     }
 
     footer {
-        padding: 15px;
+        padding: 10px;
+        margin: 0;
         font-size: 14px;
         text-align: center;
         width: 100%;
