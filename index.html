@@ -226,15 +226,15 @@
 @media screen and (max-width: 768px) {
     header {
         padding: 15px;
-        flex-direction: row; /* Maintain single-row layout */
-        justify-content: space-between; /* Space out the items */
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     nav ul {
-        flex-direction: row; /* Keep navigation items in a single row */
+        flex-direction: row;
         gap: 10px;
         width: 100%;
-        justify-content: flex-end; /* Right-align nav on mobile */
+        justify-content: flex-end;
     }
 
     nav ul li a {
@@ -243,15 +243,26 @@
     }
 
     .hero {
-        height: auto;
+        height: 120vh; /* Increase height for better visibility on mobile */
         padding: 40px 20px;
     }
 
     .hero-text {
         padding: 15px;
         font-size: 1.2em;
-        max-width: 100%; /* Ensure code snippets stay inside hero */
-        overflow-wrap: break-word; /* Force long code snippets to wrap */
+        max-width: 100%;
+        overflow: auto; /* Ensure scrolling if content overflows */
+    }
+
+    .hero-text code {
+        display: block;
+        max-height: 60vh; /* Adjust maximum height for code snippets */
+        overflow-y: auto; /* Allow scrolling within code block */
+        white-space: pre-wrap; /* Preserve whitespace and wrap lines */
+        background: #282c34; /* Code background color */
+        padding: 10px;
+        border-radius: 4px;
+        margin: 0 auto;
     }
 
     .hero-text h1 {
