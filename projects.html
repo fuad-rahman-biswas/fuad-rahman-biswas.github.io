@@ -193,9 +193,12 @@
 /* Stack navigation items vertically on smaller screens */
 @media (max-width: 768px) {
     header nav ul {
+        display: flex;
         flex-direction: row; /* Stack navigation items vertically */
         align-items: center; /* Center the items horizontally */
         width: 100%;
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
     }
 
     nav ul li {
