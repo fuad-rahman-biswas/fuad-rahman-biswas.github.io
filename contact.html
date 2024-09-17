@@ -217,6 +217,24 @@
 
         /* Media Queries for Mobile */
         @media (max-width: 768px) {
+            header {
+                padding: 15px;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            nav ul { 
+                flex-direction: row;
+                gap: 10px;
+                width: 100%;
+                justify-content: flex-end;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+                padding: 10px;
+            }
+            
             .contact form {
                 grid-template-columns: 1fr;
             }
@@ -285,10 +303,9 @@
     <footer>
         <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="skills.html">Skills</a></li>
-            <li><a href="contact.html">Contact</a></li>
         </ul>
     </footer>
 </body>
