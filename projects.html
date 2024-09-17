@@ -190,109 +190,71 @@
     }
 }
 
-/* Mobile Devices (Portrait and Landscape) */
+/* Stack navigation items vertically on smaller screens */
 @media (max-width: 768px) {
-    header {
-        padding: 1rem 0;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+    header nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center the items horizontally */
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 10px 0; /* Adjust vertical spacing between items */
     }
 
     nav ul li a {
-        font-size: 0.9em;
-        padding: 8px 16px;
+        font-size: 1em; /* Adjust font size for smaller screens */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
     }
 
     main {
-        padding: 60px 10px;
+        padding: 80px 10px; /* Adjust padding for smaller screens */
     }
 
     h1 {
-        font-size: 1.8em;
+        font-size: 2em; /* Adjust font size for the main heading */
+        margin-bottom: 30px; /* Adjust margin-bottom for the main heading */
     }
 
     .project-item {
-        width: 100%; /* Ensure full width on mobile devices */
-        max-width: none; /* Remove max-width for better responsiveness */
-        margin: 10px 0; /* Adjust margin for better spacing */
+        width: 100%; /* Full width for project items on smaller screens */
+        padding: 15px; /* Adjust padding for project items */
     }
 
     .project-item h2 {
-        font-size: 1.6em;
+        font-size: 1.5em; /* Adjust font size for project item titles */
     }
 
     .project-item p {
-        font-size: 0.9em;
-    }
-
-    .project-item a.github-button {
-        font-size: 0.9em;
-        padding: 10px 20px;
-    }
-
-    footer {
-        padding: 10px;
-        font-size: 0.9em;
+        font-size: 1em; /* Adjust font size for project item descriptions */
     }
 }
 
-/* Smaller Phones */
+/* Ensure footer contents are centered */
+footer {
+    text-align: center; /* Center align footer contents */
+    padding: 20px;
+    background: #161b22;
+    color: #c9d1d9;
+    margin-top: 40px;
+}
+
+/* Additional mobile adjustments for very small screens */
 @media (max-width: 480px) {
-    header {
-        padding: 0.5rem 0;
-    }
-
-    nav ul {
-        padding: 0;
-        margin: 0;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    nav ul li a {
-        font-size: 0.8em;
-        padding: 6px 12px;
-    }
-
-    main {
-        padding: 40px 5px;
-    }
-
     h1 {
-        font-size: 1.6em;
-    }
-
-    .project-item {
-        width: 100%; /* Full width for very small screens */
-        margin: 5px 0; /* Tighten margin for smaller screens */
+        font-size: 1.8em; /* Further reduce font size for very small screens */
+        margin-bottom: 20px; /* Further adjust margin-bottom for the main heading */
     }
 
     .project-item h2 {
-        font-size: 1.4em;
+        font-size: 1.3em; /* Further reduce font size for project item titles */
     }
 
     .project-item p {
-        font-size: 0.8em;
+        font-size: 0.9em; /* Further reduce font size for project item descriptions */
     }
 
-    .project-item a.github-button {
-        font-size: 0.8em;
-        padding: 8px 16px;
-    }
-
-    footer {
-        padding: 8px;
-        font-size: 0.8em;
+    header nav ul li {
+        margin: 8px 0; /* Further adjust vertical spacing between items */
     }
 }
 
