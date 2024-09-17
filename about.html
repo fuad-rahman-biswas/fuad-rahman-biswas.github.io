@@ -193,17 +193,6 @@
             margin-top: auto;
         }
 
-        @media (max-width: 768px) {
-            .about-me {
-                grid-template-columns: 1fr;
-                padding: 40px;
-            }
-
-            .profile-section {
-                padding-top: 0;
-            }
-        }
-
 
 /* Tablets (768px - 1024px) */
 @media screen and (max-width: 1024px) {
@@ -266,6 +255,8 @@
 
     footer {
         padding: 15px;
+        font-size: 14px;
+        text-align: center;
     }
 }
 
@@ -273,11 +264,16 @@
 @media screen and (max-width: 480px) {
     header {
         padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     nav ul {
         flex-direction: column;
         align-items: flex-start;
+        gap: 5px;
+        width: 100%;
     }
 
     nav ul li {
@@ -309,6 +305,7 @@
 
     footer {
         padding: 10px;
+        font-size: 12px;
     }
 }
 
