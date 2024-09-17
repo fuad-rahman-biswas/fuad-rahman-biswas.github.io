@@ -213,15 +213,22 @@
 @media screen and (max-width: 768px) {
     header {
         padding: 15px;
-        flex-direction: row;
-        justify-content: space-between;
+        display: flex; /* Ensure header is a flex container */
+        flex-direction: row; /* Ensure items are in a row */
+        justify-content: space-between; /* Space between logo and navigation */
+        align-items: center; /* Align items vertically centered */
     }
 
     nav ul {
-        flex-direction: row;
+        display: flex; /* Ensure the nav items are in a row */
+        flex-direction: row; /* Ensure nav items are horizontal */
         gap: 10px;
-        width: 100%;
-        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0;
     }
 
     nav ul li a {
@@ -257,6 +264,8 @@
         padding: 15px;
         font-size: 14px;
         text-align: center;
+        width: 100%; /* Ensure the footer spans the full width */
+        box-sizing: border-box; /* Ensure padding is included in the width */
     }
 }
 
@@ -264,20 +273,23 @@
 @media screen and (max-width: 480px) {
     header {
         padding: 10px;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        display: flex; /* Ensure header is a flex container */
+        flex-direction: row; /* Ensure items are in a row */
+        justify-content: space-between; /* Space between logo and navigation */
+        align-items: center; /* Align items vertically centered */
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex; /* Ensure the nav items are in a row */
+        flex-direction: row; /* Ensure nav items are horizontal */
+        align-items: center; /* Center nav items vertically */
         gap: 5px;
-        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 0;
     }
 
     nav ul li a {
@@ -306,9 +318,11 @@
     footer {
         padding: 10px;
         font-size: 12px;
+        text-align: center;
+        width: 100%; /* Ensure the footer spans the full width */
+        box-sizing: border-box; /* Ensure padding is included in the width */
     }
 }
-
     </style>
 </head>
 <body>
