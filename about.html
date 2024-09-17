@@ -211,31 +211,22 @@
 
 /* Mobile (max-width: 768px) */
 @media screen and (max-width: 768px) {
-    header {
-        padding: 10px;
-        display: flex; /* Ensure header is a flex container */
-        flex-direction: row; /* Ensure items are in a row */
-        justify-content: space-between; /* Space between logo and navigation */
-        align-items: center; /* Align items vertically centered */
-        width: 100%; /* Ensure header takes full width */
-        box-sizing: border-box; /* Include padding in the width calculation */
-    }
-
-    nav ul {
-        display: flex; /* Ensure the nav items are in a row */
-        flex-direction: row; /* Ensure nav items are horizontal */
-        gap: 10px;
-        margin: 0;
-        padding: 0;
+    header nav ul {
+        display: flex;
+        flex-direction: row; /* Stack navigation items vertically */
+        align-items: center; /* Center the items horizontally */
+        width: 100%;
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
     }
 
     nav ul li {
-        margin: 0;
+        margin: 10px 0; /* Adjust vertical spacing between items */
     }
 
     nav ul li a {
-        font-size: 14px;
-        padding: 10px;
+        font-size: 1em; /* Adjust font size for smaller screens */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
     }
 
     .about-me {
