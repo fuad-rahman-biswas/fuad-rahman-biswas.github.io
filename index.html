@@ -213,7 +213,8 @@
     }
 
     .highlight-cards {
-        flex-direction: column;
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center cards horizontally */
     }
 
     .card {
@@ -275,9 +276,10 @@
     }
 
     .highlight-cards {
-        flex-direction: column;
         gap: 20px;
         width: 100%;
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center cards horizontally */
     }
 
     .card {
@@ -307,6 +309,8 @@
 
     .highlight-cards {
         gap: 15px;
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center cards horizontally */
     }
 }
     </style>
