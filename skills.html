@@ -190,7 +190,6 @@
             background: #6f42c1;
         }
 
-        
 /* Tablets (768px - 1024px) */
 @media screen and (max-width: 1024px) {
     body {
@@ -199,19 +198,24 @@
 
     header {
         padding: 2rem 0;
+        text-align: center; /* Center header text */
     }
 
     .skill-item {
         width: 220px;
+        margin: 0 auto; /* Center skill items */
     }
 
     .cv-button {
         font-size: 1.2em;
         padding: 15px 30px;
+        display: block;
+        margin: 0 auto; /* Center CV button */
     }
 
     nav ul {
         gap: 10px;
+        justify-content: center; /* Center nav items */
     }
 
     nav ul li a {
@@ -223,20 +227,28 @@
 @media screen and (max-width: 768px) {
     main {
         padding-top: 30px;
+        text-align: center; /* Center main content */
     }
 
     .skill-item {
         width: 45%;
+        margin: 0 auto; /* Center skill items */
     }
 
     .cv-button {
         font-size: 1.1em;
         padding: 12px 25px;
+        display: block;
+        margin: 0 auto; /* Center CV button */
     }
+
     header {
         padding: 15px;
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center; /* Align items in header */
+        text-align: center; /* Center header text */
     }
 
     nav ul {
@@ -244,6 +256,8 @@
         gap: 10px;
         width: 100%;
         justify-content: flex-end;
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
     }
 
     nav ul li a {
@@ -253,8 +267,10 @@
 
     footer {
         padding: 15px;
+        text-align: center; /* Center footer text */
     }
 }
+
 
     </style>
 </head>
