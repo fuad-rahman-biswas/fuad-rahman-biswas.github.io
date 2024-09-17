@@ -216,53 +216,58 @@
         }
 
         @media (max-width: 768px) {
-            header {
-                padding: 15px;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-        
-            nav ul {
-                flex-direction: row;
-                gap: 10px;
-                width: 100%;
-                justify-content: flex-end;
-            }
-        
-            nav ul li a {
-                font-size: 14px;
-                padding: 10px;
-            }
-        
-            main {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%; /* Full viewport height */
-            }
-        
-            .contact {
-                display: block; /* Ensure it's block */
-                width: 90%; /* Adjust the width for smaller screens */
-                padding: 30px 30px;
-                margin: 0 auto; /* Center it horizontally */
-                border-radius: 15px;
-                text-align: center; /* Centers content */
-            }
-        
-            .contact h1 {
-                font-size: 2.2rem;
-            }
-        
-            .contact form {
-                grid-template-columns: 1fr;
-            }
-        
-            .contact form textarea,
-            .contact form button {
-                grid-column: span 1;
-            }
-        }
+    header {
+        padding: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Main container will center content */
+    main {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        height: 100vh; /* Full viewport height */
+    }
+
+    /* .contact section adjustments */
+    .contact {
+        width: 90%; /* Take up 90% of screen width */
+        padding: 30px 30px;
+        margin: 0; /* Remove auto margins, let flexbox do the centering */
+        border-radius: 15px;
+    }
+
+    .contact h1 {
+        font-size: 2.2rem;
+        text-align: center; /* Ensure the heading is centered */
+    }
+
+    .contact form {
+        display: flex;
+        flex-direction: column; /* Stack form elements vertically */
+        width: 100%; /* Ensure form takes full width */
+    }
+
+    .contact form textarea,
+    .contact form button {
+        width: 100%; /* Full width for form elements */
+    }
+}
+
 
     </style>
 </head>
