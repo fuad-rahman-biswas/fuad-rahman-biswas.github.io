@@ -212,22 +212,22 @@
 
 /* Mobile (max-width: 768px) */
 @media screen and (max-width: 768px) {
-    header nav ul {
-        display: flex;
-        flex-direction: row; /* Stack navigation items vertically */
-        align-items: center; /* Center the items horizontally */
-        width: 100%;
-        padding: 0; /* Remove default padding */
-        margin: 0; /* Remove default margin */
+    header {
+        padding: 15px;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    nav ul li {
-        margin: 10px 0; /* Adjust vertical spacing between items */
+    nav ul {
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+        justify-content: flex-end;
     }
 
     nav ul li a {
-        font-size: 1em; /* Adjust font size for smaller screens */
-        padding: 8px 16px; /* Adjust padding for smaller screens */
+        font-size: 14px;
+        padding: 10px;
     }
 
     .about-me {
