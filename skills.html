@@ -190,8 +190,9 @@
             background: #6f42c1;
         }
 
-        /* Large devices (desktops) */
-@media (min-width: 1024px) {
+        
+/* Tablets (768px - 1024px) */
+@media screen and (max-width: 1024px) {
     body {
         font-size: 18px;
     }
@@ -208,26 +209,18 @@
         font-size: 1.2em;
         padding: 15px 30px;
     }
-}
-
-        /* Medium devices (tablets) */
-@media (min-width: 768px) {
-    header {
-        padding: 1.5rem 0;
-    }
 
     nav ul {
-        flex-direction: row;
-    }
-
-    nav ul li {
-        margin: 0 10px;
+        gap: 10px;
     }
 
     nav ul li a {
-        padding: 10px 20px;
+        font-size: 16px;
     }
+}
 
+/* Mobile (max-width: 768px) */
+@media screen and (max-width: 768px) {
     main {
         padding-top: 30px;
     }
@@ -239,6 +232,27 @@
     .cv-button {
         font-size: 1.1em;
         padding: 12px 25px;
+    }
+    header {
+        padding: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    footer {
+        padding: 15px;
     }
 }
 
