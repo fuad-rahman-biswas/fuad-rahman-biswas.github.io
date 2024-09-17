@@ -257,13 +257,20 @@
     }
 
     .skill-item {
-        flex: 1 1 calc(50% - 10px); /* 50% width minus half of the gap */
-        max-width: calc(50% - 10px); /* Maximum width for mobile */
-        margin-bottom: 10px; /* Space below items */
-        box-sizing: border-box; /* Include padding and border in element's total width and height */
-        text-align: center; /* Center text inside skill items */
+        flex: 1 1 calc(50% - 10px); /* Each skill item takes up 50% of the container width minus gap */
+        max-width: calc(50% - 10px); /* Ensures two items fit in one row */
+        margin-bottom: 10px; /* Space between rows */
     }
-
+    
+    .skill-item img {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Keep the image proportions */
+    }
+    
+    .skill-description {
+        font-size: 0.8rem; /* Adjust text size for mobile */
+    }
+    
     .cv-button {
         font-size: 1.1em;
         padding: 12px 25px;
