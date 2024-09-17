@@ -249,10 +249,19 @@
         width: 100%; /* Make the main content take full width of the parent */
     }
 
+    .skills-category {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Space between items */
+        justify-content: center; /* Center items horizontally */
+    }
+
     .skill-item {
-        width: 100%; /* Ensure skill items take full width of the container */
-        max-width: 200px; /* Set a max width to prevent items from being too wide */
-        margin: 10px auto; /* Center skill items and add spacing */
+        flex: 1 1 calc(50% - 20px); /* 50% width minus gap */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+        max-width: calc(50% - 20px); /* Maximum width for items */
+        margin-bottom: 10px; /* Space below items */
+        text-align: center; /* Center text inside skill items */
     }
 
     .cv-button {
