@@ -194,16 +194,17 @@
 @media screen and (max-width: 1024px) {
     body {
         font-size: 18px;
-        margin: 0; /* Ensure no default margin */
+        margin: 0;
     }
 
     header {
         padding: 2rem 0;
-        text-align: center; /* Center header text */
+        text-align: center;
     }
 
     .container { /* Assuming you have a container class */
-        width: 90%; /* Adjust as needed */
+        max-width: 90%; /* Set maximum width */
+        width: 100%; /* Full width up to max-width */
         margin: 0 auto; /* Center container */
         display: flex;
         flex-direction: column;
@@ -211,7 +212,7 @@
     }
 
     .skill-item {
-        width: 220px;
+        width: 220px; /* Fixed width for larger screens */
         margin: 10px; /* Add margin for spacing */
     }
 
@@ -237,7 +238,8 @@
     main {
         padding-top: 30px;
         margin: 0 auto; /* Center main content */
-        width: 90%; /* Adjust as needed */
+        width: 95%; /* Increase width for mobile */
+        max-width: 800px; /* Set a maximum width */
         text-align: center; /* Center text inside main */
         display: flex;
         flex-direction: column;
@@ -245,7 +247,7 @@
     }
 
     .skill-item {
-        width: 45%;
+        width: 45%; /* Percentage-based width for responsiveness */
         margin: 10px auto; /* Center skill items */
     }
 
@@ -270,8 +272,8 @@
         gap: 10px;
         width: 100%;
         justify-content: flex-end;
-        padding: 0; /* Remove default padding */
-        margin: 0; /* Remove default margin */
+        padding: 0;
+        margin: 0;
     }
 
     nav ul li a {
@@ -284,7 +286,6 @@
         text-align: center; /* Center footer text */
     }
 }
-
 
     </style>
 </head>
