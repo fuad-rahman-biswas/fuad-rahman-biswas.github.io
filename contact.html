@@ -215,7 +215,8 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 768px) {
+      /* Media Queries for Mobile */
+@media (max-width: 768px) {
     header {
         padding: 15px;
         flex-direction: row;
@@ -234,40 +235,43 @@
         padding: 10px;
     }
 
-    /* Main container will center content */
+    /* Main Container Centering */
     main {
         display: flex;
-        flex-direction: column; /* Stack items vertically */
-        justify-content: center; /* Center vertically */
-        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
         height: 100vh; /* Full viewport height */
+        padding: 20px; /* Add padding for mobile */
     }
 
-    /* .contact section adjustments */
+    /* Contact Form Styles */
     .contact {
-        width: 90%; /* Take up 90% of screen width */
-        padding: 30px 30px;
-        margin: 0; /* Remove auto margins, let flexbox do the centering */
+        width: 100%; /* Full width on mobile */
+        max-width: 600px; /* Keep it from being too wide */
+        padding: 30px; /* Padding inside the form */
+        margin: 0 auto; /* Horizontal centering */
         border-radius: 15px;
+        background-color: #f9f9f9; /* Background color for better visibility */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add slight shadow */
     }
 
     .contact h1 {
-        font-size: 2.2rem;
-        text-align: center; /* Ensure the heading is centered */
+        font-size: 2rem; /* Responsive heading */
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     .contact form {
-        display: flex;
-        flex-direction: column; /* Stack form elements vertically */
-        width: 100%; /* Ensure form takes full width */
+        display: grid;
+        grid-template-columns: 1fr; /* Stack form elements vertically */
+        gap: 15px; /* Space between form elements */
     }
 
     .contact form textarea,
     .contact form button {
-        width: 100%; /* Full width for form elements */
+        grid-column: span 1;
     }
 }
-
 
     </style>
 </head>
