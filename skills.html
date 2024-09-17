@@ -194,6 +194,7 @@
 @media screen and (max-width: 1024px) {
     body {
         font-size: 18px;
+        margin: 0; /* Ensure no default margin */
     }
 
     header {
@@ -201,16 +202,24 @@
         text-align: center; /* Center header text */
     }
 
+    .container { /* Assuming you have a container class */
+        width: 90%; /* Adjust as needed */
+        margin: 0 auto; /* Center container */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items inside container */
+    }
+
     .skill-item {
         width: 220px;
-        margin: 0 auto; /* Center skill items */
+        margin: 10px; /* Add margin for spacing */
     }
 
     .cv-button {
         font-size: 1.2em;
         padding: 15px 30px;
         display: block;
-        margin: 0 auto; /* Center CV button */
+        margin: 10px auto; /* Center CV button with margin */
     }
 
     nav ul {
@@ -227,19 +236,24 @@
 @media screen and (max-width: 768px) {
     main {
         padding-top: 30px;
-        text-align: center; /* Center main content */
+        margin: 0 auto; /* Center main content */
+        width: 90%; /* Adjust as needed */
+        text-align: center; /* Center text inside main */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items inside main */
     }
 
     .skill-item {
         width: 45%;
-        margin: 0 auto; /* Center skill items */
+        margin: 10px auto; /* Center skill items */
     }
 
     .cv-button {
         font-size: 1.1em;
         padding: 12px 25px;
         display: block;
-        margin: 0 auto; /* Center CV button */
+        margin: 10px auto; /* Center CV button with margin */
     }
 
     header {
