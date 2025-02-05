@@ -83,6 +83,12 @@ nav a:hover {
     transition: 0.4s;
     border-radius: 50px;
   }
+
+  /* Keep icons visible by default */
+ .slider .icon {
+   opacity: 1;
+   transition: opacity 0.3s ease;
+}
   
   .slider:before {
     position: absolute;
@@ -94,7 +100,16 @@ nav a:hover {
     bottom: 4px;
     background-color: white;
     transition: 0.4s;
+    z-index: 2;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
+
+
+/* Dark mode circle background */
+.dark-mode .slider:before {
+  background: #333;
+}
   
   input:checked + .slider {
     background-color: #1976d2;
@@ -103,6 +118,16 @@ nav a:hover {
   input:checked + .slider:before {
     transform: translateX(26px);
   }
+
+  /* Hide sun icon when slider is on right (dark mode) */
+ input:checked ~ .slider .sun {
+    opacity: 0;
+}
+
+  /* Hide moon icon when slider is on left (light mode) */
+  input:not(:checked) ~ .slider .moon {
+    opacity: 0;
+}
   
   /* Hero Section */
   #hero {
