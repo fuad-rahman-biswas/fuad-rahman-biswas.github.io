@@ -86,20 +86,24 @@ nav a:hover {
 
   /* Keep icons visible by default */
  .slider .icon {
-   opacity: 1 !important;
-   transition: opacity 0.3s ease;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   transition: opacity 0.3s ease, left 0.4s ease, right 0.4s ease;
 }
 
-  /* New positioning and transitions */
-    .sun {
-      left: 8px;
-      transition: left 0.4s ease;
-    }
-    
-    .moon {
-      right: 8px;
-      transition: right 0.4s ease;
-    }
+  /* Sun Icon */
+.slider .sun {
+  left: 8px;
+  opacity: 1; /* Visible by default in light mode */
+}
+
+/* Moon Icon */
+.slider .moon {
+  right: 8px;
+  opacity: 0; /* Hidden by default in light mode */
+}
+
   
   .slider:before {
     position: absolute;
@@ -122,22 +126,26 @@ nav a:hover {
   background: #333;
 }
   
-  input:checked + .slider {
-    background-color: #1976d2;
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(26px);
-  }
-
-  /* Hide sun icon when slider is on right (dark mode) */
- input:checked ~ .slider .sun {
-    left: -20px;
+/* When slider is checked (dark mode) */
+input:checked + .slider .sun {
+  left: -20px; /* Move sun icon out of view */
+  opacity: 0; /* Hide sun icon */
 }
 
-  /* Hide moon icon when slider is on left (light mode) */
-  input:not(:checked) ~ .slider .moon {
-    right: 28px;
+input:checked + .slider .moon {
+  right: 8px; /* Keep moon icon in view */
+  opacity: 1; /* Show moon icon */
+}
+
+/* When slider is not checked (light mode) */
+input:not(:checked) + .slider .sun {
+  left: 8px; /* Keep sun icon in view */
+  opacity: 1; /* Show sun icon */
+}
+
+input:not(:checked) + .slider .moon {
+  right: -20px; /* Move moon icon out of view */
+  opacity: 0; /* Hide moon icon */
 }
   
   /* Hero Section */
