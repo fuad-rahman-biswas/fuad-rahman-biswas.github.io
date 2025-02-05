@@ -778,15 +778,27 @@ body.dark-mode .tech-icon:hover {
   }
 
   /* Tech Stack */
-  .tech-stack-container {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 1rem;
+  .tech-icon::after {
+    bottom: auto;
+    top: -40px; /* Show tooltip above icon on mobile */
+    transform: translateX(-50%) translateY(-10px);
   }
 
-  .tech-icon {
-    padding: 1rem;
-    margin-bottom: 10px; /* Adds space below each icon */
+  .tech-stack-container {
+    gap: 3rem 1rem; /* Increased vertical gap */
+    padding-bottom: 2rem;
   }
+
+  #tech-stack {
+    padding-bottom: 6rem;
+  }
+
+/* Add hover state with more spacing */
+.tech-icon:hover {
+  transform: translateY(-5px) scale(1.05);
+  margin-bottom: 1.5rem; /* Creates space for tooltip */
+}
+
 
   /* Projects */
   .projects-list {
