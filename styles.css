@@ -785,6 +785,7 @@ body.dark-mode .tech-icon:hover {
 
   .tech-icon {
     padding: 1rem;
+    margin-bottom: 10px; /* Adds space below each icon */
   }
 
   /* Projects */
