@@ -86,9 +86,20 @@ nav a:hover {
 
   /* Keep icons visible by default */
  .slider .icon {
-   opacity: 1;
+   opacity: 1 !important;
    transition: opacity 0.3s ease;
 }
+
+  /* New positioning and transitions */
+    .sun {
+      left: 8px;
+      transition: left 0.4s ease;
+    }
+    
+    .moon {
+      right: 8px;
+      transition: right 0.4s ease;
+    }
   
   .slider:before {
     position: absolute;
@@ -121,12 +132,12 @@ nav a:hover {
 
   /* Hide sun icon when slider is on right (dark mode) */
  input:checked ~ .slider .sun {
-    opacity: 0;
+    left: -20px;
 }
 
   /* Hide moon icon when slider is on left (light mode) */
   input:not(:checked) ~ .slider .moon {
-    opacity: 0;
+    right: 28px;
 }
   
   /* Hero Section */
@@ -802,6 +813,17 @@ body.dark-mode .tech-icon:hover {
     background: #333;
     margin: 5px 0;
     transition: 0.3s;
+  }
+
+  .sun { left: 5px; }
+  .moon { right: 5px; }
+  
+  input:checked ~ .slider .sun {
+    left: -15px;
+  }
+  
+  input:checked ~ .slider .moon {
+    right: 20px;
   }
 
   /* Hero Section */
