@@ -260,6 +260,7 @@ nav a:hover {
   
   .about-card li {
     list-style-type: disc;
+    margin-bottom: 0.8rem; /* Add gap below each li */
   }
   
   /* Hobbies Section */
@@ -716,6 +717,18 @@ body.dark-mode .tech-icon:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
   /* Navigation */
+  nav {
+    padding: 0.5rem 1rem; /* Reduced padding */
+  }
+
+  nav .container {
+    height: 50px; /* Fixed height for mobile */
+  }
+
+  .logo {
+    font-size: 1.2rem; /* Smaller logo */
+  }
+    
   nav ul {
     display: none;
     position: absolute;
@@ -739,6 +752,22 @@ body.dark-mode .tech-icon:hover {
     background: none;
     border: none;
     padding: 10px;
+    height: 24px;
+    width: 24px;
+  }
+
+  .hamburger-line {
+    height: 2px; /* Thinner lines */
+  }
+
+  /* Adjust menu position */
+  .nav-links {
+    top: 50px; /* Matches container height */
+  }
+
+  /* Reduce spacing between nav elements */
+  .nav-right {
+    gap: 0.75rem;
   }
 
   .hamburger span {
@@ -808,6 +837,18 @@ body.dark-mode .tech-icon:hover {
 
 @media (max-width: 480px) {
   /* Navigation */
+  nav {
+    padding: 0.5rem;
+  }
+  
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .dark-mode-toggle {
+    transform: scale(0.9); /* Slightly smaller toggle */
+  }
+    
   nav .container {
     padding: 1rem;
   }
