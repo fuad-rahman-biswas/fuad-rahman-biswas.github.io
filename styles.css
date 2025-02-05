@@ -58,41 +58,71 @@ nav a:hover {
 }
 
   
-  /* Dark Mode Slider Toggle */
-  .dark-mode-toggle {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
-  }
-  
-  .dark-mode-toggle input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 50px;
-  }
-
-  /* Keep icons visible by default */
- .slider .icon {
-   position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
-   transition: opacity 0.3s ease, left 0.4s ease, right 0.4s ease;
+ /* Dark Mode Slider Toggle */
+.dark-mode-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
 }
 
-  /* Sun Icon */
+.dark-mode-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+/* Circle inside the slider */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; /* Slightly larger circle */
+  width: 20px;
+  border-radius: 50%;
+  left: 2px; /* Adjusted position */
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Move the circle to the right when checked */
+input:checked + .slider:before {
+  transform: translateX(26px); /* Adjusted movement */
+}
+
+/* Change background color when checked */
+input:checked + .slider {
+  background-color: #1976d2;
+}
+
+/* Dark mode circle background */
+.dark-mode .slider:before {
+  background: #333;
+}
+
+/* Sun and Moon Icons */
+.slider .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease, left 0.4s ease, right 0.4s ease;
+}
+
+/* Sun Icon */
 .slider .sun {
   left: 8px;
   opacity: 1; /* Visible by default in light mode */
@@ -104,28 +134,6 @@ nav a:hover {
   opacity: 0; /* Hidden by default in light mode */
 }
 
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: 0.4s;
-    z-index: 2;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-
-
-/* Dark mode circle background */
-.dark-mode .slider:before {
-  background: #333;
-}
-  
 /* When slider is checked (dark mode) */
 input:checked + .slider .sun {
   left: -20px; /* Move sun icon out of view */
