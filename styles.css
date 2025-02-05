@@ -315,7 +315,7 @@ body.dark-mode .about-card {
 /* Tech Stack Section */
 #tech-stack {
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 5rem 2rem 8rem; /* Added bottom padding */
     background-color: #fafafa;
     color: #333;
 }
@@ -420,14 +420,15 @@ body.dark-mode .about-card {
 .tech-icon::after {
     content: attr(data-tooltip);
     position: absolute;
-    bottom: -40px;
+    bottom: -50px;
+    z-index: 1000;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 0.6rem 1rem;
     border-radius: 4px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
