@@ -809,17 +809,17 @@ body.dark-mode .tech-icon:hover {
   /* Tech Stack */
   .tech-icon::after {
     bottom: auto;
-    top: -40px; /* Show tooltip above icon on mobile */
-    transform: translateX(-50%) translateY(-10px);
+    bottom: -55px; /* Slightly more space for mobile */
+    transform: translateX(-50%);
   }
 
   .tech-stack-container {
     gap: 3rem 1rem; /* Increased vertical gap */
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
   }
 
   #tech-stack {
-    padding-bottom: 6rem;
+    padding-bottom: 10rem;
   }
 
 /* Add hover state with more spacing */
