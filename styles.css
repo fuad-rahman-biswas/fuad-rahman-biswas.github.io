@@ -812,15 +812,14 @@ body.dark-mode .tech-icon:hover {
     background: none;
     border: none;
     padding: 10px;
-    height: 25px; /* Fixed height for hamburger */
-    width: 25px; /* Fixed width for hamburger */
+    height: 40px; /* Adjusted height for hamburger */
+    width: 40px; /* Adjusted width for hamburger */
   }
 
   .hamburger-line {
     height: 2px; /* Thinner lines */
   }
 
-  /* Adjust menu position */
   .nav-links {
     top: 50px; /* Matches container height */
   }
