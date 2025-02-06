@@ -812,8 +812,8 @@ body.dark-mode .tech-icon:hover {
     background: none;
     border: none;
     padding: 10px;
-    height: 40px; /* Adjusted height for hamburger */
-    width: 40px; /* Adjusted width for hamburger */
+    height: 50px; /* Adjusted height for hamburger */
+    width: 50px; /* Adjusted width for hamburger */
   }
 
   .hamburger-line {
