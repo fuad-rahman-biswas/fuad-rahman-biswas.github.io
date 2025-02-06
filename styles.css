@@ -775,7 +775,8 @@ body.dark-mode .tech-icon:hover {
   }
 
   nav .container {
-    height: 50px; /* Fixed height for mobile */
+    height: 45px; /* Fixed height for mobile */
+    align-items: center; /* Ensures both items are vertically centered */
   }
 
   .logo {
