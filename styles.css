@@ -817,7 +817,7 @@ body.dark-mode .tech-icon:hover {
   }
 
   .hamburger-line {
-    height: 2px; /* Thinner lines */
+    height: 3px; /* Thinner lines */
   }
 
   .nav-links {
