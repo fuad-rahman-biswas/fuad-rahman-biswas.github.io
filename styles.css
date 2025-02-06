@@ -808,6 +808,7 @@ body.dark-mode .tech-icon:hover {
     padding: 10px;
     height: 24px;
     width: 24px;
+    align-items: center; /* Center hamburger icon vertically */
   }
 
   .hamburger-line {
