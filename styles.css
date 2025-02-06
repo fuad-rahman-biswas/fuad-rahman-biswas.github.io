@@ -58,12 +58,12 @@ nav a:hover {
 }
 
   
- /* Dark Mode Slider Toggle */
+/* Dark Mode Slider Toggle */
 .dark-mode-toggle {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 24px;
+  width: 60px; /* Slightly wider for better spacing */
+  height: 34px; /* Slightly taller for better visibility */
 }
 
 .dark-mode-toggle input {
@@ -81,18 +81,18 @@ nav a:hover {
   bottom: 0;
   background-color: #ccc;
   transition: 0.4s;
-  border-radius: 50px;
+  border-radius: 34px; /* Fully rounded corners */
 }
 
 /* Circle inside the slider */
 .slider:before {
   position: absolute;
   content: "";
-  height: 20px; /* Slightly larger circle */
-  width: 20px;
+  height: 26px; /* Slightly smaller than the slider height */
+  width: 26px;
   border-radius: 50%;
-  left: 2px; /* Adjusted position */
-  bottom: 2px;
+  left: 4px; /* Adjusted position */
+  bottom: 4px;
   background-color: white;
   transition: 0.4s;
   z-index: 2;
@@ -120,6 +120,7 @@ input:checked + .slider {
   top: 50%;
   transform: translateY(-50%);
   transition: opacity 0.3s ease, left 0.4s ease, right 0.4s ease;
+  font-size: 18px; /* Adjust icon size */
 }
 
 /* Sun Icon */
