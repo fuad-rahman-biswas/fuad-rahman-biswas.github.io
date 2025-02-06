@@ -775,8 +775,10 @@ body.dark-mode .tech-icon:hover {
   }
 
   nav .container {
-    height: 45px; /* Fixed height for mobile */
-    align-items: center; /* Ensures both items are vertically centered */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center items */
+    height: 45px; /* Fixed height for mobile navbar */
   }
 
   .logo {
@@ -801,14 +803,17 @@ body.dark-mode .tech-icon:hover {
   }
 
   .hamburger {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px; /* Space between hamburger lines */
     cursor: pointer;
     background: none;
     border: none;
     padding: 10px;
-    height: 24px;
-    width: 24px;
-    align-items: center; /* Center hamburger icon vertically */
+    height: 25px; /* Fixed height for hamburger */
+    width: 25px; /* Fixed width for hamburger */
   }
 
   .hamburger-line {
@@ -827,10 +832,9 @@ body.dark-mode .tech-icon:hover {
 
   .hamburger span {
     display: block;
-    width: 25px;
+    width: 20px;
     height: 3px;
     background: #333;
-    margin: 5px 0;
     transition: 0.3s;
   }
 
