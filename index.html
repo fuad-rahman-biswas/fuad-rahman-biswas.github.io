@@ -206,7 +206,7 @@
 
     /* Hero Section */
     .hero {
-      min-height: 100vh;
+      min-height: 115vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -228,13 +228,13 @@
     }
 
     .profile-img {
-      width: 100%;
-      height: 100%;
+      width: 110%;
+      height: 110%;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid transparent;
       background: var(--gradient-1);
-      padding: 4px;
+      padding: 5px;
       animation: profileGlow 3s ease-in-out infinite alternate;
     }
 
@@ -469,9 +469,13 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
+      align-items: stretch; /* ensures all cards are same height */
     }
 
     .skill-category {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
       background: var(--bg-secondary);
       border: 1px solid var(--border);
       border-radius: 20px;
@@ -519,6 +523,7 @@
 
     .skill-item {
       display: flex;
+      flex: 1 1 100px;
       flex-direction: column;
       align-items: center;
       gap: 0.5rem;
@@ -526,7 +531,9 @@
       background: var(--bg-tertiary);
       border-radius: 12px;
       transition: all 0.3s ease;
-      min-width: 80px;
+      min-width: 90px;
+      max-width: 120px;
+      text-align: center;
     }
 
     .skill-item:hover {
@@ -538,6 +545,11 @@
       font-size: 2rem;
       color: var(--primary);
       transition: color 0.3s ease;
+      width: 40px;  /* fixed box for consistency */
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .skill-item:hover .skill-icon {
@@ -899,159 +911,119 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="section">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-grid">
-      <div class="about-card fade-in-up stagger-1">
-        <h3><i class="fas fa-user-graduate"></i> My Journey</h3>
-        <p>
-          Currently pursuing a Bachelor's degree in <strong>Software Engineering</strong> at Taylor's University, Malaysia, specializing in <strong>AI</strong> and <strong>Machine Learning</strong>. 
-        </p>
-        <p>
-          My passion for problem-solving and technology drives me to continuously explore innovative solutions and expand my technical expertise.
-        </p>
-        <div class="about-tags">
-          <span class="tag">Problem Solving</span>
-          <span class="tag">Innovation</span>
-          <span class="tag">Continuous Learning</span>
-        </div>
-      </div>
-
-      <div class="about-card fade-in-up stagger-2">
-        <h3><i class="fas fa-code"></i> What I Do</h3>
-        <p>
-          I specialize in building dynamic web applications, designing intuitive user interfaces, and working with complex database systems.
-        </p>
-        <p>
-          From frontend development to backend logic, I enjoy tackling challenges across the full stack of modern software development.
-        </p>
-        <div class="about-tags">
-          <span class="tag">Full-Stack Development</span>
-          <span class="tag">UI/UX Design</span>
-          <span class="tag">Database Systems</span>
-        </div>
-      </div>
-
-      <div class="about-card fade-in-up stagger-3">
-        <h3><i class="fas fa-heart"></i> Beyond Coding</h3>
-        <p>
-          When I'm not coding, you'll find me pushing limits in the gym, capturing moments through photography, or exploring new destinations around the world.
-        </p>
-        <div class="about-tags">
-          <span class="tag">🏋️‍♂️ Fitness</span>
-          <span class="tag">📸 Photography</span>
-          <span class="tag">🎮 Gaming</span>
-          <span class="tag">✈️ Travel</span>
-        </div>
+<section id="about" class="section">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-grid">
+    
+    <div class="about-card fade-in-up stagger-1">
+      <h3><i class="fas fa-user-graduate"></i> My Journey</h3>
+      <p>
+        I'm currently pursuing a Bachelor's degree in <strong>Software Engineering</strong> at Taylor's University, Malaysia, with a strong focus on <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong>. 
+      </p>
+      <p>
+        What excites me most is the ability of AI to solve real-world problems and create smarter, more adaptive technologies. My curiosity drives me to constantly learn, experiment, and innovate.
+      </p>
+      <div class="about-tags">
+        <span class="tag">AI & ML</span>
+        <span class="tag">Problem Solving</span>
+        <span class="tag">Innovation</span>
+        <span class="tag">Continuous Learning</span>
       </div>
     </div>
-  </section>
+
+    <div class="about-card fade-in-up stagger-2">
+      <h3><i class="fas fa-brain"></i> What I Do</h3>
+      <p>
+        I love working on projects that combine creativity with intelligence — from building interactive applications to developing machine learning models that learn and adapt. 
+      </p>
+      <p>
+        My main interest lies in <strong>AI-driven solutions</strong>, but I also enjoy exploring the full stack of development to bring ideas into reality.
+      </p>
+      <div class="about-tags">
+        <span class="tag">Artificial Intelligence</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Full-Stack Development</span>
+      </div>
+    </div>
+
+    <div class="about-card fade-in-up stagger-3">
+      <h3><i class="fas fa-heart"></i> Beyond Coding</h3>
+      <p>
+        Outside of tech, I focus on self-growth and balance. You’ll often find me pushing my limits in the gym, diving into gaming worlds, or exploring new ideas that fuel my creativity and curiosity.
+      </p>
+      <div class="about-tags">
+        <span class="tag">🏋️‍♂️ Fitness</span>
+        <span class="tag">🎮 Gaming</span>
+        <span class="tag">🌍 Exploration</span>
+        <span class="tag">📚 Lifelong Learning</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Skills Section -->
-  <section id="skills" class="section">
-    <h2 class="section-title">Skills & Technologies</h2>
-    <div class="skills-grid">
-      <div class="skill-category fade-in-up stagger-1">
-        <h3>Languages</h3>
-        <div class="skills-list">
-          <div class="skill-item">
-            <i class="fab fa-html5 skill-icon"></i>
-            <span class="skill-name">HTML5</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-css3-alt skill-icon"></i>
-            <span class="skill-name">CSS3</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-js-square skill-icon"></i>
-            <span class="skill-name">JavaScript</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-java skill-icon"></i>
-            <span class="skill-name">Java</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-python skill-icon"></i>
-            <span class="skill-name">Python</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-database skill-icon"></i>
-            <span class="skill-name">SQL</span>
-          </div>
-        </div>
-      </div>
+<section id="skills" class="section">
+  <h2 class="section-title">Skills & Technologies</h2>
+  <div class="skills-grid">
 
-      <div class="skill-category fade-in-up stagger-2">
-        <h3>Frameworks & Tools</h3>
-        <div class="skills-list">
-          <div class="skill-item">
-            <i class="fab fa-react skill-icon"></i>
-            <span class="skill-name">React</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-wind skill-icon"></i>
-            <span class="skill-name">Tailwind</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-git-alt skill-icon"></i>
-            <span class="skill-name">Git</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-github skill-icon"></i>
-            <span class="skill-name">GitHub</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-figma skill-icon"></i>
-            <span class="skill-name">Figma</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-cube skill-icon"></i>
-            <span class="skill-name">Blender</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-category fade-in-up stagger-3">
-        <h3>Development Environment</h3>
-        <div class="skills-list">
-          <div class="skill-item">
-            <i class="fas fa-code skill-icon"></i>
-            <span class="skill-name">VS Code</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-brain skill-icon"></i>
-            <span class="skill-name">IntelliJ</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-leaf skill-icon"></i>
-            <span class="skill-name">NetBeans</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-spider skill-icon"></i>
-            <span class="skill-name">Spyder</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-database skill-icon"></i>
-            <span class="skill-name">MySQL</span>
-          </div>
-        </div>
+    <!-- Programming Languages -->
+    <div class="skill-category fade-in-up stagger-1">
+      <h3>Programming Languages</h3>
+      <div class="skills-list">
+        <div class="skill-item"><i class="fab fa-html5 skill-icon"></i><span class="skill-name">HTML5</span></div>
+        <div class="skill-item"><i class="fab fa-css3-alt skill-icon"></i><span class="skill-name">CSS3</span></div>
+        <div class="skill-item"><i class="fab fa-js-square skill-icon"></i><span class="skill-name">JavaScript</span></div>
+        <div class="skill-item"><i class="fab fa-python skill-icon"></i><span class="skill-name">Python</span></div>
+        <div class="skill-item"><i class="fab fa-java skill-icon"></i><span class="skill-name">Java</span></div>
+        <div class="skill-item"><i class="fas fa-chart-line skill-icon"></i><span class="skill-name">R</span></div>
+        <div class="skill-item"><i class="fas fa-database skill-icon"></i><span class="skill-name">SQL</span></div>
       </div>
     </div>
-  </section>
+
+    <!-- Frameworks & Tools -->
+    <div class="skill-category fade-in-up stagger-2">
+      <h3>Frameworks & Tools</h3>
+      <div class="skills-list">
+        <div class="skill-item"><i class="fab fa-react skill-icon"></i><span class="skill-name">React</span></div>
+        <div class="skill-item"><i class="fab fa-figma skill-icon"></i><span class="skill-name">Figma</span></div>
+        <div class="skill-item"><i class="fas fa-paint-brush skill-icon"></i><span class="skill-name">Canva</span></div>
+        <div class="skill-item"><i class="fas fa-cube skill-icon"></i><span class="skill-name">Blender</span></div>
+        <div class="skill-item"><i class="fas fa-database skill-icon"></i><span class="skill-name">MySQL Workbench</span></div>
+      </div>
+    </div>
+
+    <!-- Development Environments -->
+    <div class="skill-category fade-in-up stagger-3">
+      <h3>Development Environments</h3>
+      <div class="skills-list">
+        <div class="skill-item"><i class="fas fa-code skill-icon"></i><span class="skill-name">VS Code</span></div>
+        <div class="skill-item"><i class="fas fa-brain skill-icon"></i><span class="skill-name">IntelliJ IDEA</span></div>
+        <div class="skill-item"><i class="fas fa-leaf skill-icon"></i><span class="skill-name">NetBeans</span></div>
+        <div class="skill-item"><i class="fab fa-android skill-icon"></i><span class="skill-name">Android Studio</span></div>
+        <div class="skill-item"><i class="fas fa-spider skill-icon"></i><span class="skill-name">Spyder</span></div>
+        <div class="skill-item"><i class="fas fa-chart-bar skill-icon"></i><span class="skill-name">RStudio</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Projects Section -->
   <section id="projects" class="section">
     <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
+
       <div class="project-card fade-in-up stagger-1">
         <img src="Assets/image/weatherApp.jpg" alt="Weather App" class="project-image">
         <div class="project-content">
           <h3 class="project-title">Weather Forecast App</h3>
-          <p class="project-description">A comprehensive weather application built with Python, featuring real-time forecasts, interactive maps, and detailed weather analytics.</p>
+          <p class="project-description">A comprehensive weather application built with Python, featuring real-time forecasts, and detailed weather analytics.</p>
           <div class="project-tech">
             <span class="tech-tag">Python</span>
             <span class="tech-tag">API Integration</span>
-            <span class="tech-tag">Data Visualization</span>
           </div>
           <div class="project-links">
             <a href="https://github.com/fuad-rahman-biswas/WeatherApp" class="project-link" target="_blank">
@@ -1063,33 +1035,34 @@
       </div>
 
       <div class="project-card fade-in-up stagger-2">
-        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&h=200&fit=crop" alt="Currency Converter" class="project-image">
+        <img src="Assets/image/currencyConverterKotlin.jpg" alt="Currency Converter" class="project-image">
         <div class="project-content">
           <h3 class="project-title">Global Currency Converter</h3>
-          <p class="project-description">Multi-platform currency converter supporting real-time exchange rates across 180+ currencies with historical data tracking.</p>
+          <p class="project-description">An Android-only app built with Java and Kotlin that provides real-time currency conversion across 180+ currencies using a live API.</p>
           <div class="project-tech">
             <span class="tech-tag">Java</span>
             <span class="tech-tag">Kotlin</span>
-            <span class="tech-tag">REST API</span>
+            <span class="tech-tag">XML</span>
+            <span class="tech-tag">API Integration</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/fuad-rahman-biswas/Currency-Converter" class="project-link" target="_blank">
+            <a href="https://github.com/fuad-rahman-biswas/Global-exchange" class="project-link" target="_blank">
               <i class="fab fa-github"></i>
-              Java Version
+              Code
             </a>
           </div>
         </div>
       </div>
 
       <div class="project-card fade-in-up stagger-3">
-        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=200&fit=crop" alt="Budget Tracker" class="project-image">
+        <img src="Assets/image/budgetTracker.jpeg" alt="Budget Tracker" class="project-image">
         <div class="project-content">
           <h3 class="project-title">Smart Budget Tracker</h3>
-          <p class="project-description">Intelligent expense management system with AI-powered categorization, spending insights, and financial goal tracking.</p>
+          <p class="project-description">A desktop application for managing income and expenses. Data is stored in a MySQL backend with timestamps, and users can categorize spending for better insights.</p>
           <div class="project-tech">
             <span class="tech-tag">Java</span>
             <span class="tech-tag">Swing UI</span>
-            <span class="tech-tag">Data Analytics</span>
+            <span class="tech-tag">MySQL</span>
           </div>
           <div class="project-links">
             <a href="https://github.com/fuad-rahman-biswas/budget-tracker" class="project-link" target="_blank">
@@ -1101,14 +1074,14 @@
       </div>
 
       <div class="project-card fade-in-up stagger-4">
-        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=200&fit=crop" alt="Fitness Tracker" class="project-image">
+        <img src="Assets/image/fitnessTracker.jpeg" alt="Fitness Tracker" class="project-image">
         <div class="project-content">
           <h3 class="project-title">PeakHealth Fitness Tracker</h3>
           <p class="project-description">Comprehensive fitness tracking application with workout logging, progress visualization, and personalized goal setting.</p>
           <div class="project-tech">
             <span class="tech-tag">Java</span>
             <span class="tech-tag">GUI Design</span>
-            <span class="tech-tag">Data Management</span>
+            <span class="tech-tag">MySQL</span>
           </div>
           <div class="project-links">
             <a href="https://github.com/fuad-rahman-biswas/PeakHealth" class="project-link" target="_blank">
@@ -1120,7 +1093,7 @@
       </div>
 
       <div class="project-card fade-in-up stagger-1">
-        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop" alt="Tic Tac Toe" class="project-image">
+        <img src="Assets/image/ticTacToe.png" alt="Tic Tac Toe" class="project-image">
         <div class="project-content">
           <h3 class="project-title">Interactive Tic Tac Toe</h3>
           <p class="project-description">Modern web-based Tic Tac Toe game with smooth animations, AI opponent, and responsive design for all devices.</p>
@@ -1139,10 +1112,10 @@
       </div>
 
       <div class="project-card fade-in-up stagger-2">
-        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop" alt="Tribute Page" class="project-image">
+        <img src="Assets/image/tributePage.jpeg" alt="Tribute Page" class="project-image">
         <div class="project-content">
           <h3 class="project-title">Jensen Huang Tribute</h3>
-          <p class="project-description">Elegant tribute page celebrating Jensen Huang's contributions to AI and technology, featuring modern design and interactive elements.</p>
+          <p class="project-description">A tribute page honoring Jensen Huang’s contributions to AI and GPUs, built with clean responsive design and interactive elements.</p>
           <div class="project-tech">
             <span class="tech-tag">HTML5</span>
             <span class="tech-tag">CSS3</span>
@@ -1156,6 +1129,64 @@
           </div>
         </div>
       </div>
+
+      <div class="project-card fade-in-up stagger-2">
+        <img src="Assets/image/calculator.jpg" alt="Simple Calculator" class="project-image">
+        <div class="project-content">
+          <h3 class="project-title">Simple Calculator</h3>
+          <p class="project-description">A lightweight calculator app built in Java with basic arithmetic operations and an intuitive interface.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Java</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/fuad-rahman-biswas/Calculator" class="project-link" target="_blank">
+              <i class="fab fa-github"></i>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in-up stagger-2">
+        <img src="Assets/image/ai-study.jpg" alt="Ai-Study-Companion" class="project-image">
+        <div class="project-content">
+          <h3 class="project-title">Ai-Study-Companion</h3>
+          <p class="project-description">A web app that lets students chat about any topic, summarize notes, generate quizzes, and grade answers using Groq API.</p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">API Integration</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/fuad-rahman-biswas/Ai-Code-Companion" class="project-link" target="_blank">
+              <i class="fab fa-github"></i>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in-up stagger-2">
+        <img src="Assets/image/f1-race.jpg" alt="F1-Race-Prediction" class="project-image">
+        <div class="project-content">
+          <h3 class="project-title">F1 Race Prediction</h3>
+          <p class="project-description">A machine learning model that predicts Formula 1 race outcomes based on driver performance, track data, and historical results.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">API Integration</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/fuad-rahman-biswas/F1-Race-Prediction" class="project-link" target="_blank">
+              <i class="fab fa-github"></i>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
     </div>
   </section>
 
