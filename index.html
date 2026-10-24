@@ -47,8 +47,9 @@ nav.solid{background:rgba(8,7,13,0.82);backdrop-filter:blur(12px);-webkit-backdr
 .hero-grid{display:grid;grid-template-columns:1fr auto;gap:64px;align-items:end;width:100%}
 .eyebrow{font-family:var(--mono);font-size:.78rem;color:var(--muted);display:flex;align-items:center;gap:10px;margin-bottom:28px}
 .dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 3px rgba(74,222,128,.15)}
-h1{font-family:var(--serif);font-weight:400;font-size:clamp(3rem,8vw,6.2rem);line-height:.98;letter-spacing:-.025em;margin-bottom:28px}
-h1 em{color:var(--accent);font-style:italic}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(3rem,8vw,6.2rem);line-height:.98;letter-spacing:-.025em;margin-bottom:16px}
+h1 em{color:var(--accent);font-style:italic;display:block;font-size:.44em;line-height:1.15;letter-spacing:-.01em;margin-top:14px}
+.h1-credit{font-family:var(--mono);font-size:.74rem;color:var(--faint);margin-bottom:28px}
 .lede{max-width:540px;color:var(--muted);font-size:1.12rem;margin-bottom:36px}
 .lede strong{color:var(--text);font-weight:500}
 .actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
@@ -207,7 +208,8 @@ footer{border-top:1px solid var(--line);padding:32px 0;position:relative;z-index
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow"><span class="dot"></span>Open to freelance work</div>
-      <h1>Fuad Rahman<br>builds <em>useful</em> things.</h1>
+      <h1>Fuad Rahman <em>readying my usefulness for tomorrow.</em></h1>
+      <p class="h1-credit">— Gustave, <i>Clair Obscur: Expedition 33</i></p>
       <p class="lede">Final-year software engineering student at <strong>Taylor's University</strong>. I build mobile and web apps, with some AI mixed in. Right now I'm learning Flutter by building an F1 app.</p>
       <div class="actions">
         <a href="#work" class="btn btn-main">See my work</a>
@@ -238,10 +240,6 @@ footer{border-top:1px solid var(--line);padding:32px 0;position:relative;z-index
           <p>I'm in the final year of my Bachelor's in Software Engineering. Lately I've been leaning into <strong>app development</strong>, learning Flutter and Dart in Android Studio. I'm also sharpening my web skills and getting more comfortable with <strong>Python and the basics of AI/ML</strong>.</p>
           <p>Away from the keyboard, I love video games, and I'm usually halfway through one. When I'm not playing, I'm at the gym or watching football and F1. F1 is also where my current side project came from.</p>
         </div>
-        <figure class="quote">
-          <blockquote>"I am enjoying the uselessness of today and readying my usefulness for tomorrow."</blockquote>
-          <figcaption>Gustave, <i>Clair Obscur: Expedition 33</i> </figcaption>
-        </figure>
         <ul class="facts">
           <li><span>Studying</span><span>B.Sc. Software Engineering, final year</span></li>
           <li><span>Where</span><span>Taylor's University, Malaysia</span></li>
